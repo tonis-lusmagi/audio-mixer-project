@@ -4,7 +4,7 @@
                 
 # About
 
-Xilinx Linux kernel 4.09
+Xilinx Linux kernel 4.9
 
 Vivado 2017.3
 
