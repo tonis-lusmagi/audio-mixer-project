@@ -1,0 +1,41 @@
+create uninitialized project on github:
+
+open terminal in project folder
+
+$ git init
+$ git add . #all files
+$ git commit -m "Initial commit"
+$ git remote add origin git@github.com:Lusberg/audio-mixer-project.git #example
+$ git push origin master
+
+**************************************************************************************
+
+To initialize repo:
+
+open terminal in project folder
+
+$ echo "# audio-mixer-project" >> README.md
+$ git add README.md
+$ git commit -m "Initial commit"
+$ git push origin master
+
+**************************************************************************************
+
+To add files:
+
+open terminal in project folder
+
+$ git pull origin master #sync local repo
+$ git add . #all files
+$ git commit -m "Write a meaningful message here" #plz
+$ git push origin master
+
+**************************************************************************************
+
+SSH over HTTP: https://help.github.com/articles/using-ssh-over-the-https-port/
+
+**************************************************************************************
+
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+https://stackoverflow.com/questions/7047752/git-adding-files-to-repo
+https://www.linux.com/learn/beginning-git-and-github-linux-users

@@ -4,9 +4,9 @@
                 
 # About
 
-Xilinx Linux kernel 4.09 and 4.12
+Xilinx Linux kernel 4.09
 
-Vivado 2017.3 and 2018.1
+Vivado 2017.3
 
 # Features
 
