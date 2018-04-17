@@ -1,13 +1,13 @@
 # timing constraints
-create_clock -period 10.000 -name clk_100 [get_ports clk_100]
+#create_clock -period 10.000 -name clk_100 [get_ports clk_100]
 
-set_false_path -from [get_clocks zed_audio_clk_48M] -to [get_clocks clk_100]
-set_false_path -from [get_clocks clk_100] -to [get_clocks zed_audio_clk_48M]
+#set_false_path -from [get_clocks zed_audio_clk_48M] -to [get_clocks clk_100]
+#set_false_path -from [get_clocks clk_100] -to [get_clocks zed_audio_clk_48M]
 
 
 # 100 mhz clock
-set_property PACKAGE_PIN Y9 [get_ports clk_100]
-set_property IOSTANDARD LVCMOS33 [get_ports clk_100]
+#set_property PACKAGE_PIN Y9 [get_ports clk_100]
+#set_property IOSTANDARD LVCMOS33 [get_ports clk_100]
 
 # 24 mhz clock to audio chip
 set_property PACKAGE_PIN AB2 [get_ports AC_MCLK]
