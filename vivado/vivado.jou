@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Tue Apr 24 19:37:33 2018
+# Process ID: 11927
+# Current directory: /home/martin.perman/workspace/audio-mixer-project/vivado
+# Command line: vivado
+# Log file: /home/martin.perman/workspace/audio-mixer-project/vivado/vivado.log
+# Journal file: /home/martin.perman/workspace/audio-mixer-project/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk -hwspec /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper.hdf

@@ -1,0 +1,35 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+| Date         : Tue Apr 24 19:32:23 2018
+| Host         : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+| Command      : report_drc -file audio_mixer_project_wrapper_drc_routed.rpt -pb audio_mixer_project_wrapper_drc_routed.pb -rpx audio_mixer_project_wrapper_drc_routed.rpx
+| Design       : audio_mixer_project_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
+
+2. REPORT DETAILS
+-----------------
+

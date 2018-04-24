@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Tue Apr 24 18:27:54 2018
+# Process ID: 3758
+# Current directory: /home/martin.perman/workspace/audio-mixer-project/vivado
+# Command line: vivado
+# Log file: /home/martin.perman/workspace/audio-mixer-project/vivado/vivado.log
+# Journal file: /home/martin.perman/workspace/audio-mixer-project/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/audio_mixer_project.bd}
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+regenerate_bd_layout
+regenerate_bd_layout
+set_property name SDIN [get_bd_ports SDIN_0]
+set_property name DC [get_bd_ports DC_0]
+set_property name RES [get_bd_ports RES_0]
+set_property name VBAT [get_bd_ports VBAT_0]
+set_property name VDD [get_bd_ports VDD_0]
+set_property name SCLK [get_bd_ports SCLK_0]
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+delete_bd_objs [get_bd_nets Volume_Pregain_1_OUT_VOLCTRL_L] [get_bd_nets Volume_Pregain_1_OUT_VOLCTRL_R] [get_bd_nets axi_to_audio_0_audio_out] [get_bd_intf_nets ps7_0_axi_periph_M04_AXI] [get_bd_cells Volume_Pregain_1]
+startgroup
+create_bd_cell -type ip -vlnv tsotnep:userLibrary:Volume_Pregain:1.0 Volume_Pregain_1
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/ps7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins Volume_Pregain_1/S00_AXI]
+connect_bd_net [get_bd_pins Volume_Pregain_1/IN_SIG_R] [get_bd_pins axi_to_audio_0/audio_out]
+connect_bd_net [get_bd_pins Volume_Pregain_1/IN_SIG_L] [get_bd_pins axi_to_audio_0/audio_out]
+delete_bd_objs [get_bd_nets axi_to_audio_0_audio_out]
+connect_bd_net [get_bd_pins Volume_Pregain_1/IN_SIG_R] [get_bd_pins axi_to_audio_0/audio_out]
+connect_bd_net [get_bd_pins Volume_Pregain_1/IN_SIG_L] [get_bd_pins axi_to_audio_0/audio_out]
+connect_bd_net [get_bd_pins Volume_Pregain_1/OUT_RDY] [get_bd_pins xlconcat_0/In3]
+connect_bd_net [get_bd_pins FILTER_IIR_1/AUDIO_IN_L] [get_bd_pins Volume_Pregain_1/OUT_VOLCTRL_L]
+connect_bd_net [get_bd_pins Volume_Pregain_1/OUT_VOLCTRL_R] [get_bd_pins FILTER_IIR_1/AUDIO_IN_R]
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+delete_bd_objs [get_bd_nets axi_to_audio_0_audio_out]
+connect_bd_net [get_bd_pins Volume_Pregain_1/IN_SIG_R] [get_bd_pins axi_to_audio_0/audio_out]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins Volume_Pregain_1/IN_SIG_L]
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {23} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {24}] [get_bd_cells xlconstant_1]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+ipx::edit_ip_in_project -upgrade true -name axi_to_audio_v1_0_project -directory /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.tmp/axi_to_audio_v1_0_project /home/martin.perman/workspace/audio-mixer-project/ip-repo/axi_to_audio_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/martin.perman/workspace/audio-mixer-project/ip-repo/axi_to_audio_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv ttu.ee:user:axi_to_audio:1.0 [get_ips  audio_mixer_project_axi_to_audio_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips audio_mixer_project_axi_to_audio_0_0] -no_script -sync -force -quiet
+delete_bd_objs [get_bd_nets xlconstant_1_dout] [get_bd_cells xlconstant_1]
+connect_bd_net [get_bd_pins Volume_Pregain_1/IN_SIG_L] [get_bd_pins axi_to_audio_0/audio_out]
+save_bd_design
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file mkdir /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk
+write_hwdef -force  -file /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper.hdf
+file copy -force /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/audio_mixer_project_wrapper.sysdef /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper.hdf
+

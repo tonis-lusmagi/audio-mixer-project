@@ -1,4 +1,4 @@
- set_property PACKAGE_PIN U10 [get_ports DC]
+set_property PACKAGE_PIN U10 [get_ports DC]
 set_property PACKAGE_PIN U9 [get_ports RES]
 set_property PACKAGE_PIN AB12 [get_ports SCLK]
 set_property PACKAGE_PIN AA12 [get_ports SDIN]

@@ -1,0 +1,42 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+| Date         : Tue Apr 24 19:31:16 2018
+| Host         : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+| Command      : report_control_sets -file audio_mixer_project_wrapper_control_sets_placed.rpt
+| Design       : audio_mixer_project_wrapper
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+
+1. Summary
+----------
+
++-------------------------------+-------+
+|             Status            | Count |
++-------------------------------+-------+
+| Number of unique control sets |   513 |
++-------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             295 |          123 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             728 |          210 |
+| Yes          | No                    | No                     |            3641 |          902 |
+| Yes          | No                    | Yes                    |             792 |          191 |
+| Yes          | Yes                   | No                     |            8766 |         2762 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+

@@ -1,0 +1,6 @@
+19:38:24 INFO  : Registering command handlers for SDK TCF services
+19:38:26 INFO  : Launching XSCT server: xsct -n -interactive /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/temp_xsdb_launch_script.tcl
+19:38:28 INFO  : XSCT server has started successfully.
+19:38:30 INFO  : Successfully done setting XSCT server connection channel  
+19:38:30 INFO  : Successfully done setting SDK workspace  
+19:38:30 INFO  : Processing command line option -hwspec /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper.hdf.
