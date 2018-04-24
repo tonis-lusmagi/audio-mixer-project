@@ -1,0 +1,1 @@
+cmd_/home/clarke/workspace/lab4/driver/uio_full/uio_pdrv_genirq.ko := arm-linux-gnueabihf-ld -EL -r  -T /home/clarke/workspace/linux-xlnx/scripts/module-common.lds --build-id  -o /home/clarke/workspace/lab4/driver/uio_full/uio_pdrv_genirq.ko /home/clarke/workspace/lab4/driver/uio_full/uio_pdrv_genirq.o /home/clarke/workspace/lab4/driver/uio_full/uio_pdrv_genirq.mod.o ;  true
