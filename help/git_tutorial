@@ -48,3 +48,6 @@ To add branches
 $ git checkout -b new v1.1
 
 
+
+**************************************************************************************
+git push https://github.com/Lusberg/audio-mixer-project.git
