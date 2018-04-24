@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="audio_mixer_project" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1523994035"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1523994035"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1523994035"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1523994035"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1524561098"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1524561098"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1524561098"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1524561098"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -113,6 +113,14 @@
       </File>
       <File Name="ip/audio_mixer_project_FILTER_IIR_1_0/audio_mixer_project_FILTER_IIR_1_0.xci" Type="IP">
         <Instance HierarchyPath="FILTER_IIR_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/audio_mixer_project_axi_to_audio_0_0/audio_mixer_project_axi_to_audio_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_to_audio_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

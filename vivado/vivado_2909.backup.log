@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Tue Apr 24 10:36:22 2018
+# Process ID: 2909
+# Current directory: /home/martin.perman/workspace/vivado
+# Command line: vivado
+# Log file: /home/martin.perman/workspace/vivado/vivado.log
+# Journal file: /home/martin.perman/workspace/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/martin.perman/workspace/vivado/audio-mixer-project.xpr
+INFO: [Project 1-313] Project file moved from '/home/clarke/workspace/audio-mixer-project/vivado' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory '/home/martin.perman/workspace/vivado/audio-mixer-project.ip_user_files', nor could it be found using path '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/martin.perman/workspace/ip-repo/SoC_Design/HDL/Audio_Mixer'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/martin.perman/workspace/ip-repo/zedboard_audio'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/martin.perman/workspace/ip-repo/ip_repo_vivado/FILTER_IIR_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/martin.perman/workspace/ip-repo/Volume_Pregain'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/martin.perman/workspace/ip-repo/SoC_Design/IPs/OLED/ZedBoard_OLED_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/x_17/Vivado/2017.3/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 6124.391 ; gain = 72.734 ; free physical = 11221 ; free virtual = 15290
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 24 10:37:27 2018...
