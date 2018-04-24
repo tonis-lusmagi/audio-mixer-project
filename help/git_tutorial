@@ -25,6 +25,7 @@ To add files:
 
 open terminal in project folder
 
+$ git fetch #or below
 $ git pull origin master #sync local repo
 $ git add . #all files
 $ git commit -m "Write a meaningful message here" #plz
@@ -39,3 +40,11 @@ SSH over HTTP: https://help.github.com/articles/using-ssh-over-the-https-port/
 https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 https://stackoverflow.com/questions/7047752/git-adding-files-to-repo
 https://www.linux.com/learn/beginning-git-and-github-linux-users
+
+**************************************************************************************
+
+To add branches
+
+$ git checkout -b new v1.1
+
+
