@@ -25,7 +25,7 @@ To add files:
 
 open terminal in project folder
 
-$ git fetch #or below
+$ git fetch
 $ git pull origin master #sync local repo
 $ git add . #all files
 $ git commit -m "Write a meaningful message here" #plz
@@ -48,6 +48,8 @@ To add branches
 $ git checkout -b new v1.1
 
 
-
 **************************************************************************************
+
+To push over https:
+
 git push https://github.com/Lusberg/audio-mixer-project.git
