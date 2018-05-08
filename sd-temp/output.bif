@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]/home/clarke/workspace/audio-mixer-project/sd-temp/FSBL.elf
+	/home/clarke/workspace/audio-mixer-project/sd-temp/audio_mixer_project_wrapper.bit
+	/home/clarke/workspace/audio-mixer-project/sd-temp/u-boot.elf
+}

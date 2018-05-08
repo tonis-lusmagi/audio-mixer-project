@@ -7,20 +7,20 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/cad/x_17/SDK/2017.3/bin:/cad/x_17/Vivado/2017.3/ids_lite/ISE/bin/lin64:/cad/x_17/Vivado/2017.3/bin
+  PATH=/opt/Xilinx/SDK/2017.3/bin:/opt/Xilinx/Vivado/2017.3/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2017.3/bin
 else
-  PATH=/cad/x_17/SDK/2017.3/bin:/cad/x_17/Vivado/2017.3/ids_lite/ISE/bin/lin64:/cad/x_17/Vivado/2017.3/bin:$PATH
+  PATH=/opt/Xilinx/SDK/2017.3/bin:/opt/Xilinx/Vivado/2017.3/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2017.3/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=/cad/x_17/Vivado/2017.3/ids_lite/ISE/lib/lin64
+  LD_LIBRARY_PATH=/opt/Xilinx/Vivado/2017.3/ids_lite/ISE/lib/lin64
 else
-  LD_LIBRARY_PATH=/cad/x_17/Vivado/2017.3/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=/opt/Xilinx/Vivado/2017.3/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/synth_1'
+HD_PWD='/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log audio_mixer_project_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source audio_mixer_project_wrapper.tcl
+EAStep vivado -log audio_mixer_project_wrapper.vds -m64 -tempDir /home/clarke/tmp -product Vivado -mode batch -messageDb vivado.pb -notrace -source audio_mixer_project_wrapper.tcl

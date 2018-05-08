@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="audio_mixer_project_FILTER_IIR_1_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1524583823">
-  <File Type="RDS-RDS" Name="audio_mixer_project_FILTER_IIR_1_0.vds"/>
   <File Type="RDS-DCP" Name="audio_mixer_project_FILTER_IIR_1_0.dcp"/>
   <File Type="PA-TCL" Name="audio_mixer_project_FILTER_IIR_1_0.tcl"/>
+  <File Type="RDS-RDS" Name="audio_mixer_project_FILTER_IIR_1_0.vds"/>
   <File Type="REPORTS-TCL" Name="audio_mixer_project_FILTER_IIR_1_0_reports.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/audio_mixer_project_FILTER_IIR_1_0">
     <File Path="$PSRCDIR/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_FILTER_IIR_1_0/audio_mixer_project_FILTER_IIR_1_0.xci">

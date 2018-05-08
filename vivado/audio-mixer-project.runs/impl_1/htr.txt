@@ -6,4 +6,4 @@
 # Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log audio_mixer_project_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source audio_mixer_project_wrapper.tcl -notrace
+vivado -log audio_mixer_project_wrapper.vdi -applog -m64 -tempDir /home/clarke/tmp -product Vivado -messageDb vivado.pb -mode batch -source audio_mixer_project_wrapper.tcl -notrace

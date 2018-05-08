@@ -22,34 +22,34 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.cache/wt [current_project]
-set_property parent.project_path /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.xpr [current_project]
+set_property webtalk.parent_dir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.cache/wt [current_project]
+set_property parent.project_path /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
 set_property ip_repo_paths {
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/SoC_Design/HDL/Audio_Mixer
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/axi_to_audio_1.0
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/zedboard_audio
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/ip_repo_vivado/FILTER_IIR_1.0
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/Volume_Pregain
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/ZedBoard_OLED_1.0
+  /home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/HDL/Audio_Mixer
+  /home/clarke/workspace/audio-mixer-project/ip-repo/axi_to_audio_1.0
+  /home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio
+  /home/clarke/workspace/audio-mixer-project/ip-repo/ip_repo_vivado/FILTER_IIR_1.0
+  /home/clarke/workspace/audio-mixer-project/ip-repo/Volume_Pregain
+  /home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/ZedBoard_OLED_1.0
 } [current_project]
-set_property ip_output_repo /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.cache/ip [current_project]
+set_property ip_output_repo /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_ZedboardOLED_0_0/src/charLib/charLib.coe
-read_vhdl -library xil_defaultlib /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/hdl/audio_mixer_project_wrapper.vhd
-add_files /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/audio_mixer_project.bd
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_ZedboardOLED_0_0/src/charLib/charLib_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_auto_pc_0/audio_mixer_project_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/audio_mixer_project_ooc.xdc]
+add_files /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_ZedboardOLED_0_0/src/charLib/charLib.coe
+read_vhdl -library xil_defaultlib /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/hdl/audio_mixer_project_wrapper.vhd
+add_files /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/audio_mixer_project.bd
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_ZedboardOLED_0_0/src/charLib/charLib_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_auto_pc_0/audio_mixer_project_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/audio_mixer_project_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -59,11 +59,11 @@ set_property used_in_implementation false [get_files -all /home/martin.perman/wo
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/martin.perman/workspace/audio-mixer-project/ip-repo/zedboard_audio/constraints/zed_audio.xdc
-set_property used_in_implementation false [get_files /home/martin.perman/workspace/audio-mixer-project/ip-repo/zedboard_audio/constraints/zed_audio.xdc]
+read_xdc /home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio/constraints/zed_audio.xdc
+set_property used_in_implementation false [get_files /home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio/constraints/zed_audio.xdc]
 
-read_xdc /home/martin.perman/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/oled_constraints.xdc
-set_property used_in_implementation false [get_files /home/martin.perman/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/oled_constraints.xdc]
+read_xdc /home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/oled_constraints.xdc
+set_property used_in_implementation false [get_files /home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/oled_constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
