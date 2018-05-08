@@ -11,7 +11,7 @@
 #include <sys/mman.h>
 #include <fcntl.h>
 #include <stdint.h>
-
+#include <pthread.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -80,13 +80,16 @@
 
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );
+void *send_audio_function(void);
 
 struct sockaddr_in receiving_address;
 int client_socket; 
 socklen_t addr_size;
+int fd5;
 
 int main(int argc, char *argv[])
 {
+	pthread_t thread;
 	short int buffer[512];
 	int i;
 	
@@ -122,8 +125,11 @@ int main(int argc, char *argv[])
         if (fd4 < 1) { perror(argv[0]); return -1; }
         
         //open dev/uio0 AXI_TO_AUDIO
-        int fd5 = open ("/dev/uio0", O_RDWR);
+        fd5 = open ("/dev/uio0", O_RDWR);
         if (fd5 < 1) { perror(argv[0]); return -1; }
+        
+        mkfifo("/tmp/myfifo", 0660);
+		int fd_fifo = open("/tmp/myfifo", O_WRONLY);
  
   
         //Redirect stdout/printf into /dev/kmsg file (so it will be printed using printk)
@@ -153,11 +159,6 @@ int main(int argc, char *argv[])
         void *ptr5; //AXI_TO_AUDIO
         ptr5 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd5, pageSize*0);
 		
-		
-		int IRQEnable = 1; 
-		write(fd5, &IRQEnable, sizeof(IRQEnable));
-		
-		printf("Interrupt Enabled\n");
 		
         //write into registers
 
@@ -212,17 +213,25 @@ int main(int argc, char *argv[])
 			printf("Connection error\n");
 		else
 			printf("Stream connected\n");
+			
+		iret1 = pthread_create(&thread, NULL, send_audio_function, NULL);
+		if(iret1)
+		{
+			fprintf(stderr,"Error - pthread_create() return code: %d\n",iret1);
+		}
         
         while(1) //get stream and send to axi_to_audio
         {
 			udp_client_recv((unsigned int*)&buffer, 1024);
-			for(i=0;i<512;i=i+2)
+			write(fd_fifo, buffer, 512);
+			/*for(i=0;i<512;i=i+2)
 			{
 				AXI_TO_AUDIO_REG_0 = (int)buffer[i];
 				read(fd5, &IRQEnable, sizeof(IRQEnable));
-			}
+			}*/
 		}
-  
+		
+		pthread_join( thread, NULL);
         //unmap
         munmap(ptr, pageSize);
         munmap(ptr2, pageSize);
@@ -269,4 +278,19 @@ int udp_client_recv(unsigned *buffer,int buffer_size ){
         return 0;
     else
         return 1; 
+}
+
+void *send_audio_function(void)
+{
+	short int buf;
+	int IRQEnable = 1; 
+	write(fd5, &IRQEnable, sizeof(IRQEnable));
+	printf("Interrupt Enabled\n");
+	int fd = open("/tmp/myfifo", O_RDONLY);
+	while (1)
+	{
+		read(fd5, &IRQEnable, sizeof(IRQEnable));
+		read(fd, buf, 2);
+		AXI_TO_AUDIO_REG_0 = (int)buf;
+	}
 }
