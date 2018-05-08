@@ -307,6 +307,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver PMOD_CONTROLLER */
+#define XPAR_PMOD_CONTROLLER_NUM_INSTANCES 1
+
+/* Definitions for peripheral PMOD_CONTROLLER_0 */
+#define XPAR_PMOD_CONTROLLER_0_DEVICE_ID 0
+#define XPAR_PMOD_CONTROLLER_0_S00_AXI_BASEADDR 0x43C60000
+#define XPAR_PMOD_CONTROLLER_0_S00_AXI_HIGHADDR 0x43C6FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver QSPIPS */
 #define XPAR_XQSPIPS_NUM_INSTANCES 1
 

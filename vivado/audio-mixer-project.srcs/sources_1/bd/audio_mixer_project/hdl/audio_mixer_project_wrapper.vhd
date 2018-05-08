@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
---Date        : Tue May  8 19:18:08 2018
---Host        : archlinux running 64-bit unknown
+--Date        : Tue May  8 22:48:46 2018
+--Host        : archlinux running 64-bit Arch Linux
 --Command     : generate_target audio_mixer_project_wrapper.bd
 --Design      : audio_mixer_project_wrapper
 --Purpose     : IP block netlist
@@ -22,6 +22,7 @@ entity audio_mixer_project_wrapper is
     AC_MCLK : out STD_LOGIC;
     AC_SCK : out STD_LOGIC;
     AC_SDA : inout STD_LOGIC;
+    Button : in STD_LOGIC;
     DC : out STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -45,8 +46,11 @@ entity audio_mixer_project_wrapper is
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     RES : out STD_LOGIC;
+    Rotary_a : in STD_LOGIC;
+    Rotary_b : in STD_LOGIC;
     SCLK : out STD_LOGIC;
     SDIN : out STD_LOGIC;
+    Switch : in STD_LOGIC;
     VBAT : out STD_LOGIC;
     VDD : out STD_LOGIC;
     btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
@@ -92,7 +96,11 @@ architecture STRUCTURE of audio_mixer_project_wrapper is
     VBAT : out STD_LOGIC;
     DC : out STD_LOGIC;
     SCLK : out STD_LOGIC;
-    SDIN : out STD_LOGIC
+    SDIN : out STD_LOGIC;
+    Button : in STD_LOGIC;
+    Rotary_a : in STD_LOGIC;
+    Rotary_b : in STD_LOGIC;
+    Switch : in STD_LOGIC
   );
   end component audio_mixer_project;
 begin
@@ -107,6 +115,7 @@ audio_mixer_project_i: component audio_mixer_project
       AC_MCLK => AC_MCLK,
       AC_SCK => AC_SCK,
       AC_SDA => AC_SDA,
+      Button => Button,
       DC => DC,
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
       DDR_ba(2 downto 0) => DDR_ba(2 downto 0),
@@ -130,8 +139,11 @@ audio_mixer_project_i: component audio_mixer_project
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       RES => RES,
+      Rotary_a => Rotary_a,
+      Rotary_b => Rotary_b,
       SCLK => SCLK,
       SDIN => SDIN,
+      Switch => Switch,
       VBAT => VBAT,
       VDD => VDD,
       btns_5bits_tri_i(4 downto 0) => btns_5bits_tri_i(4 downto 0)

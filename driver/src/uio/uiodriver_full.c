@@ -82,6 +82,11 @@
 #define AXI_TO_AUDIO_REG_2   *((unsigned *)(ptr5 + 8))
 #define AXI_TO_AUDIO_REG_3   *((unsigned *)(ptr5 + 12))
 
+#define PMOD_REG_0   *((unsigned *)(ptr6 + 0))
+#define PMOD_REG_1   *((unsigned *)(ptr6 + 4))
+#define PMOD_REG_2   *((unsigned *)(ptr6 + 8))
+#define PMOD_REG_3   *((unsigned *)(ptr6 + 12))
+
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );
 void *send_audio_function(void *arg);
@@ -113,25 +118,29 @@ int main(int argc, char *argv[])
         unsigned Low = atoi(argv[5]);
 
   
-        //open dev/uio2 VOLUME 0
+        //VOLUME 0
         int fd = open ("/dev/uio2", O_RDWR);
         if (fd < 1) { perror(argv[0]); return -1; }
 
-        //open dev/uio1 FILTER 0
+        //FILTER 0
         int fd2 = open ("/dev/uio1", O_RDWR);
         if (fd2 < 1) { perror(argv[0]); return -1; }
-        
-        //open dev/uio3 VOLUME 1
-        int fd3 = open ("/dev/uio3", O_RDWR);
-        if (fd3 < 1) { perror(argv[0]); return -1; }
 
-        //open dev/uio4 FILTER 1
-        int fd4 = open ("/dev/uio4", O_RDWR);
+        //VOLUME 1
+        int fd3 = open ("/dev/uio4", O_RDWR);
+        if (fd3 < 1) { perror(argv[0]); return -1; }
+        
+        //FILTER 1
+        int fd4 = open ("/dev/uio3", O_RDWR);
         if (fd4 < 1) { perror(argv[0]); return -1; }
         
         //open dev/uio0 AXI_TO_AUDIO
-        fd5 = open ("/dev/uio0", O_RDWR);
+        int fd5 = open ("/dev/uio0", O_RDWR);
         if (fd5 < 1) { perror(argv[0]); return -1; }
+
+        //open dev/uio0 PMOD_CONTROLLER_0
+        int fd6 = open ("/dev/uio5", O_RDWR);
+        if (fd6 < 1) { perror(argv[0]); return -1; }
         
         mkfifo("/tmp/myfifo", 0660);
 		int fd_fifo = open("/tmp/myfifo", O_WRONLY);
@@ -164,6 +173,8 @@ int main(int argc, char *argv[])
         //void *ptr5; //AXI_TO_AUDIO
         ptr5 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd5, pageSize*0);
 		
+        void *ptr6; //PMOD_CONTROLLER
+        ptr6 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd6, pageSize*0);
 		
         //write into registers
 
@@ -243,7 +254,7 @@ int main(int argc, char *argv[])
         munmap(ptr3, pageSize);
         munmap(ptr4, pageSize);
         munmap(ptr5, pageSize);
-        
+        munmap(ptr6, pageSize);
         //close
         fclose(stdout);
     }

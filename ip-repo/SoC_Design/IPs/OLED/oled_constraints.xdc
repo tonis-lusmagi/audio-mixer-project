@@ -10,3 +10,4 @@ set_property IOSTANDARD LVCMOS33 [get_ports SCLK]
 set_property IOSTANDARD LVCMOS33 [get_ports SDIN]
 set_property IOSTANDARD LVCMOS33 [get_ports VBAT]
 set_property IOSTANDARD LVCMOS33 [get_ports VDD]
+

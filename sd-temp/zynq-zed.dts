@@ -59,6 +59,13 @@
     	reg = < 0x43C20000 0x10000 >;
 	};
 
+	PMOD_CONTROLLER_0: PMOD_CONTROLLER_0@43C60000 {
+    	compatible = "generic-uio";
+    	reg = < 0x43C60000 0x10000 >;
+    	interrupt-parent = <&intc>;
+    	interrupts = <0 34 1>;
+	};	
+
 	aliases {
 		ethernet0 = &gem0;
 		serial0 = &uart1;

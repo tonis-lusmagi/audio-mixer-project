@@ -2,7 +2,6 @@
 *** Running vivado
     with args -log audio_mixer_project_wrapper.vdi -applog -m64 -tempDir /home/clarke/tmp -product Vivado -messageDb vivado.pb -mode batch -source audio_mixer_project_wrapper.tcl -notrace
 
-/opt/Xilinx/Vivado/2017.3/bin/ldlibpath.sh: line 17: lsb_release: command not found
 
 ****** Vivado v2017.3 (64-bit)
   **** SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
@@ -12,13 +11,13 @@
 source audio_mixer_project_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/HDL/Audio_Mixer'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/clarke/workspace/audio-mixer-project/ip-repo/pmod_controller_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/clarke/workspace/audio-mixer-project/ip-repo/axi_to_audio_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/clarke/workspace/audio-mixer-project/ip-repo/ip_repo_vivado/FILTER_IIR_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/clarke/workspace/audio-mixer-project/ip-repo/Volume_Pregain'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/ZedBoard_OLED_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.3/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'audio_mixer_project_auto_pc_0' generated file not found '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_auto_pc_0/stats.txt'. Please regenerate to continue.
 Command: link_design -top audio_mixer_project_wrapper -part xc7z020clg484-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
@@ -30,6 +29,7 @@ INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mi
 INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0.dcp' for cell 'audio_mixer_project_i/axi_gpio_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_axi_to_audio_0_0/audio_mixer_project_axi_to_audio_0_0.dcp' for cell 'audio_mixer_project_i/axi_to_audio_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_mixer_0_0/audio_mixer_project_mixer_0_0.dcp' for cell 'audio_mixer_project_i/mixer_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/audio_mixer_project_pmod_controller_0_0.dcp' for cell 'audio_mixer_project_i/pmod_controller_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.dcp' for cell 'audio_mixer_project_i/processing_system7_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0.dcp' for cell 'audio_mixer_project_i/rst_ps7_0_100M'
 INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xlconcat_0_0/audio_mixer_project_xlconcat_0_0.dcp' for cell 'audio_mixer_project_i/xlconcat_0'
@@ -37,7 +37,7 @@ INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mi
 INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0.dcp' for cell 'audio_mixer_project_i/zed_audio_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xbar_0/audio_mixer_project_xbar_0.dcp' for cell 'audio_mixer_project_i/ps7_0_axi_periph/xbar'
 INFO: [Project 1-454] Reading design checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_auto_pc_0/audio_mixer_project_auto_pc_0.dcp' for cell 'audio_mixer_project_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-INFO: [Netlist 29-17] Analyzing 950 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 964 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2017.3
 INFO: [Device 21-403] Loading part xc7z020clg484-1
@@ -56,14 +56,16 @@ Parsing XDC File [/home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_au
 Finished Parsing XDC File [/home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio/constraints/zed_audio.xdc]
 Parsing XDC File [/home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/oled_constraints.xdc]
 Finished Parsing XDC File [/home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/oled_constraints.xdc]
+Parsing XDC File [/home/clarke/workspace/audio-mixer-project/ip-repo/pmod_controller_1.0/pmod_constraints.xdc]
+Finished Parsing XDC File [/home/clarke/workspace/audio-mixer-project/ip-repo/pmod_controller_1.0/pmod_constraints.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
-30 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+32 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1568.875 ; gain = 407.383 ; free physical = 11142 ; free virtual = 12993
+link_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1570.879 ; gain = 409.383 ; free physical = 9629 ; free virtual = 12243
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -74,7 +76,7 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.95 . Memory (MB): peak = 1633.891 ; gain = 65.016 ; free physical = 11139 ; free virtual = 12990
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.96 . Memory (MB): peak = 1634.895 ; gain = 64.016 ; free physical = 9624 ; free virtual = 12238
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-2] Deriving generated clocks
 
@@ -83,42 +85,42 @@ Starting Logic Optimization Task
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1a8470664
+Phase 1 Retarget | Checksum: 17a2aad74
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2114.383 ; gain = 0.000 ; free physical = 10738 ; free virtual = 12602
-INFO: [Opt 31-389] Phase Retarget created 9 cells and removed 40 cells
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2116.387 ; gain = 0.000 ; free physical = 9239 ; free virtual = 11852
+INFO: [Opt 31-389] Phase Retarget created 9 cells and removed 46 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 236ce0ebd
+Phase 2 Constant propagation | Checksum: 20b25b8ef
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2114.383 ; gain = 0.000 ; free physical = 10738 ; free virtual = 12602
-INFO: [Opt 31-389] Phase Constant propagation created 2 cells and removed 12 cells
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2116.387 ; gain = 0.000 ; free physical = 9235 ; free virtual = 11849
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 8 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 26dc5ec25
+Phase 3 Sweep | Checksum: 178884b38
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2114.383 ; gain = 0.000 ; free physical = 10735 ; free virtual = 12599
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 178 cells
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2116.387 ; gain = 0.000 ; free physical = 9231 ; free virtual = 11845
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 181 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 26dc5ec25
+Phase 4 BUFG optimization | Checksum: 178884b38
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2114.383 ; gain = 0.000 ; free physical = 10734 ; free virtual = 12599
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2116.387 ; gain = 0.000 ; free physical = 9231 ; free virtual = 11845
 INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 26dc5ec25
+Phase 5 Shift Register Optimization | Checksum: 178884b38
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2114.383 ; gain = 0.000 ; free physical = 10735 ; free virtual = 12599
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2116.387 ; gain = 0.000 ; free physical = 9232 ; free virtual = 11845
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2114.383 ; gain = 0.000 ; free physical = 10734 ; free virtual = 12599
-Ending Logic Optimization Task | Checksum: 1cdc69ae2
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2116.387 ; gain = 0.000 ; free physical = 9231 ; free virtual = 11844
+Ending Logic Optimization Task | Checksum: 15370dbd8
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2114.383 ; gain = 0.000 ; free physical = 10734 ; free virtual = 12599
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2116.387 ; gain = 0.000 ; free physical = 9231 ; free virtual = 11844
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -137,21 +139,21 @@ INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 1 Total Ports: 4
 Number of Flops added for Enable Generation: 1
 
-Ending PowerOpt Patch Enables Task | Checksum: 1410628aa
+Ending PowerOpt Patch Enables Task | Checksum: 1e0216301
 
-Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10689 ; free virtual = 12558
-Ending Power Optimization Task | Checksum: 1410628aa
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9191 ; free virtual = 11804
+Ending Power Optimization Task | Checksum: 1e0216301
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 2526.754 ; gain = 412.371 ; free physical = 10706 ; free virtual = 12575
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2530.758 ; gain = 414.371 ; free physical = 9207 ; free virtual = 11821
 INFO: [Common 17-83] Releasing license: Implementation
-52 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+54 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:25 . Memory (MB): peak = 2526.754 ; gain = 957.879 ; free physical = 10706 ; free virtual = 12575
+opt_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 2530.758 ; gain = 959.879 ; free physical = 9207 ; free virtual = 11821
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10705 ; free virtual = 12577
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9206 ; free virtual = 11822
 INFO: [Common 17-1381] The checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/audio_mixer_project_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file audio_mixer_project_wrapper_drc_opted.rpt -pb audio_mixer_project_wrapper_drc_opted.pb -rpx audio_mixer_project_wrapper_drc_opted.rpx
 Command: report_drc -file audio_mixer_project_wrapper_drc_opted.rpt -pb audio_mixer_project_wrapper_drc_opted.pb -rpx audio_mixer_project_wrapper_drc_opted.rpx
@@ -178,92 +180,92 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10696 ; free virtual = 12572
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a16b4f80
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9200 ; free virtual = 11818
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 15cccfb54
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10696 ; free virtual = 12572
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9200 ; free virtual = 11818
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10701 ; free virtual = 12577
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9207 ; free virtual = 11824
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 9b7db904
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1cb4fcaf7
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10674 ; free virtual = 12552
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9182 ; free virtual = 11799
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 12382353e
+Phase 1.3 Build Placer Netlist Model | Checksum: 22ab5268e
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10623 ; free virtual = 12502
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9132 ; free virtual = 11750
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 12382353e
+Phase 1.4 Constrain Clocks/Macros | Checksum: 22ab5268e
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10623 ; free virtual = 12502
-Phase 1 Placer Initialization | Checksum: 12382353e
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9133 ; free virtual = 11751
+Phase 1 Placer Initialization | Checksum: 22ab5268e
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10623 ; free virtual = 12502
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9133 ; free virtual = 11751
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 21c2b5d0f
+Phase 2 Global Placement | Checksum: 144103db0
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:18 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10587 ; free virtual = 12471
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:18 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9100 ; free virtual = 11717
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 21c2b5d0f
+Phase 3.1 Commit Multi Column Macros | Checksum: 144103db0
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:18 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10587 ; free virtual = 12471
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:18 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9100 ; free virtual = 11717
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 13a679003
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 17ce5a743
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:20 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 12464
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:19 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9095 ; free virtual = 11713
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 173c153e0
+Phase 3.3 Area Swap Optimization | Checksum: fba125b4
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:20 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 12464
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9095 ; free virtual = 11713
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 12307deaf
+Phase 3.4 Pipeline Register Optimization | Checksum: 129e11f38
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:20 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 12464
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9095 ; free virtual = 11713
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 12307deaf
+Phase 3.5 Timing Path Optimizer | Checksum: 129e11f38
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:20 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10580 ; free virtual = 12464
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9095 ; free virtual = 11713
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: 12307deaf
+Phase 3.6 Fast Optimization | Checksum: 129e11f38
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:20 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10581 ; free virtual = 12465
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9095 ; free virtual = 11712
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: 58801247
+Phase 3.7 Small Shape Detail Placement | Checksum: 2451c78ff
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:25 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10557 ; free virtual = 12447
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:24 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9073 ; free virtual = 11691
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 13e2ed9bc
+Phase 3.8 Re-assign LUT pins | Checksum: 170eb031b
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:26 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10557 ; free virtual = 12447
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:25 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9074 ; free virtual = 11691
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 13e2ed9bc
+Phase 3.9 Pipeline Register Optimization | Checksum: 170eb031b
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:26 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10557 ; free virtual = 12447
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:25 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9074 ; free virtual = 11691
 
 Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: 143a57038
+Phase 3.10 Fast Optimization | Checksum: 1bf425960
 
-Time (s): cpu = 00:01:02 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10563 ; free virtual = 12452
-Phase 3 Detail Placement | Checksum: 143a57038
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:26 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9077 ; free virtual = 11695
+Phase 3 Detail Placement | Checksum: 1bf425960
 
-Time (s): cpu = 00:01:02 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10563 ; free virtual = 12452
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:26 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9077 ; free virtual = 11695
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -271,60 +273,60 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 151df66ea
+Post Placement Optimization Initialization | Checksum: 1f57f9fa8
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
 INFO: [Place 46-33] Processed net audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/slv_reg15[0], BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-33] Processed net audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/slv_reg15[0], BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-31] BUFG insertion identified 2 candidate nets, 0 success, 2 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 151df66ea
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1f57f9fa8
 
-Time (s): cpu = 00:01:09 ; elapsed = 00:00:29 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10577 ; free virtual = 12465
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-4.726. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1e3e00c36
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:28 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9091 ; free virtual = 11708
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-4.724. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1131dcb31
 
-Time (s): cpu = 00:01:21 ; elapsed = 00:00:35 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10574 ; free virtual = 12462
-Phase 4.1 Post Commit Optimization | Checksum: 1e3e00c36
+Time (s): cpu = 00:01:21 ; elapsed = 00:00:35 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9086 ; free virtual = 11703
+Phase 4.1 Post Commit Optimization | Checksum: 1131dcb31
 
-Time (s): cpu = 00:01:21 ; elapsed = 00:00:35 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10574 ; free virtual = 12462
+Time (s): cpu = 00:01:21 ; elapsed = 00:00:35 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9086 ; free virtual = 11703
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1e3e00c36
+Phase 4.2 Post Placement Cleanup | Checksum: 1131dcb31
 
-Time (s): cpu = 00:01:22 ; elapsed = 00:00:36 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10574 ; free virtual = 12462
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9086 ; free virtual = 11704
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1e3e00c36
+Phase 4.3 Placer Reporting | Checksum: 1131dcb31
 
-Time (s): cpu = 00:01:22 ; elapsed = 00:00:36 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10574 ; free virtual = 12462
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9086 ; free virtual = 11704
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 1d38ae1f4
+Phase 4.4 Final Placement Cleanup | Checksum: 9b7c3319
 
-Time (s): cpu = 00:01:22 ; elapsed = 00:00:36 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10574 ; free virtual = 12462
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1d38ae1f4
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9086 ; free virtual = 11704
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 9b7c3319
 
-Time (s): cpu = 00:01:22 ; elapsed = 00:00:36 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10574 ; free virtual = 12462
-Ending Placer Task | Checksum: 1658b78ff
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9086 ; free virtual = 11704
+Ending Placer Task | Checksum: 87bcec01
 
-Time (s): cpu = 00:01:22 ; elapsed = 00:00:36 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10604 ; free virtual = 12492
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9115 ; free virtual = 11733
 INFO: [Common 17-83] Releasing license: Implementation
-75 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+77 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:25 ; elapsed = 00:00:38 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10604 ; free virtual = 12492
+place_design: Time (s): cpu = 00:01:25 ; elapsed = 00:00:38 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9115 ; free virtual = 11733
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.95 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10567 ; free virtual = 12485
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.94 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9083 ; free virtual = 11730
 INFO: [Common 17-1381] The checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/audio_mixer_project_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file audio_mixer_project_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10583 ; free virtual = 12477
+report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9097 ; free virtual = 11720
 INFO: [runtcl-4] Executing : report_utilization -file audio_mixer_project_wrapper_utilization_placed.rpt -pb audio_mixer_project_wrapper_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10595 ; free virtual = 12489
+report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9107 ; free virtual = 11731
 INFO: [runtcl-4] Executing : report_control_sets -file audio_mixer_project_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10595 ; free virtual = 12489
+report_control_sets: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9108 ; free virtual = 11731
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -336,151 +338,143 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: c9459beb ConstDB: 0 ShapeSum: 9c45dd14 RouteDB: 0
+Checksum: PlaceDB: 125bef65 ConstDB: 0 ShapeSum: 7560fc9c RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: e5075330
+Phase 1 Build RT Design | Checksum: a4dd349c
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10459 ; free virtual = 12350
-Post Restoration Checksum: NetGraph: 19c1d314 NumContArr: cb45801c Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 8968 ; free virtual = 11596
+Post Restoration Checksum: NetGraph: 4fa90fd6 NumContArr: 553424c6 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: e5075330
+Phase 2.1 Create Timer | Checksum: a4dd349c
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10458 ; free virtual = 12349
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 8966 ; free virtual = 11595
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: e5075330
+Phase 2.2 Fix Topology Constraints | Checksum: a4dd349c
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10426 ; free virtual = 12317
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 8934 ; free virtual = 11563
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: e5075330
+Phase 2.3 Pre Route Cleanup | Checksum: a4dd349c
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10426 ; free virtual = 12317
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 8934 ; free virtual = 11563
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 151b72bde
+Phase 2.4 Update Timing | Checksum: b385535f
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10410 ; free virtual = 12302
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.801 | TNS=-225.272| WHS=-2.141 | THS=-335.111|
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:16 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 8977 ; free virtual = 11621
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.821 | TNS=-224.889| WHS=-2.120 | THS=-329.480|
 
-Phase 2 Router Initialization | Checksum: 1f5cd1fd1
+Phase 2 Router Initialization | Checksum: 7031fb87
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:17 . Memory (MB): peak = 2526.754 ; gain = 0.000 ; free physical = 10406 ; free virtual = 12298
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:17 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 8977 ; free virtual = 11617
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 18e840c61
+Phase 3 Initial Routing | Checksum: 25bbc8cdd
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:20 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10380 ; free virtual = 12272
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:21 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9022 ; free virtual = 11651
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 2112
- Number of Nodes with overlaps = 120
- Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2162
+ Number of Nodes with overlaps = 108
+ Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.801 | TNS=-452.714| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.822 | TNS=-1167.139| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1cc9fa902
+Phase 4.1 Global Iteration 0 | Checksum: 21f26fecd
 
-Time (s): cpu = 00:01:32 ; elapsed = 00:00:28 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10387 ; free virtual = 12279
+Time (s): cpu = 00:01:47 ; elapsed = 00:00:31 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9134 ; free virtual = 11742
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.801 | TNS=-452.714| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.821 | TNS=-1104.885| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 1541849e1
+Phase 4.2 Global Iteration 1 | Checksum: 1274b2e5d
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:28 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10387 ; free virtual = 12279
+Time (s): cpu = 00:01:49 ; elapsed = 00:00:31 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9137 ; free virtual = 11745
+Phase 4 Rip-up And Reroute | Checksum: 1274b2e5d
 
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.801 | TNS=-452.714| WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: d64889f5
-
-Time (s): cpu = 00:01:35 ; elapsed = 00:00:28 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10387 ; free virtual = 12279
-Phase 4 Rip-up And Reroute | Checksum: d64889f5
-
-Time (s): cpu = 00:01:35 ; elapsed = 00:00:29 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10387 ; free virtual = 12279
+Time (s): cpu = 00:01:49 ; elapsed = 00:00:31 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9137 ; free virtual = 11745
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1627f23c1
+Phase 5.1.1 Update Timing | Checksum: 1560f726d
 
-Time (s): cpu = 00:01:36 ; elapsed = 00:00:29 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10387 ; free virtual = 12279
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.801 | TNS=-449.397| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:32 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9137 ; free virtual = 11744
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.821 | TNS=-1090.833| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 11684b851
+Phase 5.1 Delay CleanUp | Checksum: 1af0b410b
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:00:29 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10377 ; free virtual = 12269
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:32 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9135 ; free virtual = 11742
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 11684b851
+Phase 5.2 Clock Skew Optimization | Checksum: 1af0b410b
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:00:29 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10377 ; free virtual = 12269
-Phase 5 Delay and Skew Optimization | Checksum: 11684b851
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:32 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9135 ; free virtual = 11741
+Phase 5 Delay and Skew Optimization | Checksum: 1af0b410b
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:00:29 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10377 ; free virtual = 12269
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:32 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9135 ; free virtual = 11741
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 12d6d5043
+Phase 6.1.1 Update Timing | Checksum: 16f83e4a2
 
-Time (s): cpu = 00:01:39 ; elapsed = 00:00:30 . Memory (MB): peak = 2536.688 ; gain = 9.934 ; free physical = 10378 ; free virtual = 12270
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.801 | TNS=-433.135| WHS=-0.395 | THS=-1.748 |
+Time (s): cpu = 00:01:53 ; elapsed = 00:00:33 . Memory (MB): peak = 2530.758 ; gain = 0.000 ; free physical = 9134 ; free virtual = 11742
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.821 | TNS=-1090.936| WHS=-0.487 | THS=-1.569 |
 
 
 Phase 6.1.2 Lut RouteThru Assignment for hold
-Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 14c891e65
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 12adb7dc5
 
-Time (s): cpu = 00:02:04 ; elapsed = 00:00:38 . Memory (MB): peak = 3616.688 ; gain = 1089.934 ; free physical = 10321 ; free virtual = 12213
-Phase 6.1 Hold Fix Iter | Checksum: 14c891e65
+Time (s): cpu = 00:02:09 ; elapsed = 00:00:39 . Memory (MB): peak = 3338.691 ; gain = 807.934 ; free physical = 9098 ; free virtual = 11702
+Phase 6.1 Hold Fix Iter | Checksum: 12adb7dc5
 
-Time (s): cpu = 00:02:04 ; elapsed = 00:00:38 . Memory (MB): peak = 3616.688 ; gain = 1089.934 ; free physical = 10321 ; free virtual = 12212
+Time (s): cpu = 00:02:09 ; elapsed = 00:00:39 . Memory (MB): peak = 3338.691 ; gain = 807.934 ; free physical = 9098 ; free virtual = 11702
 
 Phase 6.2 Additional Hold Fix
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.801 | TNS=-444.435| WHS=-0.384 | THS=-0.881 |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.821 | TNS=-1101.921| WHS=-0.487 | THS=-0.872 |
 
-Phase 6.2 Additional Hold Fix | Checksum: 1416a2e09
+Phase 6.2 Additional Hold Fix | Checksum: 1b999922a
 
-Time (s): cpu = 00:02:24 ; elapsed = 00:00:45 . Memory (MB): peak = 3744.688 ; gain = 1217.934 ; free physical = 10335 ; free virtual = 12224
+Time (s): cpu = 00:02:23 ; elapsed = 00:00:46 . Memory (MB): peak = 3466.691 ; gain = 935.934 ; free physical = 9102 ; free virtual = 11707
  Number of Nodes with overlaps = 0
 WARNING: [Route 35-468] The router encountered 48 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
-	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[40]_i_1/I0
-	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[41]_i_1/I0
-	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[42]_i_1/I0
-	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[43]_i_1/I0
-	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[44]_i_1/I0
-	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[45]_i_1/I0
-	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[46]_i_1/I0
-	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[47]_i_1/I0
+	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[48]_i_1/I0
+	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[49]_i_1/I0
 	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[50]_i_1/I0
 	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[51]_i_1/I0
+	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[52]_i_1/I0
+	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[53]_i_1/I0
+	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[54]_i_1/I0
+	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[55]_i_1/I0
+	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[56]_i_1/I0
+	audio_mixer_project_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out[57]_i_1/I0
 	.. and 38 more pins.
 
-Phase 6 Post Hold Fix | Checksum: 17ebfe6c3
+Phase 6 Post Hold Fix | Checksum: 1f1f0d5b0
 
-Time (s): cpu = 00:02:25 ; elapsed = 00:00:46 . Memory (MB): peak = 3744.688 ; gain = 1217.934 ; free physical = 10371 ; free virtual = 12260
+Time (s): cpu = 00:02:25 ; elapsed = 00:00:47 . Memory (MB): peak = 3466.691 ; gain = 935.934 ; free physical = 9135 ; free virtual = 11740
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 4.33147 %
-  Global Horizontal Routing Utilization  = 4.87635 %
+  Global Vertical Routing Utilization    = 4.23848 %
+  Global Horizontal Routing Utilization  = 5.04048 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -491,54 +485,55 @@ Router Utilization Summary
 
 Utilization threshold used for congestion level computation: 0.85
 Congestion Report
-North Dir 1x1 Area, Max Cong = 63.0631%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 54.0541%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 73.5294%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 50%, No Congested Regions.
-Phase 7 Route finalize | Checksum: 22bceb63f
+North Dir 1x1 Area, Max Cong = 65.7658%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 54.955%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 67.6471%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 58.8235%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 1ebae6001
 
-Time (s): cpu = 00:02:26 ; elapsed = 00:00:46 . Memory (MB): peak = 3744.688 ; gain = 1217.934 ; free physical = 10373 ; free virtual = 12263
+Time (s): cpu = 00:02:26 ; elapsed = 00:00:47 . Memory (MB): peak = 3466.691 ; gain = 935.934 ; free physical = 9137 ; free virtual = 11741
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 22bceb63f
+Phase 8 Verifying routed nets | Checksum: 1ebae6001
 
-Time (s): cpu = 00:02:26 ; elapsed = 00:00:46 . Memory (MB): peak = 3744.688 ; gain = 1217.934 ; free physical = 10373 ; free virtual = 12262
+Time (s): cpu = 00:02:26 ; elapsed = 00:00:47 . Memory (MB): peak = 3466.691 ; gain = 935.934 ; free physical = 9136 ; free virtual = 11741
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 23ebcdb25
+Phase 9 Depositing Routes | Checksum: 1a91da215
 
-Time (s): cpu = 00:02:27 ; elapsed = 00:00:47 . Memory (MB): peak = 3744.688 ; gain = 1217.934 ; free physical = 10375 ; free virtual = 12265
+Time (s): cpu = 00:02:27 ; elapsed = 00:00:49 . Memory (MB): peak = 3466.691 ; gain = 935.934 ; free physical = 9135 ; free virtual = 11740
 
 Phase 10 Post Router Timing
 
 Phase 10.1 Update Timing
-Phase 10.1 Update Timing | Checksum: 18018ce44
+Phase 10.1 Update Timing | Checksum: 1786d4cbc
 
-Time (s): cpu = 00:02:28 ; elapsed = 00:00:48 . Memory (MB): peak = 3744.688 ; gain = 1217.934 ; free physical = 10376 ; free virtual = 12266
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-4.801 | TNS=-450.030| WHS=0.051  | THS=0.000  |
+Time (s): cpu = 00:02:29 ; elapsed = 00:00:49 . Memory (MB): peak = 3466.691 ; gain = 935.934 ; free physical = 9133 ; free virtual = 11740
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-4.821 | TNS=-1106.009| WHS=0.050  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 18018ce44
+Phase 10 Post Router Timing | Checksum: 1786d4cbc
 
-Time (s): cpu = 00:02:29 ; elapsed = 00:00:48 . Memory (MB): peak = 3744.688 ; gain = 1217.934 ; free physical = 10376 ; free virtual = 12266
+Time (s): cpu = 00:02:29 ; elapsed = 00:00:49 . Memory (MB): peak = 3466.691 ; gain = 935.934 ; free physical = 9133 ; free virtual = 11740
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:02:29 ; elapsed = 00:00:48 . Memory (MB): peak = 3744.688 ; gain = 1217.934 ; free physical = 10433 ; free virtual = 12323
+Time (s): cpu = 00:02:29 ; elapsed = 00:00:49 . Memory (MB): peak = 3466.691 ; gain = 935.934 ; free physical = 9188 ; free virtual = 11795
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-94 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+95 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:02:33 ; elapsed = 00:00:50 . Memory (MB): peak = 3744.688 ; gain = 1217.934 ; free physical = 10433 ; free virtual = 12323
+route_design: Time (s): cpu = 00:02:33 ; elapsed = 00:00:52 . Memory (MB): peak = 3466.691 ; gain = 935.934 ; free physical = 9188 ; free virtual = 11795
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3768.699 ; gain = 0.000 ; free physical = 10391 ; free virtual = 12319
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3490.703 ; gain = 0.000 ; free physical = 9145 ; free virtual = 11791
 INFO: [Common 17-1381] The checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/audio_mixer_project_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3490.703 ; gain = 24.012 ; free physical = 9170 ; free virtual = 11791
 INFO: [runtcl-4] Executing : report_drc -file audio_mixer_project_wrapper_drc_routed.rpt -pb audio_mixer_project_wrapper_drc_routed.pb -rpx audio_mixer_project_wrapper_drc_routed.rpx
 Command: report_drc -file audio_mixer_project_wrapper_drc_routed.rpt -pb audio_mixer_project_wrapper_drc_routed.pb -rpx audio_mixer_project_wrapper_drc_routed.rpx
 INFO: [DRC 23-27] Running DRC with 8 threads
@@ -557,7 +552,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-105 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+106 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file audio_mixer_project_wrapper_route_status.rpt -pb audio_mixer_project_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -file audio_mixer_project_wrapper_timing_summary_routed.rpt -warn_on_violation  -rpx audio_mixer_project_wrapper_timing_summary_routed.rpx
@@ -585,203 +580,9 @@ Creating bitstream...
 Writing bitstream ./audio_mixer_project_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue May  8 19:23:28 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.3/doc/webtalk_introduction.html.
+INFO: [Common 17-186] '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue May  8 23:44:39 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.3/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-122 Infos, 5 Warnings, 1 Critical Warnings and 0 Errors encountered.
+123 Infos, 4 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:28 ; elapsed = 00:00:16 . Memory (MB): peak = 3864.746 ; gain = 0.000 ; free physical = 10210 ; free virtual = 12131
-INFO: [Common 17-206] Exiting Vivado at Tue May  8 19:23:28 2018...
-
-*** Running vivado
-    with args -log audio_mixer_project_wrapper.vdi -applog -m64 -tempDir /home/clarke/tmp -product Vivado -messageDb vivado.pb -mode batch -source audio_mixer_project_wrapper.tcl -notrace
-
-/opt/Xilinx/Vivado/2017.3/bin/ldlibpath.sh: line 17: lsb_release: command not found
-
-****** Vivado v2017.3 (64-bit)
-  **** SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
-  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source audio_mixer_project_wrapper.tcl -notrace
-Command: open_checkpoint audio_mixer_project_wrapper_routed.dcp
-
-Starting open_checkpoint Task
-
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1149.453 ; gain = 0.000 ; free physical = 10284 ; free virtual = 12564
-INFO: [Netlist 29-17] Analyzing 950 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.3
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-24995-archlinux/dcp3/audio_mixer_project_wrapper_board.xdc]
-Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-24995-archlinux/dcp3/audio_mixer_project_wrapper_board.xdc]
-Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-24995-archlinux/dcp3/audio_mixer_project_wrapper_early.xdc]
-Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-24995-archlinux/dcp3/audio_mixer_project_wrapper_early.xdc]
-Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-24995-archlinux/dcp3/audio_mixer_project_wrapper.xdc]
-Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-24995-archlinux/dcp3/audio_mixer_project_wrapper.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.93 ; elapsed = 00:00:00.94 . Memory (MB): peak = 1487.719 ; gain = 30.906 ; free physical = 10651 ; free virtual = 12940
-Restored from archive | CPU: 0.940000 secs | Memory: 25.460732 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.93 ; elapsed = 00:00:00.94 . Memory (MB): peak = 1487.719 ; gain = 30.906 ; free physical = 10651 ; free virtual = 12940
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
-  SRLC32E => SRL16E: 1 instances
-
-INFO: [Project 1-604] Checkpoint was created with Vivado v2017.3 (64-bit) build 2018833
-open_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1487.719 ; gain = 338.266 ; free physical = 10694 ; free virtual = 12943
-Command: write_bitstream -force audio_mixer_project_wrapper.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
-INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Writing bitstream ./audio_mixer_project_wrapper.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue May  8 19:56:29 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.3/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:35 ; elapsed = 00:00:23 . Memory (MB): peak = 2043.621 ; gain = 555.902 ; free physical = 10550 ; free virtual = 12812
-INFO: [Common 17-206] Exiting Vivado at Tue May  8 19:56:29 2018...
-
-*** Running vivado
-    with args -log audio_mixer_project_wrapper.vdi -applog -m64 -tempDir /home/clarke/tmp -product Vivado -messageDb vivado.pb -mode batch -source audio_mixer_project_wrapper.tcl -notrace
-
-/opt/Xilinx/Vivado/2017.3/bin/ldlibpath.sh: line 17: lsb_release: command not found
-
-****** Vivado v2017.3 (64-bit)
-  **** SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
-  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source audio_mixer_project_wrapper.tcl -notrace
-Command: open_checkpoint audio_mixer_project_wrapper_routed.dcp
-
-Starting open_checkpoint Task
-
-Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1149.449 ; gain = 0.000 ; free physical = 11281 ; free virtual = 13544
-INFO: [Netlist 29-17] Analyzing 950 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.3
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-26665-archlinux/dcp3/audio_mixer_project_wrapper_board.xdc]
-Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-26665-archlinux/dcp3/audio_mixer_project_wrapper_board.xdc]
-Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-26665-archlinux/dcp3/audio_mixer_project_wrapper_early.xdc]
-Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-26665-archlinux/dcp3/audio_mixer_project_wrapper_early.xdc]
-Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-26665-archlinux/dcp3/audio_mixer_project_wrapper.xdc]
-Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-26665-archlinux/dcp3/audio_mixer_project_wrapper.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1487.715 ; gain = 30.906 ; free physical = 10876 ; free virtual = 13167
-Restored from archive | CPU: 1.030000 secs | Memory: 25.460732 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1487.715 ; gain = 30.906 ; free physical = 10876 ; free virtual = 13167
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
-  SRLC32E => SRL16E: 1 instances
-
-INFO: [Project 1-604] Checkpoint was created with Vivado v2017.3 (64-bit) build 2018833
-open_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1487.715 ; gain = 338.266 ; free physical = 10919 ; free virtual = 13170
-Command: write_bitstream -force audio_mixer_project_wrapper.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
-INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Writing bitstream ./audio_mixer_project_wrapper.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue May  8 20:13:59 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.3/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:34 ; elapsed = 00:00:23 . Memory (MB): peak = 2043.172 ; gain = 555.457 ; free physical = 10784 ; free virtual = 13056
-INFO: [Common 17-206] Exiting Vivado at Tue May  8 20:13:59 2018...
-
-*** Running vivado
-    with args -log audio_mixer_project_wrapper.vdi -applog -m64 -tempDir /home/clarke/tmp -product Vivado -messageDb vivado.pb -mode batch -source audio_mixer_project_wrapper.tcl -notrace
-
-
-****** Vivado v2017.3 (64-bit)
-  **** SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
-  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source audio_mixer_project_wrapper.tcl -notrace
-Command: open_checkpoint audio_mixer_project_wrapper_routed.dcp
-
-Starting open_checkpoint Task
-
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1149.453 ; gain = 0.000 ; free physical = 11709 ; free virtual = 13954
-INFO: [Netlist 29-17] Analyzing 950 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.3
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-28392-archlinux/dcp3/audio_mixer_project_wrapper_board.xdc]
-Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-28392-archlinux/dcp3/audio_mixer_project_wrapper_board.xdc]
-Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-28392-archlinux/dcp3/audio_mixer_project_wrapper_early.xdc]
-Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-28392-archlinux/dcp3/audio_mixer_project_wrapper_early.xdc]
-Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-28392-archlinux/dcp3/audio_mixer_project_wrapper.xdc]
-Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-28392-archlinux/dcp3/audio_mixer_project_wrapper.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.98 . Memory (MB): peak = 1487.719 ; gain = 30.906 ; free physical = 11311 ; free virtual = 13595
-Restored from archive | CPU: 0.990000 secs | Memory: 25.460732 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.98 . Memory (MB): peak = 1487.719 ; gain = 30.906 ; free physical = 11311 ; free virtual = 13595
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
-  SRLC32E => SRL16E: 1 instances
-
-INFO: [Project 1-604] Checkpoint was created with Vivado v2017.3 (64-bit) build 2018833
-open_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1487.719 ; gain = 338.266 ; free physical = 11353 ; free virtual = 13598
-Command: write_bitstream -force audio_mixer_project_wrapper.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
-INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Writing bitstream ./audio_mixer_project_wrapper.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue May  8 20:28:58 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.3/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:34 ; elapsed = 00:00:22 . Memory (MB): peak = 2042.621 ; gain = 554.902 ; free physical = 11216 ; free virtual = 13466
-INFO: [Common 17-206] Exiting Vivado at Tue May  8 20:28:58 2018...
+write_bitstream: Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 3586.750 ; gain = 0.000 ; free physical = 8959 ; free virtual = 11601
+INFO: [Common 17-206] Exiting Vivado at Tue May  8 23:44:39 2018...

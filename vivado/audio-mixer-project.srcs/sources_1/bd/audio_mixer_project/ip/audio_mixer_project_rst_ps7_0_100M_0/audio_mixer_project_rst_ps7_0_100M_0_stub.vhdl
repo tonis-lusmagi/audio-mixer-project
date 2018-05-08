@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
--- Date        : Tue Apr 24 18:49:58 2018
+-- Date        : Tue Apr 24 18:31:57 2018
 -- Host        : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
--- Command     : write_vhdl -force -mode synth_stub
---               /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top audio_mixer_project_rst_ps7_0_100M_0 -prefix
+--               audio_mixer_project_rst_ps7_0_100M_0_ audio_mixer_project_rst_ps7_0_100M_0_stub.vhdl
 -- Design      : audio_mixer_project_rst_ps7_0_100M_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

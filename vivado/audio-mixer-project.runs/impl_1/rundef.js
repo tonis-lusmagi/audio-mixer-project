@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "write_bitstream", "begin" );
+ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
          "-log audio_mixer_project_wrapper.vdi -applog -m64 -tempDir /home/clarke/tmp -product Vivado -messageDb vivado.pb -mode batch -source audio_mixer_project_wrapper.tcl -notrace" );
 

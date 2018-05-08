@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Tue May  8 20:28:06 2018
-# Process ID: 28392
+# Start of session at: Tue May  8 23:41:27 2018
+# Process ID: 19569
 # Current directory: /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1
 # Command line: vivado -log audio_mixer_project_wrapper.vdi -applog -tempDir /home/clarke/tmp -product Vivado -messageDb vivado.pb -mode batch -source audio_mixer_project_wrapper.tcl -notrace
 # Log file: /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/audio_mixer_project_wrapper.vdi

@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date             : Tue May  8 19:23:10 2018
-| Host             : archlinux running 64-bit unknown
+| Date             : Tue May  8 23:44:21 2018
+| Host             : archlinux running 64-bit Arch Linux
 | Command          : report_power -file audio_mixer_project_wrapper_power_routed.rpt -pb audio_mixer_project_wrapper_power_summary_routed.pb -rpx audio_mixer_project_wrapper_power_routed.rpx
 | Design           : audio_mixer_project_wrapper
 | Device           : xc7z020clg484-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.886        |
+| Total On-Chip Power (W)  | 1.885        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.736        |
+| Dynamic (W)              | 1.735        |
 | Device Static (W)        | 0.150        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 63.3         |
@@ -52,21 +52,21 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.031 |        5 |       --- |             --- |
-| Slice Logic             |     0.027 |    27945 |       --- |             --- |
-|   LUT as Logic          |     0.023 |     9937 |     53200 |           18.68 |
-|   CARRY4                |     0.003 |      638 |     13300 |            4.80 |
-|   Register              |     0.001 |    14223 |    106400 |           13.37 |
+| Clocks                  |     0.030 |        5 |       --- |             --- |
+| Slice Logic             |     0.027 |    28263 |       --- |             --- |
+|   LUT as Logic          |     0.023 |    10031 |     53200 |           18.86 |
+|   CARRY4                |     0.003 |      648 |     13300 |            4.87 |
+|   Register              |     0.001 |    14442 |    106400 |           13.57 |
 |   LUT as Shift Register |    <0.001 |       68 |     17400 |            0.39 |
 |   F7/F8 Muxes           |    <0.001 |      300 |     53200 |            0.56 |
-|   Others                |     0.000 |      298 |       --- |             --- |
-| Signals                 |     0.024 |    22593 |       --- |             --- |
+|   Others                |     0.000 |      305 |       --- |             --- |
+| Signals                 |     0.024 |    22889 |       --- |             --- |
 | Block RAM               |     0.001 |        1 |       140 |            0.71 |
 | MMCM                    |     0.121 |        1 |         4 |           25.00 |
-| I/O                     |     0.003 |       20 |       200 |           10.00 |
+| I/O                     |     0.003 |       24 |       200 |           12.00 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.150 |          |           |                 |
-| Total                   |     1.886 |          |           |                 |
+| Total                   |     1.885 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.099 |       0.083 |      0.016 |
+| Vccint    |       1.000 |     0.099 |       0.082 |      0.016 |
 | Vccaux    |       1.800 |     0.083 |       0.067 |      0.016 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -154,11 +154,11 @@ Table of Contents
 +------------------------------------------------------+-----------+
 | Name                                                 | Power (W) |
 +------------------------------------------------------+-----------+
-| audio_mixer_project_wrapper                          |     1.736 |
-|   audio_mixer_project_i                              |     1.733 |
-|     FILTER_IIR_0                                     |     0.028 |
-|       U0                                             |     0.028 |
-|         FILTER_IIR_v1_0_S00_AXI_inst                 |     0.028 |
+| audio_mixer_project_wrapper                          |     1.735 |
+|   audio_mixer_project_i                              |     1.732 |
+|     FILTER_IIR_0                                     |     0.027 |
+|       U0                                             |     0.027 |
+|         FILTER_IIR_v1_0_S00_AXI_inst                 |     0.027 |
 |           Filter_Top_Level_inst                      |     0.026 |
 |             IIR_BP_L                                 |     0.005 |
 |               mul                                    |     0.003 |
@@ -172,9 +172,9 @@ Table of Contents
 |               mul                                    |     0.003 |
 |             IIR_LP_R                                 |     0.004 |
 |               mul                                    |     0.003 |
-|     FILTER_IIR_1                                     |     0.026 |
-|       U0                                             |     0.026 |
-|         FILTER_IIR_v1_0_S00_AXI_inst                 |     0.026 |
+|     FILTER_IIR_1                                     |     0.025 |
+|       U0                                             |     0.025 |
+|         FILTER_IIR_v1_0_S00_AXI_inst                 |     0.025 |
 |           Filter_Top_Level_inst                      |     0.024 |
 |             IIR_BP_L                                 |     0.004 |
 |               mul                                    |     0.003 |
@@ -228,6 +228,13 @@ Table of Contents
 |         axi_to_audio_v1_0_S00_AXI_inst               |    <0.001 |
 |     mixer_0                                          |    <0.001 |
 |       U0                                             |    <0.001 |
+|     pmod_controller_0                                |    <0.001 |
+|       U0                                             |    <0.001 |
+|         pmod_controller_v1_0_S00_AXI_inst            |    <0.001 |
+|           controller1                                |    <0.001 |
+|             Button_debouncer                         |    <0.001 |
+|             Switch_debouncer                         |    <0.001 |
+|             pulsegen                                 |    <0.001 |
 |     processing_system7_0                             |     1.532 |
 |       inst                                           |     1.532 |
 |     ps7_0_axi_periph                                 |     0.004 |
@@ -256,9 +263,9 @@ Table of Contents
 |               WR.b_channel_0                         |    <0.001 |
 |                 bid_fifo_0                           |    <0.001 |
 |                 bresp_fifo_0                         |    <0.001 |
-|       xbar                                           |     0.001 |
-|         inst                                         |     0.001 |
-|           gen_sasd.crossbar_sasd_0                   |     0.001 |
+|       xbar                                           |    <0.001 |
+|         inst                                         |    <0.001 |
+|           gen_sasd.crossbar_sasd_0                   |    <0.001 |
 |             addr_arbiter_inst                        |    <0.001 |
 |             gen_decerr.decerr_slave_inst             |    <0.001 |
 |             reg_slice_r                              |    <0.001 |

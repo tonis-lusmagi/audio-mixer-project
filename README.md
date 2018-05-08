@@ -17,13 +17,13 @@ Lembitu | Martin | Tonis
 IPs:
 
 	Zedboard_audio IP: 
-	AXI to audio: 
+	AXI to audio: Martin
 	Filter:
 	Volume: 
 	Mixer: 
 	OLED: 
-	GPIO: 
-	Rotary encoder: 
+	GPIO: AXI stock
+	PMOD: Lemps
 
 Software:
 
@@ -78,12 +78,13 @@ Change working branch:
 # UIO map
 
 	$ cat /sys/class/uio/uio0/name
-	uio0 AXI_TO_AUDIO_0
-	uio1 FILTER_IIR_0	#Line
-	uio2 VOLUME_PREGAIN_0	#Line
-	uio3 FILTER_IIR_1	#AXI
-	uio4 VOLUME_PREGAIN_1	#AXI
-	uio5 ZEDBOARDOLED_0
+	uio0 intc33 AXI_TO_AUDIO_0	
+	uio1 intc29 FILTER_IIR_0	#Line
+	uio2 intc30 VOLUME_PREGAIN_0	#Line
+	uio3 intc31 FILTER_IIR_1	#AXI
+	uio4 intc32 VOLUME_PREGAIN_1	#AXI
+	uio5 intcxx ZEDBOARDOLED_0
+	uio6 intc34 PMOD_CONTROLLER_0
 
 # Compile driver
 	
