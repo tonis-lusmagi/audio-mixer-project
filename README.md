@@ -8,9 +8,15 @@ Xilinx Linux kernel 4.9
 
 Vivado 2017.3
 
-# Features
+# Authors
 
 Lembitu | Martin | Tonis
+
+# Liscences
+
+
+
+# Features
 
 	You should be able to receive an audio from the network from Linux
 	You should be able to read audio from Line In
