@@ -97,7 +97,7 @@ Change working branch:
 	$ mount /dev/mmcblk0p1 /mnt
 	$ cd /mnt
 	$ insmod uio_pdrv_genirq.ko of_id=generic-uio
-	$ ./uiodriver_full 0 0 1
+	$ ./uiodriver_full 512 512 0 0 0
 
 	$ rmmod uio_pdrv_genirq
 	$ umount /dev/mmcblk0p1
@@ -113,6 +113,7 @@ Change working branch:
 	2. Project name: "FSBL"; leave settings default; Next
 	3. "Zynq FSBL"; Finish
 
+	$ cd ~/workspace/audio-mixer-project
 	$ cp vivado/audio-mixer-project.sdk/FSBL/Debug/FSBL.elf sd-temp/
 
 # Boot image

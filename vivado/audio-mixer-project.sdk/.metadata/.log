@@ -1,59 +1,59 @@
-!SESSION 2018-05-08 19:23:56.318 -----------------------------------------------
+!SESSION 2018-05-08 20:29:29.758 -----------------------------------------------
 eclipse.buildId=2017.3
 java.version=1.8.0_112
 java.vendor=Oracle Corporation
 BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
 Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk
 
-!ENTRY org.eclipse.ui 2 0 2018-05-08 19:23:59.179
+!ENTRY org.eclipse.ui 2 0 2018-05-08 20:29:31.070
 !MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
-!SUBENTRY 1 org.eclipse.ui 2 0 2018-05-08 19:23:59.179
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-05-08 20:29:31.070
 !MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
 
-!ENTRY org.eclipse.ui 2 0 2018-05-08 19:23:59.803
+!ENTRY org.eclipse.ui 2 0 2018-05-08 20:29:31.613
 !MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
-!SUBENTRY 1 org.eclipse.ui 2 0 2018-05-08 19:23:59.803
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-05-08 20:29:31.613
 !MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:03.932
-!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-2
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:35.481
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:03.932
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:35.482
 !MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-14
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:04.307
-!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-2
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:35.595
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:04.308
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:35.595
 !MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-14
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:04.309
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:35.596
 !MESSAGE XSCT Command: [setws /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk], Thread: Thread-14
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:04.311
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:35.597
 !MESSAGE XSCT command with result: [setws /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk], Result: [null, ]. Thread: Thread-14
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:05.380
-!MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: Worker-6
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:36.461
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: Worker-3
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.344
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-6
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.258
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-3
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.351
-!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: Worker-6
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.266
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: Worker-3
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.353
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.268
 !MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, {"device": "7z020",
 "family": "zynq",
 "timestamp": "Tue May  8 19:18:19 2018",
 "vivado_version": "2017.3",
 "part": "xc7z020clg484-1",
-}]. Thread: Worker-6
+}]. Thread: Worker-3
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.355
-!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: Worker-6
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.270
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: Worker-3
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.365
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.281
 !MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, {"FILTER_IIR_0": {"hier_name": "FILTER_IIR_0",
 "type": "FILTER_IIR",
 "version": "1.0",
@@ -319,12 +319,12 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /home/clarke/works
 "version": "1.00.a",
 "ip_type": "PERIPHERAL",
 },
-}]. Thread: Worker-6
+}]. Thread: Worker-3
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.411
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.331
 !MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.424
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.345
 !MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Result: [null, {"axi_gpio_0_S_AXI": {"name": "axi_gpio_0",
 "base": "0x41200000",
 "high": "0x4120FFFF",
@@ -778,10 +778,10 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /home/clarke/works
 },
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.452
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.374
 !MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.461
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.383
 !MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Result: [null, {"FILTER_IIR_0": {},
 "FILTER_IIR_1": {},
 "Volume_Pregain_0": {},
@@ -1001,10 +1001,10 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
 "ps7_xadc_0": {},
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.463
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.385
 !MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf ps7_cortexa9_1], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:07.472
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:38.394
 !MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf ps7_cortexa9_1], Result: [null, {"FILTER_IIR_0": {},
 "FILTER_IIR_1": {},
 "Volume_Pregain_0": {},
@@ -1224,10 +1224,10 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
 "ps7_xadc_0": {},
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.975
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.834
 !MESSAGE XSCT Command: [hsi::utils::get_supported_os -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.980
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.839
 !MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, {"ps7_cortexa9_0": {"freertos901_xilinx_v1_1": {"name": "freertos901_xilinx",
 "version": "1.1",
 "desc": "FreeRTOS is a market leading open source RTOS",
@@ -1260,40 +1260,40 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
 },
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.989
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.848
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.990
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.850
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.994
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.853
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.995
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.855
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.995
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.855
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.996
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.856
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.997
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.857
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:25.998
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.858
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:26.002
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.862
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:26.004
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.863
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:26.004
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.863
 !MESSAGE XSCT Command: [::hsi::utils::get_all_app_details -json], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:26.027
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.887
 !MESSAGE XSCT command with result: [::hsi::utils::get_all_app_details -json], Result: [null, {"empty_application": {"userdefname": "Empty Application",
 "description": "A blank C project.",
 "supp_proc": "microblaze ps7_cortexa9 psu_cortexa53 psu_cortexr5",
@@ -1477,46 +1477,46 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 },
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:26.029
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.889
 !MESSAGE XSCT Command: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -os standalone -processor ps7_cortexa9_0 -app hello_world -sw {} -arch {}], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:26.049
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.908
 !MESSAGE XSCT command with result: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -os standalone -processor ps7_cortexa9_0 -app hello_world -sw {} -arch {}], Result: [null, 1]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:26.050
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.910
 !MESSAGE XSCT Command: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -os standalone -processor ps7_cortexa9_0 -app hello_world -sw {} -arch {}], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:26.069
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:52.929
 !MESSAGE XSCT command with result: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -os standalone -processor ps7_cortexa9_0 -app hello_world -sw {} -arch {}], Result: [null, 1]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:28.846
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:54.924
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:28.848
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:54.925
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:29.062
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:55.978
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:29.065
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:55.981
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:29.307
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:56.317
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:29.309
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:56.319
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:29.530
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:56.585
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:29.533
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:29:56.588
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:40.198
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:03.247
 !MESSAGE XSCT Command: [::hsi::utils::get_all_app_details -json], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:40.257
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:03.278
 !MESSAGE XSCT command with result: [::hsi::utils::get_all_app_details -json], Result: [null, {"empty_application": {"userdefname": "Empty Application",
 "description": "A blank C project.",
 "supp_proc": "microblaze ps7_cortexa9 psu_cortexa53 psu_cortexr5",
@@ -1700,57 +1700,57 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 },
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:40.260
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:03.280
 !MESSAGE XSCT Command: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -os standalone -processor ps7_cortexa9_0 -app zynq_fsbl -sw {} -arch {}], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:40.276
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:03.298
 !MESSAGE XSCT command with result: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -os standalone -processor ps7_cortexa9_0 -app zynq_fsbl -sw {} -arch {}], Result: [null, 1]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.007
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.199
 !MESSAGE XSCT Command: [::hsi::utils::write_sw_mss -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -sw FSBL_bsp -dir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp -processor ps7_cortexa9_0 -os standalone -app zynq_fsbl], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.023
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.216
 !MESSAGE XSCT command with result: [::hsi::utils::write_sw_mss -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -sw FSBL_bsp -dir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp -processor ps7_cortexa9_0 -os standalone -app zynq_fsbl], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.061
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.252
 !MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.062
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.253
 !MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.063
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.254
 !MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.065
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.256
 !MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
 "osname": "standalone",
 "osver": "6.4",
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.065
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.256
 !MESSAGE XSCT Command: [::hsi::utils::generate_bsp_sources /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.325
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.377
 !MESSAGE XSCT command with result: [::hsi::utils::generate_bsp_sources /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.839
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.793
 !MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.841
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.794
 !MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, xilffs xilrsa]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.841
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.795
 !MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.843
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.796
 !MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"xilffs": "3.7",
 "xilrsa": "1.4",
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.843
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.797
 !MESSAGE XSCT Command: [hsi::utils::get_all_libs -json], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.848
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.801
 !MESSAGE XSCT command with result: [hsi::utils::get_all_libs -json], Result: [null, {"libmetal_v1_3": {"name": "libmetal",
 "version": "1.3",
 "desc": "Libmetal Library",
@@ -1861,16 +1861,16 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 },
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.849
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.802
 !MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.850
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.803
 !MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf ps7_cortexa9_0], Result: [null, FILTER_IIR_0 FILTER_IIR_1 Volume_Pregain_0 Volume_Pregain_1 ZedboardOLED_0 axi_gpio_0 axi_to_audio_0 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_ttc_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.850
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.804
 !MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.855
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.808
 !MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"FILTER_IIR_0": {"name": "FILTER_IIR",
 "ver": "1.0",
 },
@@ -1999,10 +1999,10 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 },
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.855
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.809
 !MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.924
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.880
 !MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, {"FILTER_IIR_0": {"version": "1.0",
 "driver_info": {"generic": {"name": "generic",
 "version": "2.0",
@@ -2526,70 +2526,70 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 },
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.925
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.882
 !MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.926
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.883
 !MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, xilffs xilrsa]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.927
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.884
 !MESSAGE XSCT Command: [::hsi::utils::closesw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.928
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.885
 !MESSAGE XSCT command with result: [::hsi::utils::closesw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.950
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.911
 !MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.952
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.913
 !MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.952
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.914
 !MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.954
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.915
 !MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
 "osname": "standalone",
 "osver": "6.4",
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.954
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.915
 !MESSAGE XSCT Command: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.955
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.916
 !MESSAGE XSCT command with result: [::hsi::utils::openhw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.955
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.916
 !MESSAGE XSCT Command: [::hsi::utils::opensw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.955
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.917
 !MESSAGE XSCT command with result: [::hsi::utils::opensw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:43.956
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:09.918
 !MESSAGE XSCT Command: [::hsi::utils::generate_app_template -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss -app zynq_fsbl -processor ps7_cortexa9_0 -os standalone -dir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL/src], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.059
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.438
 !MESSAGE XSCT command with result: [::hsi::utils::generate_app_template -hw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf -sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss -app zynq_fsbl -processor ps7_cortexa9_0 -os standalone -dir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL/src], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.295
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.670
 !MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.296
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.671
 !MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.297
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.672
 !MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.298
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.673
 !MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
 "osname": "standalone",
 "osver": "6.4",
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.309
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.682
 !MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.314
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.687
 !MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"FILTER_IIR_0": {"name": "FILTER_IIR",
 "ver": "1.0",
 },
@@ -2718,77 +2718,77 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 },
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.426
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.778
 !MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.427
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.779
 !MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.427
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.780
 !MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.429
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.781
 !MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
 "osname": "standalone",
 "osver": "6.4",
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.435
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.787
 !MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.436
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.788
 !MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, xilffs xilrsa]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.437
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.789
 !MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.438
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.790
 !MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"xilffs": "3.7",
 "xilrsa": "1.4",
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.486
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.837
 !MESSAGE XSCT Command: [::hsi::utils::closesw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.487
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:13.838
 !MESSAGE XSCT command with result: [::hsi::utils::closesw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.876
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.230
 !MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.881
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.232
 !MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss ], Result: [null, ]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.881
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.233
 !MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.883
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.234
 !MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
 "osname": "standalone",
 "osver": "6.4",
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.891
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.239
 !MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.893
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.242
 !MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, xilffs xilrsa]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.893
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.243
 !MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.895
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.246
 !MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/system.hdf /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, {"xilffs": "3.7",
 "xilrsa": "1.4",
 }]. Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.931
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.275
 !MESSAGE XSCT Command: [::hsi::utils::closesw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Thread: main
 
-!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 19:24:47.932
+!ENTRY com.xilinx.sdk.utils 0 0 2018-05-08 20:30:14.277
 !MESSAGE XSCT command with result: [::hsi::utils::closesw /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/FSBL_bsp/system.mss], Result: [null, ]. Thread: main
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.204
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.669
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2815,7 +2815,7 @@ java.lang.NullPointerException
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.220
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.686
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2826,7 +2826,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.229
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.693
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2837,7 +2837,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.230
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.696
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2848,7 +2848,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.235
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.700
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2859,7 +2859,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.241
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.708
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2870,7 +2870,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.244
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.711
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2881,7 +2881,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.251
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.718
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2892,7 +2892,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.255
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.725
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2903,7 +2903,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.260
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.733
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2914,7 +2914,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.263
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.736
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2925,7 +2925,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.279
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.746
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2936,7 +2936,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.283
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.754
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2947,7 +2947,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.288
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.755
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2958,7 +2958,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.294
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.759
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2969,7 +2969,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.306
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.778
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2980,7 +2980,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.309
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.781
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -2991,7 +2991,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.320
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.788
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3002,7 +3002,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.323
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.791
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3013,7 +3013,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.330
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.799
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3024,7 +3024,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.333
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.802
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3035,7 +3035,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.339
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.810
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3046,7 +3046,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.342
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.813
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3057,7 +3057,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.346
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.818
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3068,7 +3068,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.349
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.821
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3079,7 +3079,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.354
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.833
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3090,7 +3090,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.357
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.836
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3101,7 +3101,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.361
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.842
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3112,7 +3112,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.365
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.845
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3123,7 +3123,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.370
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.850
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3134,7 +3134,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.372
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.853
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3145,7 +3145,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.381
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.859
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3156,7 +3156,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.383
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.862
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3167,7 +3167,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.388
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.866
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3178,7 +3178,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.390
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.869
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3189,7 +3189,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.396
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.876
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3200,7 +3200,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.398
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.879
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3211,7 +3211,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.403
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.884
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3222,7 +3222,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.406
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.888
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3233,7 +3233,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.412
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.894
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3244,7 +3244,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.415
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.897
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3255,7 +3255,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.419
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.903
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3266,7 +3266,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.421
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.905
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3277,7 +3277,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.430
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.913
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3288,7 +3288,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.432
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.917
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3299,7 +3299,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.436
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.922
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3310,7 +3310,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.439
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.925
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3321,7 +3321,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.444
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.930
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3332,7 +3332,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.447
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.933
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3343,7 +3343,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.453
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.939
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3354,7 +3354,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.456
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.941
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3365,7 +3365,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.459
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:14.945
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3376,7 +3376,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.986
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.420
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3387,7 +3387,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.989
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.423
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3398,7 +3398,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.992
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.426
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3409,7 +3409,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.994
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.429
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3420,7 +3420,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:48.997
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.433
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3431,7 +3431,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:49.000
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.435
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3442,7 +3442,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:49.002
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.438
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3453,10 +3453,10 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 1 0 2018-05-08 19:24:49.142
-!MESSAGE Indexed 'FSBL' (11 sources, 64 headers) in 1.06 sec: 1,665 declarations; 7,688 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-08 20:30:15.480
+!MESSAGE Indexed 'FSBL' (11 sources, 64 headers) in 0.942 sec: 1,665 declarations; 7,688 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:49.513
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.985
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3467,7 +3467,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:49.516
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.987
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3478,7 +3478,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:49.519
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.992
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3489,7 +3489,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:49.522
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.995
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3500,7 +3500,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:49.525
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:15.999
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3511,10 +3511,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 1 0 2018-05-08 19:24:50.077
-!MESSAGE Indexed 'FSBL_bsp' (132 sources, 89 headers) in 0.922 sec: 5,246 declarations; 34,870 references; 56 unresolved inclusions; 3 syntax errors; 63 unresolved names (0.16%)
-
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:50.091
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:16.536
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3525,7 +3522,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:50.094
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:16.538
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3536,7 +3533,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:50.097
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:16.541
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3546,8 +3543,11 @@ java.lang.NullPointerException
 	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-08 20:30:16.683
+!MESSAGE Indexed 'FSBL_bsp' (132 sources, 89 headers) in 1.19 sec: 5,246 declarations; 34,870 references; 56 unresolved inclusions; 3 syntax errors; 63 unresolved names (0.16%)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:50.424
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:16.924
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3558,7 +3558,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:50.427
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:16.927
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3569,7 +3569,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:50.430
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:16.929
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3580,7 +3580,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.673
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.284
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3591,7 +3591,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.674
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.286
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3602,7 +3602,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.677
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.289
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3613,7 +3613,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.815
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.438
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3624,7 +3624,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.818
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.440
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3635,7 +3635,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.820
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.442
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3646,7 +3646,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.853
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.478
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3657,7 +3657,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.857
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.484
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3668,7 +3668,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.858
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.485
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3679,7 +3679,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.858
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.486
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3690,7 +3690,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.858
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.486
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3701,7 +3701,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.859
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.486
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3712,7 +3712,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.859
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.487
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3723,7 +3723,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.877
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.508
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3734,7 +3734,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.880
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.510
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3745,7 +3745,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:51.882
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.512
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3756,7 +3756,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:52.069
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.711
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3767,7 +3767,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:52.071
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.714
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3778,7 +3778,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:52.073
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.716
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3789,7 +3789,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:52.075
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.717
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3800,7 +3800,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:52.077
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.720
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3811,7 +3811,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:52.081
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:18.722
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3822,7 +3822,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:52.597
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.226
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3833,7 +3833,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:52.599
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.229
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3844,7 +3844,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:52.602
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.230
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3855,7 +3855,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.039
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.657
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3866,7 +3866,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.041
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.659
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3877,7 +3877,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.045
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.661
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3888,7 +3888,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.364
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.954
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3899,7 +3899,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.367
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.956
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3910,7 +3910,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.369
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.958
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3921,7 +3921,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.406
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.993
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3932,7 +3932,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.408
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.994
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3943,7 +3943,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.408
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.995
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3954,7 +3954,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.409
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.995
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3965,7 +3965,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.409
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.996
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3976,7 +3976,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.410
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.996
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3987,7 +3987,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.410
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:19.996
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -3998,7 +3998,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.434
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.021
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4009,7 +4009,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.436
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.022
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4020,7 +4020,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.440
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.025
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4031,7 +4031,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.684
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.250
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4042,7 +4042,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.686
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.251
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4053,7 +4053,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:53.689
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.253
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4064,7 +4064,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:54.189
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.774
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4075,7 +4075,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:54.191
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.776
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4086,7 +4086,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:54.194
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.782
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4097,7 +4097,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:54.233
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.832
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4108,7 +4108,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:54.234
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.834
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4119,7 +4119,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:54.234
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.835
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4130,7 +4130,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:54.234
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:20.835
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4141,7 +4141,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.006
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:21.614
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4152,7 +4152,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.007
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:21.615
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4163,7 +4163,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.008
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:21.615
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4174,7 +4174,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.058
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:21.666
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4185,7 +4185,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.060
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:21.669
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4196,7 +4196,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.062
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:21.671
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4207,7 +4207,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.123
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:21.731
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4218,7 +4218,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.125
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:21.733
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4229,7 +4229,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.127
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:21.736
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4240,7 +4240,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.511
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.134
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4251,7 +4251,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.514
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.137
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4262,7 +4262,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.516
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.139
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4273,7 +4273,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.967
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.638
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4284,7 +4284,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.969
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.640
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4295,7 +4295,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:55.971
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.643
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4306,7 +4306,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.002
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.677
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4317,7 +4317,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.004
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.679
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4328,7 +4328,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.006
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.682
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4339,7 +4339,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.039
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.720
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4350,7 +4350,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.041
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.721
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4361,7 +4361,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.041
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.721
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4372,7 +4372,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.041
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.722
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4383,7 +4383,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.042
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.722
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4394,7 +4394,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.042
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.722
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4405,7 +4405,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.042
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.722
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4416,7 +4416,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.068
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.747
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4427,7 +4427,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.070
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.749
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4438,7 +4438,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.072
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.751
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4449,7 +4449,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.200
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.886
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4460,7 +4460,7 @@ java.lang.NullPointerException
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
 
-!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 19:24:56.248
+!ENTRY org.eclipse.cdt.core 4 0 2018-05-08 20:30:22.892
 !MESSAGE Error
 !STACK 0
 java.lang.NullPointerException
@@ -4485,5 +4485,33 @@ java.lang.NullPointerException
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY com.xilinx.sdk.utils 1 0 2018-05-08 19:28:23.773
+!ENTRY com.xilinx.sdk.utils 1 0 2018-05-08 20:32:35.763
 !MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.debug.ui 4 0 2018-05-08 20:36:01.682
+!MESSAGE Launch shortcut 'com.xilinx.sdk.launch.remote.shortcut' enablement expression caused exception. Shortcut was removed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.jdt.launching.isContainer to type class org.eclipse.core.internal.resources.File
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:160)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableConfigurationTypes(LaunchConfigurationManager.java:736)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableLaunchConfigurations(LaunchConfigurationManager.java:773)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:507)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:324)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:244)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:142)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2018-05-08 20:36:01.683
+!MESSAGE No property tester contributes a property org.eclipse.jdt.launching.isContainer to type class org.eclipse.core.internal.resources.File
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-05-08 20:36:49.072
+!MESSAGE Executed Webtalk command
