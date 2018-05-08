@@ -97,7 +97,7 @@ Change working branch:
 	$ mount /dev/mmcblk0p1 /mnt
 	$ cd /mnt
 	$ insmod uio_pdrv_genirq.ko of_id=generic-uio
-	$ ./uiodriver_full p
+	$ ./uiodriver_full 0 0 1
 
 	$ rmmod uio_pdrv_genirq
 	$ umount /dev/mmcblk0p1
