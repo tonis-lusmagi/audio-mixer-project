@@ -154,6 +154,10 @@ int main(int argc, char *argv[])
         ptr5 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd5, pageSize*0);
 		
 		
+		int IRQEnable = 1; 
+		write(fd5, &IRQEnable, sizeof(IRQEnable));
+		
+		printf("Interrupt Enabled\n");
 		
         //write into registers
 
@@ -204,7 +208,10 @@ int main(int argc, char *argv[])
         FILTER_1_REG_19 = Low;
         
         
-        udp_client_setup("10.255.255.255", 7891);
+        if(udp_client_setup("10.255.255.255", 7891))
+			printf("Connection error\n");
+		else
+			printf("Stream connected\n");
         
         while(1) //get stream and send to axi_to_audio
         {
@@ -212,47 +219,9 @@ int main(int argc, char *argv[])
 			for(i=0;i<512;i=i+2)
 			{
 				AXI_TO_AUDIO_REG_0 = (int)buffer[i];
+				read(fd5, &IRQEnable, sizeof(IRQEnable));
 			}
 		}
-        
-
-
-        /************************************************************************************************
-         * TASK 2: Enable interrupts                                                                    *
-         ************************************************************************************************
-         * HINT 0: You need to write the value of IRQEnable into a specific file.                       *
-         * HINT 1: You can find more information from the "Userspace I/O (UIO)" section in the          *
-         *         LAB 3 additional material                                                            *
-         ************************************************************************************************/
-        
-        //int IRQEnable = 1;
-
-        //write(fd, &IRQEnable, sizeof(IRQEnable));
-         
-        //start calculation
-        //SLV_REG_2 = 1;
-        //SLV_REG_2 = 0;
-  
-  
-        /************************************************************************************************
-         * TASK 3: Wait for interrupts (block program execution until the interrupt is received         *
-         ************************************************************************************************
-         * HINT 0: You need to read a specific file                                                     *
-         * HINT 1: You can find more information from the "Userspace I/O (UIO)" section in the          *
-         *         LAB 3 additional material                                                            *
-         * HINT 2: Use the IRQEnable variable for storing the output of the function                    *
-         ************************************************************************************************/
-        //read(fd, &IRQEnable, sizeof(IRQEnable)); // manual: http://linux.die.net/man/2/read
-  
-        //if you direct stdio into correct file, this printf will be written into printk, and will get time-stamp on message
-        //printf("DEBUG_USERSPACE : IRQ\n");
-  
-        //when you read from file into this buffer, it will give you total number of interrupts, 
-        //printf("Interrupt count: = %d \n", IRQEnable);
-  
-        //Read and print result of IP calculation
-        //unsigned ans = SLV_REG_3;
-        //printf("READ: from offset of %d, a value of %d \n", 12, ans);
   
         //unmap
         munmap(ptr, pageSize);
