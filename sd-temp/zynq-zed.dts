@@ -22,6 +22,8 @@
 	AXI_TO_AUDIO_0: AXI_TO_AUDIO_0@43C50000 {
     	compatible = "generic-uio";
     	reg = < 0x43C50000 0x10000 >;
+    	interrupt-parent = <&intc>;
+    	interrupts = <0 33 1>;
 	};
 
 	FILTER_IIR_0: FILTER_IIR_0@43C00000 {
@@ -55,8 +57,6 @@
 	ZEDBOARDOLED_0: ZEDBOARDOLED_0@43C20000 {
     	compatible = "generic-uio";
     	reg = < 0x43C20000 0x10000 >;
-    	interrupt-parent = <&intc>;
-    	interrupts = <0 33 1>;
 	};
 
 	aliases {
