@@ -9,6 +9,6 @@
  
 all:
 	make -C ~/workspace/linux/ M=$(PWD) modules
-	$(CC) uiodriver_full.c -o uiodriver_full
+	$(CC) uiodriver_full.c -pthread -o uiodriver_full
 clean:
 	make -C ~/workspace/linux/ M=$(PWD) clean

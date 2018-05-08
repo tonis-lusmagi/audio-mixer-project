@@ -20,6 +20,10 @@
 #include <string.h>         // For memset"
 #include <arpa/inet.h>     // For address struct
 
+#include <sys/types.h> 		//fifo
+#include <sys/stat.h>		//fifo
+#include <pthread.h>
+
 
 #define VOLUME_0_REG_0   *((unsigned *)(ptr + 0))
 #define VOLUME_0_REG_1   *((unsigned *)(ptr + 4))
@@ -80,12 +84,13 @@
 
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );
-void *send_audio_function(void);
+void *send_audio_function(void *arg);
 
 struct sockaddr_in receiving_address;
 int client_socket; 
 socklen_t addr_size;
 int fd5;
+void *ptr5; //AXI_TO_AUDIO
 
 int main(int argc, char *argv[])
 {
@@ -156,7 +161,7 @@ int main(int argc, char *argv[])
         void *ptr4; //FILTER 1
         ptr4 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd4, pageSize*0);
         
-        void *ptr5; //AXI_TO_AUDIO
+        //void *ptr5; //AXI_TO_AUDIO
         ptr5 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd5, pageSize*0);
 		
 		
@@ -214,7 +219,7 @@ int main(int argc, char *argv[])
 		else
 			printf("Stream connected\n");
 			
-		iret1 = pthread_create(&thread, NULL, send_audio_function, NULL);
+		int iret1 = pthread_create(&thread, NULL, send_audio_function, NULL);
 		if(iret1)
 		{
 			fprintf(stderr,"Error - pthread_create() return code: %d\n",iret1);
@@ -280,7 +285,7 @@ int udp_client_recv(unsigned *buffer,int buffer_size ){
         return 1; 
 }
 
-void *send_audio_function(void)
+void *send_audio_function(void *arg)
 {
 	short int buf;
 	int IRQEnable = 1; 
@@ -290,7 +295,7 @@ void *send_audio_function(void)
 	while (1)
 	{
 		read(fd5, &IRQEnable, sizeof(IRQEnable));
-		read(fd, buf, 2);
+		read(fd, &buf, 2);
 		AXI_TO_AUDIO_REG_0 = (int)buf;
 	}
 }
