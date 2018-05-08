@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1525796303">
-  <File Type="VDS-TIMING-PB" Name="audio_mixer_project_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="audio_mixer_project_wrapper_timing_summary_synth.rpt"/>
+  <File Type="PA-TCL" Name="audio_mixer_project_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="audio_mixer_project_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="audio_mixer_project_wrapper.vds"/>
   <File Type="RDS-DCP" Name="audio_mixer_project_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="audio_mixer_project_wrapper_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="audio_mixer_project_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="audio_mixer_project_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="audio_mixer_project_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="audio_mixer_project_wrapper_reports.tcl"/>
-  <File Type="PA-TCL" Name="audio_mixer_project_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/audio_mixer_project/audio_mixer_project.bd">
@@ -58,18 +55,18 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_FILTER_IIR_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_mixer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_xlconcat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_Volume_Pregain_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_xlconstant_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_axi_to_audio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_zed_audio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_ZedboardOLED_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_FILTER_IIR_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_Volume_Pregain_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_FILTER_IIR_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_zed_audio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_axi_to_audio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_xlconstant_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_Volume_Pregain_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_xlconcat_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_mixer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="audio_mixer_project_xbar_0"/>
 </GenRun>

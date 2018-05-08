@@ -69,47 +69,47 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_Volume_Pregain_1_1/audio_mixer_project_Volume_Pregain_1_1.xci">
-          <Proxy FileSetName="audio_mixer_project_Volume_Pregain_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xci">
-          <Proxy FileSetName="audio_mixer_project_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0.xci">
-          <Proxy FileSetName="audio_mixer_project_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="audio_mixer_project_rst_ps7_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0.xci">
-          <Proxy FileSetName="audio_mixer_project_zed_audio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_xlconstant_0_0/audio_mixer_project_xlconstant_0_0.xci">
-          <Proxy FileSetName="audio_mixer_project_xlconstant_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_FILTER_IIR_0_0/audio_mixer_project_FILTER_IIR_0_0.xci">
-          <Proxy FileSetName="audio_mixer_project_FILTER_IIR_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_Volume_Pregain_0_0/audio_mixer_project_Volume_Pregain_0_0.xci">
-          <Proxy FileSetName="audio_mixer_project_Volume_Pregain_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_xlconcat_0_0/audio_mixer_project_xlconcat_0_0.xci">
-          <Proxy FileSetName="audio_mixer_project_xlconcat_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_mixer_0_0/audio_mixer_project_mixer_0_0.xci">
-          <Proxy FileSetName="audio_mixer_project_mixer_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_xbar_0/audio_mixer_project_xbar_0.xci">
           <Proxy FileSetName="audio_mixer_project_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_ZedboardOLED_0_0/audio_mixer_project_ZedboardOLED_0_0.xci">
           <Proxy FileSetName="audio_mixer_project_ZedboardOLED_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_mixer_0_0/audio_mixer_project_mixer_0_0.xci">
+          <Proxy FileSetName="audio_mixer_project_mixer_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_xlconcat_0_0/audio_mixer_project_xlconcat_0_0.xci">
+          <Proxy FileSetName="audio_mixer_project_xlconcat_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_Volume_Pregain_0_0/audio_mixer_project_Volume_Pregain_0_0.xci">
+          <Proxy FileSetName="audio_mixer_project_Volume_Pregain_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_FILTER_IIR_0_0/audio_mixer_project_FILTER_IIR_0_0.xci">
+          <Proxy FileSetName="audio_mixer_project_FILTER_IIR_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_xlconstant_0_0/audio_mixer_project_xlconstant_0_0.xci">
+          <Proxy FileSetName="audio_mixer_project_xlconstant_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0.xci">
+          <Proxy FileSetName="audio_mixer_project_zed_audio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="audio_mixer_project_rst_ps7_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0.xci">
+          <Proxy FileSetName="audio_mixer_project_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xci">
+          <Proxy FileSetName="audio_mixer_project_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_FILTER_IIR_1_0/audio_mixer_project_FILTER_IIR_1_0.xci">
           <Proxy FileSetName="audio_mixer_project_FILTER_IIR_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_axi_to_audio_0_0/audio_mixer_project_axi_to_audio_0_0.xci">
           <Proxy FileSetName="audio_mixer_project_axi_to_audio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="audio_mixer_project.bd" FileRelPathName="ip/audio_mixer_project_Volume_Pregain_1_1/audio_mixer_project_Volume_Pregain_1_1.xci">
+          <Proxy FileSetName="audio_mixer_project_Volume_Pregain_1_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/audio_mixer_project/hdl/audio_mixer_project_wrapper.vhd">
