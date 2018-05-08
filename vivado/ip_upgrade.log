@@ -1,6 +1,48 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+| Date         : Tue May  8 11:50:13 2018
+| Host         : lx20 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'audio_mixer_project_pmod_controller_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of audio_mixer_project_pmod_controller_0_1 (ttu.ee:user:pmod_controller:1.0 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+| Date         : Tue May  8 11:48:59 2018
+| Host         : lx20 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'audio_mixer_project_pmod_controller_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of audio_mixer_project_pmod_controller_0_1 (ttu.ee:user:pmod_controller:1.0 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
 | Date         : Tue Apr 24 19:25:23 2018
 | Host         : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
 | Command      : upgrade_ip

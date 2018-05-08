@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
---Date        : Tue Apr 24 19:26:30 2018
---Host        : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+--Date        : Tue May  8 11:50:55 2018
+--Host        : lx20 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
 --Command     : generate_target audio_mixer_project_wrapper.bd
 --Design      : audio_mixer_project_wrapper
 --Purpose     : IP block netlist
