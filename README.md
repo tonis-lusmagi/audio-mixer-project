@@ -130,3 +130,13 @@ Build BOOT.BIN:
 		~/workspace/audio-mixer-project/sd-temp/audio_mixer_project_wrapper.bit (Partition type: datafile)
 		~/workspace/audio-mixer-project/sd-temp/u-boot.elf (Partition type: datafile)
 	6. Create Image
+
+# MAC and IP
+
+Use the number of the computer as the parameter for the script (a red sticker on the computer case). For example, if you are working in front of computer called LX22, then choose 22 as the parameter for your script:
+
+	$ ./change_ip_and_mac.sh [xx]
+
+
+
+
