@@ -1,3 +1,3 @@
-/home/clarke/workspace/lab4/driver/uio_full/uio_pdrv_genirq.ko
-/home/clarke/workspace/lab4/driver/uio_full/uio_pdrv_genirq.o
+/home/clarke/workspace/audio-mixer-project/driver/src/uio/uio_pdrv_genirq.ko
+/home/clarke/workspace/audio-mixer-project/driver/src/uio/uio_pdrv_genirq.o
 

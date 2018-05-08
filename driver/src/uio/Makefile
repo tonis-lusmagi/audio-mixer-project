@@ -8,7 +8,7 @@
 	CC=$(CROSS_COMPILE)gcc
  
 all:
-	make -C /home/clarke/workspace/linux/ M=$(PWD) modules
+	make -C ~/workspace/linux/ M=$(PWD) modules
 	$(CC) uiodriver_full.c -o uiodriver_full
 clean:
-	make -C /home/clarke/workspace/linux/ M=$(PWD) clean
+	make -C ~/workspace/linux/ M=$(PWD) clean

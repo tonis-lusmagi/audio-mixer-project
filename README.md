@@ -86,7 +86,8 @@ Change working branch:
 	uio5 ZEDBOARDOLED_0
 
 # Compile driver
-
+	
+	$ export PATH=$PATH:/cad/x_16/SDK/2016.1/gnu/arm/lin/bin
 	$ cd ~/workspace/audio-mixer-project/driver/src/uio
 	$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
 
