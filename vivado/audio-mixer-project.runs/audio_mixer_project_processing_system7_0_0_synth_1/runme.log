@@ -1,7 +1,8 @@
 
 *** Running vivado
-    with args -log audio_mixer_project_processing_system7_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source audio_mixer_project_processing_system7_0_0.tcl
+    with args -log audio_mixer_project_processing_system7_0_0.vds -m64 -tempDir /home/clarke/tmp -product Vivado -mode batch -messageDb vivado.pb -notrace -source audio_mixer_project_processing_system7_0_0.tcl
 
+/opt/Xilinx/Vivado/2017.3/bin/ldlibpath.sh: line 17: lsb_release: command not found
 
 ****** Vivado v2017.3 (64-bit)
   **** SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
@@ -9,35 +10,36 @@
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source audio_mixer_project_processing_system7_0_0.tcl -notrace
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1318.816 ; gain = 85.000 ; free physical = 8598 ; free virtual = 13482
-INFO: [Synth 8-638] synthesizing module 'audio_mixer_project_processing_system7_0_0' [/home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/synth/audio_mixer_project_processing_system7_0_0.v:60]
-INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
-INFO: [Synth 8-638] synthesizing module 'BUFG' [/cad/x_17/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [/cad/x_17/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-638] synthesizing module 'BIBUF' [/cad/x_17/Vivado/2017.3/scripts/rt/data/unisim_comp.v:268]
-INFO: [Synth 8-256] done synthesizing module 'BIBUF' (2#1) [/cad/x_17/Vivado/2017.3/scripts/rt/data/unisim_comp.v:268]
-INFO: [Synth 8-638] synthesizing module 'PS7' [/cad/x_17/Vivado/2017.3/scripts/rt/data/unisim_comp.v:40559]
-INFO: [Synth 8-256] done synthesizing module 'PS7' (3#1) [/cad/x_17/Vivado/2017.3/scripts/rt/data/unisim_comp.v:40559]
-INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (4#1) [/home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
-INFO: [Synth 8-256] done synthesizing module 'audio_mixer_project_processing_system7_0_0' (5#1) [/home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/synth/audio_mixer_project_processing_system7_0_0.v:60]
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1361.355 ; gain = 127.539 ; free physical = 8613 ; free virtual = 13497
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1361.355 ; gain = 127.539 ; free physical = 8598 ; free virtual = 13483
+/opt/Xilinx/Vivado/2017.3/bin/ldlibpath.sh: line 17: lsb_release: command not found
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1250.844 ; gain = 84.000 ; free physical = 11227 ; free virtual = 13032
+INFO: [Synth 8-638] synthesizing module 'audio_mixer_project_processing_system7_0_0' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/synth/audio_mixer_project_processing_system7_0_0.v:60]
+INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-638] synthesizing module 'BIBUF' [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:268]
+INFO: [Synth 8-256] done synthesizing module 'BIBUF' (2#1) [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:268]
+INFO: [Synth 8-638] synthesizing module 'PS7' [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:40559]
+INFO: [Synth 8-256] done synthesizing module 'PS7' (3#1) [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:40559]
+INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (4#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
+INFO: [Synth 8-256] done synthesizing module 'audio_mixer_project_processing_system7_0_0' (5#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/synth/audio_mixer_project_processing_system7_0_0.v:60]
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1293.375 ; gain = 126.531 ; free physical = 11224 ; free virtual = 13035
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1293.375 ; gain = 126.531 ; free physical = 11219 ; free virtual = 13032
 INFO: [Device 21-403] Loading part xc7z020clg484-1
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1636.105 ; gain = 1.000 ; free physical = 8157 ; free virtual = 13042
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:47 . Memory (MB): peak = 1636.105 ; gain = 402.289 ; free physical = 8230 ; free virtual = 13115
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:47 . Memory (MB): peak = 1636.105 ; gain = 402.289 ; free physical = 8230 ; free virtual = 13115
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:47 . Memory (MB): peak = 1636.105 ; gain = 402.289 ; free physical = 8228 ; free virtual = 13113
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:48 . Memory (MB): peak = 1636.105 ; gain = 402.289 ; free physical = 8217 ; free virtual = 13102
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:48 . Memory (MB): peak = 1636.105 ; gain = 402.289 ; free physical = 8202 ; free virtual = 13087
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:58 . Memory (MB): peak = 1840.105 ; gain = 606.289 ; free physical = 8444 ; free virtual = 13329
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:58 . Memory (MB): peak = 1860.113 ; gain = 626.297 ; free physical = 8431 ; free virtual = 13315
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:59 . Memory (MB): peak = 1868.121 ; gain = 634.305 ; free physical = 8429 ; free virtual = 13314
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:01:00 . Memory (MB): peak = 1868.125 ; gain = 634.309 ; free physical = 8426 ; free virtual = 13311
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:01:00 . Memory (MB): peak = 1868.125 ; gain = 634.309 ; free physical = 8426 ; free virtual = 13311
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:01:00 . Memory (MB): peak = 1868.125 ; gain = 634.309 ; free physical = 8426 ; free virtual = 13311
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:01:00 . Memory (MB): peak = 1868.125 ; gain = 634.309 ; free physical = 8426 ; free virtual = 13311
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:01:00 . Memory (MB): peak = 1868.125 ; gain = 634.309 ; free physical = 8426 ; free virtual = 13311
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:01:00 . Memory (MB): peak = 1868.125 ; gain = 634.309 ; free physical = 8426 ; free virtual = 13311
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1597.141 ; gain = 0.000 ; free physical = 10737 ; free virtual = 12587
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 1597.141 ; gain = 430.297 ; free physical = 10815 ; free virtual = 12672
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 1597.141 ; gain = 430.297 ; free physical = 10815 ; free virtual = 12672
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 1597.141 ; gain = 430.297 ; free physical = 10813 ; free virtual = 12670
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 1597.141 ; gain = 430.297 ; free physical = 10800 ; free virtual = 12657
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 1597.141 ; gain = 430.297 ; free physical = 10784 ; free virtual = 12642
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 1771.141 ; gain = 604.297 ; free physical = 10965 ; free virtual = 12827
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 1791.148 ; gain = 624.305 ; free physical = 10952 ; free virtual = 12814
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1799.156 ; gain = 632.312 ; free physical = 10944 ; free virtual = 12812
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 1799.156 ; gain = 632.312 ; free physical = 10947 ; free virtual = 12815
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 1799.156 ; gain = 632.312 ; free physical = 10947 ; free virtual = 12815
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 1799.156 ; gain = 632.312 ; free physical = 10947 ; free virtual = 12815
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 1799.156 ; gain = 632.312 ; free physical = 10947 ; free virtual = 12815
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 1799.156 ; gain = 632.312 ; free physical = 10947 ; free virtual = 12815
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 1799.156 ; gain = 632.312 ; free physical = 10947 ; free virtual = 12815
 
 Report Cell Usage: 
 +------+------+------+
@@ -48,5 +50,5 @@ Report Cell Usage:
 |3     |LUT1  |   112|
 |4     |PS7   |     1|
 +------+------+------+
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:01:00 . Memory (MB): peak = 1868.125 ; gain = 634.309 ; free physical = 8426 ; free virtual = 13311
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:01:01 . Memory (MB): peak = 1871.121 ; gain = 663.125 ; free physical = 8611 ; free virtual = 13495
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 1799.156 ; gain = 632.312 ; free physical = 10947 ; free virtual = 12815
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 1802.156 ; gain = 648.684 ; free physical = 11126 ; free virtual = 12991

@@ -24,24 +24,24 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.cache/wt [current_project]
-set_property parent.project_path /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.xpr [current_project]
+set_property webtalk.parent_dir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.cache/wt [current_project]
+set_property parent.project_path /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
 set_property ip_repo_paths {
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/SoC_Design/HDL/Audio_Mixer
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/axi_to_audio_1.0
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/zedboard_audio
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/ip_repo_vivado/FILTER_IIR_1.0
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/Volume_Pregain
-  /home/martin.perman/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/ZedBoard_OLED_1.0
+  /home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/HDL/Audio_Mixer
+  /home/clarke/workspace/audio-mixer-project/ip-repo/axi_to_audio_1.0
+  /home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio
+  /home/clarke/workspace/audio-mixer-project/ip-repo/ip_repo_vivado/FILTER_IIR_1.0
+  /home/clarke/workspace/audio-mixer-project/ip-repo/Volume_Pregain
+  /home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/IPs/OLED/ZedBoard_OLED_1.0
 } [current_project]
-set_property ip_output_repo /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.cache/ip [current_project]
+set_property ip_output_repo /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xci
-set_property used_in_implementation false [get_files -all /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xdc]
+read_ip -quiet /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xci
+set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -54,7 +54,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1 -new_name audio_mixer_project_processing_system7_0_0 -ip [get_ips audio_mixer_project_processing_system7_0_0]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1 -new_name audio_mixer_project_processing_system7_0_0 -ip [get_ips audio_mixer_project_processing_system7_0_0]]
 
 if { $cached_ip eq {} } {
 
@@ -93,32 +93,32 @@ write_checkpoint -force -noxdef audio_mixer_project_processing_system7_0_0.dcp
 create_report "audio_mixer_project_processing_system7_0_0_synth_1_synth_report_utilization_0" "report_utilization -file audio_mixer_project_processing_system7_0_0_utilization_synth.rpt -pb audio_mixer_project_processing_system7_0_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0.dcp /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.dcp
+  file copy -force /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0.dcp /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.v
+  write_verilog -force -mode synth_stub /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -128,46 +128,46 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0.dcp /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.dcp
+  file copy -force /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0.dcp /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0_stub.v /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.v
+  file rename -force /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0_stub.v /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0_stub.vhdl /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.vhdl
+  file rename -force /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0_stub.vhdl /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0_sim_netlist.v /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_sim_netlist.v
+  file rename -force /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0_sim_netlist.v /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0_sim_netlist.vhdl /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_sim_netlist.vhdl
+  file rename -force /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0_sim_netlist.vhdl /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.ip_user_files/ip/audio_mixer_project_processing_system7_0_0]} {
+if {[file isdir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.ip_user_files/ip/audio_mixer_project_processing_system7_0_0]} {
   catch { 
-    file copy -force /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.v /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.ip_user_files/ip/audio_mixer_project_processing_system7_0_0
+    file copy -force /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.v /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.ip_user_files/ip/audio_mixer_project_processing_system7_0_0
   }
 }
 
-if {[file isdir /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.ip_user_files/ip/audio_mixer_project_processing_system7_0_0]} {
+if {[file isdir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.ip_user_files/ip/audio_mixer_project_processing_system7_0_0]} {
   catch { 
-    file copy -force /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.vhdl /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.ip_user_files/ip/audio_mixer_project_processing_system7_0_0
+    file copy -force /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_stub.vhdl /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.ip_user_files/ip/audio_mixer_project_processing_system7_0_0
   }
 }

@@ -614,7 +614,7 @@ proc create_root_design { parentCell } {
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
   set_property -dict [ list \
-   CONFIG.NUM_PORTS {4} \
+   CONFIG.NUM_PORTS {5} \
  ] $xlconcat_0
 
   # Create instance: xlconstant_0, and set properties
@@ -675,6 +675,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net zed_audio_0_AC_SCK [get_bd_ports AC_SCK] [get_bd_pins zed_audio_0/AC_SCK]
   connect_bd_net -net zed_audio_0_line_in_l [get_bd_pins Volume_Pregain_0/IN_SIG_L] [get_bd_pins zed_audio_0/line_in_l]
   connect_bd_net -net zed_audio_0_line_in_r [get_bd_pins Volume_Pregain_0/IN_SIG_R] [get_bd_pins zed_audio_0/line_in_r]
+  connect_bd_net -net zed_audio_0_sample_clk_48k [get_bd_pins xlconcat_0/In4] [get_bd_pins zed_audio_0/sample_clk_48k]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs FILTER_IIR_0/S00_AXI/S00_AXI_reg] SEG_FILTER_IIR_0_S00_AXI_reg

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Tue May  8 13:19:39 2018
+| Date         : Tue May  8 19:23:12 2018
 | Host         : archlinux running 64-bit unknown
 | Command      : report_clock_utilization -file audio_mixer_project_wrapper_clock_utilization_routed.rpt
 | Design       : audio_mixer_project_wrapper
@@ -50,8 +50,8 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------+-------------------------------------------------------------------------------------+-----------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock             | Driver Pin                                                                          | Net                                                       |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------+-------------------------------------------------------------------------------------+-----------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 6 |       13679 |               0 |       10.000 | clk_fpga_0        | audio_mixer_project_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |         236 |               0 |       20.833 | zed_audio_clk_48M | audio_mixer_project_i/zed_audio_0/U0/i_clocking/clkout1_buf/O                       | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 6 |       13680 |               0 |       10.000 | clk_fpga_0        | audio_mixer_project_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 5 |         236 |               0 |       20.833 | zed_audio_clk_48M | audio_mixer_project_i/zed_audio_0/U0/i_clocking/clkout1_buf/O                       | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------+-------------------------------------------------------------------------------------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -76,18 +76,18 @@ Table of Contents
 +----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL           | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                                                                                    | Net                                                                                                             |
 +----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------||
-| 0        | FDCE/Q          | None       | SLICE_X95Y96/C5FF  | X1Y1         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/Mul_Ready - Static -
-| 1        | FDCE/Q          | None       | SLICE_X83Y123/C5FF | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/Mul_Ready - Static -
-| 2        | FDCE/Q          | None       | SLICE_X57Y90/BFF   | X1Y1         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/Mul_Ready - Static -
-| 3        | FDCE/Q          | None       | SLICE_X50Y126/B5FF | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/Mul_Ready - Static -
-| 4        | FDCE/Q          | None       | SLICE_X85Y96/D5FF  | X1Y1         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/Mul_Ready - Static -
-| 5        | FDCE/Q          | None       | SLICE_X66Y111/AFF  | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/Mul_Ready - Static -
-| 6        | FDCE/Q          | None       | SLICE_X56Y48/BFF   | X1Y0         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/Mul_Ready - Static -
-| 7        | FDCE/Q          | None       | SLICE_X58Y66/CFF   | X1Y1         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/Mul_Ready - Static -
-| 8        | FDCE/Q          | None       | SLICE_X86Y57/CFF   | X1Y1         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/Mul_Ready - Static -
-| 9        | FDCE/Q          | None       | SLICE_X97Y80/AFF   | X1Y1         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/Mul_Ready - Static -
-| 10       | FDCE/Q          | None       | SLICE_X72Y47/AFF   | X1Y0         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/Mul_Ready - Static -
-| 11       | FDCE/Q          | None       | SLICE_X90Y72/B5FF  | X1Y1         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/Mul_Ready - Static -
+| 0        | FDCE/Q          | None       | SLICE_X34Y123/BFF  | X0Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/Mul_Ready - Static -
+| 1        | FDCE/Q          | None       | SLICE_X36Y112/D5FF | X0Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/Mul_Ready - Static -
+| 2        | FDCE/Q          | None       | SLICE_X58Y122/B5FF | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/Mul_Ready - Static -
+| 3        | FDCE/Q          | None       | SLICE_X59Y103/C5FF | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/Mul_Ready - Static -
+| 4        | FDCE/Q          | None       | SLICE_X40Y134/C5FF | X0Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/Mul_Ready - Static -
+| 5        | FDCE/Q          | None       | SLICE_X52Y110/DFF  | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_0/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/Mul_Ready - Static -
+| 6        | FDCE/Q          | None       | SLICE_X94Y125/AFF  | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_L/mul/Mul_Ready - Static -
+| 7        | FDCE/Q          | None       | SLICE_X100Y78/AFF  | X1Y1         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_BP_R/mul/Mul_Ready - Static -
+| 8        | FDCE/Q          | None       | SLICE_X61Y127/A5FF | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_L/mul/Mul_Ready - Static -
+| 9        | FDCE/Q          | None       | SLICE_X87Y104/B5FF | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_HP_R/mul/Mul_Ready - Static -
+| 10       | FDCE/Q          | None       | SLICE_X91Y126/CFF  | X1Y2         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_L/mul/Mul_Ready - Static -
+| 11       | FDCE/Q          | None       | SLICE_X98Y95/CFF   | X1Y1         |          32 |               6 |              |       | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/ShiftAdd.sr_READY_reg/Q | audio_mixer_project_i/FILTER_IIR_1/U0/FILTER_IIR_v1_0_S00_AXI_inst/Filter_Top_Level_inst/IIR_LP_R/mul/Mul_Ready - Static -
 +----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
@@ -102,12 +102,12 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  807 |  2500 |  329 |  1000 |    0 |    60 |    0 |    30 |    0 |    60 |
-| X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  955 |  3200 |  158 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
-| X0Y1              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 2898 |  1200 | 1054 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 5248 |  2600 | 1663 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
-| X0Y2              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1826 |  1200 |  601 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2488 |  2600 |  732 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  696 |  2500 |  274 |  1000 |    0 |    60 |    0 |    30 |    0 |    60 |
+| X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   30 |  3200 |   18 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 3110 |  1200 | 1126 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3786 |  2600 | 1212 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y2              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 2698 |  1200 |  948 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3903 |  2600 | 1438 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -120,7 +120,7 @@ All Modules
 |    | X0 | X1 |
 +----+----+----+
 | Y2 |  2 |  2 |
-| Y1 |  1 |  2 |
+| Y1 |  2 |  2 |
 | Y0 |  2 |  1 |
 +----+----+----+
 
@@ -131,7 +131,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                       |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------+
-| g0        | BUFG/O          | n/a               | clk_fpga_0 |      10.000 | {0.000 5.000} |       13677 |        0 |              1 |        0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
+| g0        | BUFG/O          | n/a               | clk_fpga_0 |      10.000 | {0.000 5.000} |       13678 |        0 |              1 |        0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -142,9 +142,9 @@ All Modules
 +----+-------+-------+
 |    | X0    | X1    |
 +----+-------+-------+
-| Y2 |  1729 |  2343 |
-| Y1 |  2960 |  4954 |
-| Y0 |   740 |   952 |
+| Y2 |  2594 |  3651 |
+| Y1 |  3057 |  3719 |
+| Y0 |   627 |    31 |
 +----+-------+-------+
 
 
@@ -165,9 +165,9 @@ All Modules
 +----+------+-----+
 |    | X0   | X1  |
 +----+------+-----+
-| Y2 |  108 |  33 |
-| Y1 |    0 |  26 |
-| Y0 |   69 |   0 |
+| Y2 |   27 |  20 |
+| Y1 |  107 |  11 |
+| Y0 |   71 |   0 |
 +----+------+-----+
 
 
@@ -177,8 +177,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         740 |               0 | 739 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
-| g1        | n/a   | BUFG/O          | None       |          69 |               0 |  68 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
+| g0        | n/a   | BUFG/O          | None       |         627 |               0 | 626 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |          71 |               0 |  70 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -188,11 +188,11 @@ All Modules
 10. Clock Region Cell Placement per Global Clock: Region X1Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         952 |               0 | 951 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          31 |               0 | 30 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -204,7 +204,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        2960 |               0 | 2898 |     62 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
+| g0        | n/a   | BUFG/O          | None       |        3057 |               0 | 3009 |     48 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |         107 |               0 |  101 |      6 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -217,8 +218,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        4954 |               0 | 4954 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
-| g1        | n/a   | BUFG/O          | None       |          26 |               0 |   26 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
+| g0        | n/a   | BUFG/O          | None       |        3719 |               0 | 3719 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |          11 |               0 |   11 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -231,8 +232,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1729 |               0 | 1724 |      4 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
-| g1        | n/a   | BUFG/O          | None       |         108 |               0 |  102 |      6 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
+| g0        | n/a   | BUFG/O          | None       |        2594 |               0 | 2575 |     18 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |          27 |               0 |   27 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -245,8 +246,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        2343 |               0 | 2343 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
-| g1        | n/a   | BUFG/O          | None       |          33 |               0 |   33 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
+| g0        | n/a   | BUFG/O          | None       |        3651 |               0 | 3651 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |          20 |               0 |   20 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48    |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -266,7 +267,7 @@ set_property LOC BUFGCTRL_X0Y16 [get_cells audio_mixer_project_i/processing_syst
 #startgroup
 create_pblock {CLKAG_audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48}
 add_cells_to_pblock [get_pblocks  {CLKAG_audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48"}]]]
-resize_pblock [get_pblocks {CLKAG_audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_audio_mixer_project_i/zed_audio_0/U0/i_clocking/CLK_48}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "audio_mixer_project_i/processing_system7_0/inst/FCLK_CLK0" driven by instance "audio_mixer_project_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG" located at site "BUFGCTRL_X0Y16"

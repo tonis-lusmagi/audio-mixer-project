@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 24 19:26:31 2018" VIVADOVERSION="2017.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May  8 19:18:19 2018" VIVADOVERSION="2017.3">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.3" DEVICE="7z020" NAME="audio_mixer_project" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -1800,7 +1800,7 @@
         <PARAMETER NAME="C_S_AXI_HP3_DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_M_AXI_GP0_THREAD_ID_WIDTH" VALUE="12"/>
         <PARAMETER NAME="C_M_AXI_GP1_THREAD_ID_WIDTH" VALUE="12"/>
-        <PARAMETER NAME="C_NUM_F2P_INTR_INPUTS" VALUE="4"/>
+        <PARAMETER NAME="C_NUM_F2P_INTR_INPUTS" VALUE="5"/>
         <PARAMETER NAME="C_IRQ_F2P_MODE" VALUE="DIRECT"/>
         <PARAMETER NAME="C_DQ_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_DQS_WIDTH" VALUE="4"/>
@@ -2143,7 +2143,7 @@
         <PARAMETER NAME="PCW_S_AXI_HP2_DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="PCW_S_AXI_HP3_ID_WIDTH" VALUE="6"/>
         <PARAMETER NAME="PCW_S_AXI_HP3_DATA_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="PCW_NUM_F2P_INTR_INPUTS" VALUE="4"/>
+        <PARAMETER NAME="PCW_NUM_F2P_INTR_INPUTS" VALUE="5"/>
         <PARAMETER NAME="PCW_EN_DDR" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_SMC" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_QSPI" VALUE="1"/>
@@ -2907,7 +2907,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="IRQ_F2P" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="xlconcat_0_dout">
+        <PORT DIR="I" LEFT="4" NAME="IRQ_F2P" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
           </CONNECTIONS>
@@ -2922,6 +2922,8 @@
             <CONNECTION INSTANCE="zed_audio_0" PORT="clk_100"/>
             <CONNECTION INSTANCE="ZedboardOLED_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="FILTER_IIR_1" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="axi_to_audio_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
@@ -2931,8 +2933,6 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M04_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M05_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ACLK"/>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="axi_to_audio_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -4079,101 +4079,6 @@
             <CONNECTION INSTANCE="ZedboardOLED_0" PORT="s00_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M04_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_awprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M04_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="FILTER_IIR_1_s00_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="FILTER_IIR_1" PORT="s00_axi_awaddr"/>
@@ -4362,6 +4267,101 @@
         <PORT DIR="O" NAME="M06_AXI_rready" SIGIS="undef" SIGNAME="axi_to_audio_0_s00_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_to_audio_0" PORT="s00_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M04_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M04_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="Volume_Pregain_1_s00_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4617,6 +4617,8 @@
             <CONNECTION INSTANCE="Volume_Pregain_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="ZedboardOLED_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="FILTER_IIR_1" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="axi_to_audio_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ARESETN"/>
@@ -4625,8 +4627,6 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M04_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M05_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ARESETN"/>
-            <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="axi_to_audio_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4667,8 +4667,8 @@
         <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="dout_width" VALUE="4"/>
-        <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
+        <PARAMETER NAME="dout_width" VALUE="5"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="5"/>
         <PARAMETER NAME="Component_Name" VALUE="audio_mixer_project_xlconcat_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -4693,7 +4693,12 @@
             <CONNECTION INSTANCE="Volume_Pregain_1" PORT="OUT_RDY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+        <PORT DIR="I" LEFT="0" NAME="In4" RIGHT="0" SIGIS="undef" SIGNAME="zed_audio_0_sample_clk_48k">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zed_audio_0" PORT="sample_clk_48k"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="IRQ_F2P"/>
           </CONNECTIONS>
@@ -4792,7 +4797,11 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="new_sample" SIGIS="undef"/>
-        <PORT DIR="O" NAME="sample_clk_48k" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sample_clk_48k" SIGIS="undef" SIGNAME="zed_audio_0_sample_clk_48k">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In4"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="AC_MCLK" SIGIS="undef" SIGNAME="zed_audio_0_AC_MCLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="AC_MCLK"/>
