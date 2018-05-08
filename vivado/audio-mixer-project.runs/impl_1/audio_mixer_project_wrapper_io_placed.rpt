@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date                      : Tue Apr 24 19:31:15 2018
+| Date                      : Tue May  8 11:34:42 2018
 | Host                      : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
 | Command                   : report_io -file audio_mixer_project_wrapper_io_placed.rpt
 | Design                    : audio_mixer_project_wrapper

@@ -56,12 +56,12 @@ int main(int argc, char *argv[])
         unsigned Low = atoi(argv[5]);
 
   
-        //open dev/uio1 VOLUME
-        int fd = open ("/dev/uio1", O_RDWR);
+        //open dev/uio1 VOLUME 0
+        int fd = open ("/dev/uio2", O_RDWR);
         if (fd < 1) { perror(argv[0]); return -1; }
 
-        //open dev/uio0 FILTER
-        int fd2 = open ("/dev/uio0", O_RDWR);
+        //open dev/uio0 FILTER 0
+        int fd2 = open ("/dev/uio1", O_RDWR);
         if (fd2 < 1) { perror(argv[0]); return -1; }
  
   
