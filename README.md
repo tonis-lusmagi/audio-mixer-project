@@ -14,6 +14,25 @@ Lembitu | Martin | Tonis
 
 # Liscences
 
+IPs:
+
+	Zedboard_audio IP: 
+	AXI to audio: 
+	Filter:
+	Volume: 
+	Mixer: 
+	OLED: 
+	GPIO: 
+	Rotary encoder: 
+
+Software:
+
+	UDP broadcast client code:
+	OLED control library:
+
+Scripts:
+
+	Script for setting the MAC and IP addresses: 
 
 
 # Features
@@ -92,6 +111,7 @@ Change working branch:
 	1. File --> New --> Application Project
 	2. Project name: "FSBL"; leave settings default; Next
 	3. "Zynq FSBL"; Finish
+
 	$ cp vivado/audio-mixer-project.sdk/FSBL/Debug/FSBL.elf sd-temp/
 
 # Boot image
@@ -109,5 +129,4 @@ Build BOOT.BIN:
 		~/workspace/audio-mixer-project/sd-temp/FSBL.elf (Partition type: bootloader)
 		~/workspace/audio-mixer-project/sd-temp/audio_mixer_project_wrapper.bit (Partition type: datafile)
 		~/workspace/audio-mixer-project/sd-temp/u-boot.elf (Partition type: datafile)
-	
 	6. Create Image
