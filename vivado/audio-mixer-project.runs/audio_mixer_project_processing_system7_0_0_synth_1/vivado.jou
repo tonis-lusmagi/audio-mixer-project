@@ -2,11 +2,11 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Tue Apr 24 18:48:48 2018
-# Process ID: 7139
-# Current directory: /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1
-# Command line: vivado -log audio_mixer_project_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source audio_mixer_project_processing_system7_0_0.tcl
-# Log file: /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0.vds
-# Journal file: /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/vivado.jou
+# Start of session at: Tue May  8 19:18:25 2018
+# Process ID: 19412
+# Current directory: /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1
+# Command line: vivado -log audio_mixer_project_processing_system7_0_0.vds -tempDir /home/clarke/tmp -product Vivado -mode batch -messageDb vivado.pb -notrace -source audio_mixer_project_processing_system7_0_0.tcl
+# Log file: /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/audio_mixer_project_processing_system7_0_0.vds
+# Journal file: /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_processing_system7_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source audio_mixer_project_processing_system7_0_0.tcl -notrace

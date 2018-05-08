@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
---Date        : Tue Apr 24 19:26:30 2018
---Host        : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+--Date        : Tue May  8 19:18:08 2018
+--Host        : archlinux running 64-bit unknown
 --Command     : generate_target audio_mixer_project.bd
 --Design      : audio_mixer_project
 --Purpose     : IP block netlist
@@ -2489,7 +2489,7 @@ architecture STRUCTURE of audio_mixer_project is
     M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    IRQ_F2P : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 4 downto 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -2647,7 +2647,8 @@ architecture STRUCTURE of audio_mixer_project is
     In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    In4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   end component audio_mixer_project_xlconcat_0_0;
   component audio_mixer_project_mixer_0_0 is
@@ -2998,7 +2999,7 @@ architecture STRUCTURE of audio_mixer_project is
   signal ps7_0_axi_periph_M06_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_100M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal zed_audio_0_AC_ADR0 : STD_LOGIC;
   signal zed_audio_0_AC_ADR1 : STD_LOGIC;
@@ -3007,6 +3008,7 @@ architecture STRUCTURE of audio_mixer_project is
   signal zed_audio_0_AC_SCK : STD_LOGIC;
   signal zed_audio_0_line_in_l : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal zed_audio_0_line_in_r : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal zed_audio_0_sample_clk_48k : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE0_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE1_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE2_OUT_UNCONNECTED : STD_LOGIC;
@@ -3016,7 +3018,6 @@ architecture STRUCTURE of audio_mixer_project is
   signal NLW_rst_ps7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_zed_audio_0_new_sample_UNCONNECTED : STD_LOGIC;
-  signal NLW_zed_audio_0_sample_clk_48k_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -3285,7 +3286,7 @@ processing_system7_0: component audio_mixer_project_processing_system7_0_0
       DDR_WEB => DDR_we_n,
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
-      IRQ_F2P(3 downto 0) => xlconcat_0_dout(3 downto 0),
+      IRQ_F2P(4 downto 0) => xlconcat_0_dout(4 downto 0),
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
       M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK0,
       M_AXI_GP0_ARADDR(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
@@ -3545,7 +3546,8 @@ xlconcat_0: component audio_mixer_project_xlconcat_0_0
       In1(0) => Volume_Pregain_0_OUT_RDY,
       In2(0) => FILTER_IIR_1_FILTER_DONE,
       In3(0) => Volume_Pregain_1_OUT_RDY,
-      dout(3 downto 0) => xlconcat_0_dout(3 downto 0)
+      In4(0) => zed_audio_0_sample_clk_48k,
+      dout(4 downto 0) => xlconcat_0_dout(4 downto 0)
     );
 xlconstant_0: component audio_mixer_project_xlconstant_0_0
      port map (
@@ -3570,6 +3572,6 @@ zed_audio_0: component audio_mixer_project_zed_audio_0_0
       line_in_l(23 downto 0) => zed_audio_0_line_in_l(23 downto 0),
       line_in_r(23 downto 0) => zed_audio_0_line_in_r(23 downto 0),
       new_sample => NLW_zed_audio_0_new_sample_UNCONNECTED,
-      sample_clk_48k => NLW_zed_audio_0_sample_clk_48k_UNCONNECTED
+      sample_clk_48k => zed_audio_0_sample_clk_48k
     );
 end STRUCTURE;
