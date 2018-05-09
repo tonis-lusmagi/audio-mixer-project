@@ -150,7 +150,7 @@ int main(int argc, char *argv[])
         printf("fd6 init done\n");
         
 
- 
+		mkfifo("/tmp/myfifo", 0644);
   
         //Redirect stdout/printf into /dev/kmsg file (so it will be printed using printk)
         //freopen ("/dev/kmsg","w",stdout);
@@ -240,17 +240,15 @@ int main(int argc, char *argv[])
 			printf("Stream connected\n");
 			
 		int iret1 = pthread_create(&thread, NULL, send_audio_function, NULL);
-
-        mkfifo("/tmp/myfifo", 0644);
-        if ((fd_fifo = open("/tmp/myfifo", O_WRONLY)) < 0)
-            printf("error\n");
-        else
-            printf("fifo in\n");
-
 		if(iret1)
 		{
-			fprintf(stderr,"Error - pthread_create() return code: %d\n",iret1);
+			printf("Error - pthread_create() return code: %d\n",iret1);
 		}
+		
+        if ((fd_fifo = open("/tmp/myfifo", O_WRONLY)) < 0)
+            printf("fifo write open error\n");
+        else
+            printf("fifo write open\n");
         
         while(1) //get stream and send to axi_to_audio
         {
@@ -310,11 +308,14 @@ int udp_client_recv(unsigned *buffer,int buffer_size ){
 void *send_audio_function(void *arg)
 {
 	short int buf;
+	int fd;
 	int IRQEnable = 1; 
 	write(fd5, &IRQEnable, sizeof(IRQEnable));
 	printf("Interrupt Enabled\n");
-	int fd = open("/tmp/myfifo", O_RDONLY);
-    printf("FIFO READ open done\n");
+	if ((fd = open("/tmp/myfifo", O_RDONLY)) < 1)
+		printf("fifo read open error");
+	else
+		printf("FIFO READ open\n");
 
 	while (1)
 	{
