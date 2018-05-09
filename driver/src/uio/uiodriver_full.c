@@ -149,10 +149,7 @@ int main(int argc, char *argv[])
         if (fd6 < 1) { perror(argv[0]); return -1; }
         printf("fd6 init done\n");
         
-        mkfifo("/tmp/myfifo", 0666);
-        printf("0666\n");
-		if ((fd_fifo = open("/tmp/myfifo", O_WRONLY | O_NONBLOCK)) == -1);
-		printf("fifo init done\n");
+
  
   
         //Redirect stdout/printf into /dev/kmsg file (so it will be printed using printk)
@@ -243,6 +240,13 @@ int main(int argc, char *argv[])
 			printf("Stream connected\n");
 			
 		int iret1 = pthread_create(&thread, NULL, send_audio_function, NULL);
+
+        mkfifo("/tmp/myfifo", 0644);
+        if ((fd_fifo = open("/tmp/myfifo", O_WRONLY)) < 0)
+            printf("error\n");
+        else
+            printf("fifo in\n");
+
 		if(iret1)
 		{
 			fprintf(stderr,"Error - pthread_create() return code: %d\n",iret1);
@@ -309,16 +313,13 @@ void *send_audio_function(void *arg)
 	int IRQEnable = 1; 
 	write(fd5, &IRQEnable, sizeof(IRQEnable));
 	printf("Interrupt Enabled\n");
-	int fd = open("/tmp/myfifo", O_RDONLY | O_NONBLOCK);
+	int fd = open("/tmp/myfifo", O_RDONLY);
     printf("FIFO READ open done\n");
 
 	while (1)
 	{
 		read(fd5, &IRQEnable, sizeof(IRQEnable));
-        printf("read fd5, IRQ enable\n");
 		read(fd, &buf, 2);
-        printf("fd buf\n");
 		AXI_TO_AUDIO_REG_0 = (int)buf;
-        printf("%d ", AXI_TO_AUDIO_REG_0);
 	}
 }
