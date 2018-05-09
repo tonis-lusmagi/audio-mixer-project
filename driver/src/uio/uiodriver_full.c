@@ -77,7 +77,7 @@
 #define FILTER_1_REG_18   *((unsigned *)(ptr4 + 72))
 #define FILTER_1_REG_19   *((unsigned *)(ptr4 + 76))
 
-#define AXI_TO_AUDIO_REG_0   *((unsigned *)(ptr5 + 0))
+#define AXI_TO_AUDIO_REG_0   *((unsigned *)(ptr5 + 0)) //we use this
 #define AXI_TO_AUDIO_REG_1   *((unsigned *)(ptr5 + 4))
 #define AXI_TO_AUDIO_REG_2   *((unsigned *)(ptr5 + 8))
 #define AXI_TO_AUDIO_REG_3   *((unsigned *)(ptr5 + 12))
@@ -85,7 +85,7 @@
 #define PMOD_REG_0   *((unsigned *)(ptr6 + 0))
 #define PMOD_REG_1   *((unsigned *)(ptr6 + 4))
 #define PMOD_REG_2   *((unsigned *)(ptr6 + 8))
-#define PMOD_REG_3   *((unsigned *)(ptr6 + 12))
+#define PMOD_REG_3   *((unsigned *)(ptr6 + 12)) //we only use this, first 4 bits
 
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );
@@ -102,7 +102,8 @@ int main(int argc, char *argv[])
 	pthread_t thread;
 	short int buffer[512];
 	int i;
-	
+	int fd_fifo;
+
     if (*argv[1] == 'p') {
         printf("::::START_USAGE::::\n");
         printf("EXAMPLE : %s Right_vol(512) Left_vol(512) High_pass(0 on, 1 off) Band_pass Low_pass \n", argv[0]);
@@ -148,17 +149,17 @@ int main(int argc, char *argv[])
         if (fd6 < 1) { perror(argv[0]); return -1; }
         printf("fd6 init done\n");
         
-        mkfifo("/tmp/myfifo", 0660);
-		int fd_fifo = open("/tmp/myfifo", O_WRONLY);
+        mkfifo("/tmp/myfifo", 0666);
+        printf("0666\n");
+		if ((fd_fifo = open("/tmp/myfifo", O_WRONLY | O_NONBLOCK)) == -1);
 		printf("fifo init done\n");
  
   
         //Redirect stdout/printf into /dev/kmsg file (so it will be printed using printk)
-        freopen ("/dev/kmsg","w",stdout);
-  
+        //freopen ("/dev/kmsg","w",stdout);
+        //printf("freopen\n");
         //get architecture specific page size
         unsigned pageSize = sysconf(_SC_PAGESIZE);
-  
         /*************************************************************************************************
          * TASK 1: Map the physical address to virtual address.                                          *
          *************************************************************************************************
@@ -169,14 +170,16 @@ int main(int argc, char *argv[])
 
         void *ptr; //VOL 0
         ptr = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd, pageSize*0);
+        printf("ptr init done\n");
         void *ptr2; //FILTER 0
         ptr2 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd2, pageSize*0);
-		
+		printf("ptr2 init done\n");
 		void *ptr3; //VOL 1
         ptr3 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd3, pageSize*0);
+        printf("ptr3 init done\n");
         void *ptr4; //FILTER 1
         ptr4 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd4, pageSize*0);
-        
+        printf("ptr4 init done\n");
         //void *ptr5; //AXI_TO_AUDIO
         ptr5 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd5, pageSize*0);
         printf("ptr5 init done\n");
@@ -249,11 +252,6 @@ int main(int argc, char *argv[])
         {
 			udp_client_recv((unsigned int*)&buffer, 1024);
 			write(fd_fifo, buffer, 512);
-			/*for(i=0;i<512;i=i+2)
-			{
-				AXI_TO_AUDIO_REG_0 = (int)buffer[i];
-				read(fd5, &IRQEnable, sizeof(IRQEnable));
-			}*/
 		}
 		
 		pthread_join( thread, NULL);
@@ -311,11 +309,16 @@ void *send_audio_function(void *arg)
 	int IRQEnable = 1; 
 	write(fd5, &IRQEnable, sizeof(IRQEnable));
 	printf("Interrupt Enabled\n");
-	int fd = open("/tmp/myfifo", O_RDONLY);
+	int fd = open("/tmp/myfifo", O_RDONLY | O_NONBLOCK);
+    printf("FIFO READ open done\n");
+
 	while (1)
 	{
 		read(fd5, &IRQEnable, sizeof(IRQEnable));
+        printf("read fd5, IRQ enable\n");
 		read(fd, &buf, 2);
+        printf("fd buf\n");
 		AXI_TO_AUDIO_REG_0 = (int)buf;
+        printf("%d ", AXI_TO_AUDIO_REG_0);
 	}
 }

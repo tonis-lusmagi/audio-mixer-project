@@ -45,6 +45,7 @@ Scripts:
 	Controllable from Linux user interface (UI).
 	Following elements used:
 		Linux command line
+		Linux command line menu
 		ZedBoard's built-in OLED display
 		ZedBoard's buttons/switches/LEDs (at least one of them)
 		PMOD Rotary encoder
