@@ -30,8 +30,8 @@ set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
 set_property ip_repo_paths {
   /home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/HDL/Audio_Mixer
-  /home/clarke/workspace/audio-mixer-project/ip-repo/pmod_controller_1.0
   /home/clarke/workspace/audio-mixer-project/ip-repo/axi_to_audio_1.0
+  /home/clarke/workspace/audio-mixer-project/ip-repo/pmod_controller_1.0
   /home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio
   /home/clarke/workspace/audio-mixer-project/ip-repo/ip_repo_vivado/FILTER_IIR_1.0
   /home/clarke/workspace/audio-mixer-project/ip-repo/Volume_Pregain
@@ -48,8 +48,6 @@ set_property used_in_implementation false [get_files -all /home/clarke/workspace
 set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xbar_0/audio_mixer_project_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_ZedboardOLED_0_0/src/charLib/charLib_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_auto_pc_0/audio_mixer_project_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/audio_mixer_project_ooc.xdc]

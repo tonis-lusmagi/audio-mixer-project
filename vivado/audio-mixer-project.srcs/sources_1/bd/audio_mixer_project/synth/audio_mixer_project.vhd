@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
---Date        : Tue May  8 22:48:46 2018
+--Date        : Wed May  9 12:47:34 2018
 --Host        : archlinux running 64-bit Arch Linux
 --Command     : generate_target audio_mixer_project.bd
 --Design      : audio_mixer_project
@@ -2697,7 +2697,7 @@ entity audio_mixer_project is
     btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of audio_mixer_project : entity is "audio_mixer_project,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=audio_mixer_project,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=16,numNonXlnxBlks=9,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of audio_mixer_project : entity is "audio_mixer_project,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=audio_mixer_project,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=16,numNonXlnxBlks=9,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=13,da_board_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of audio_mixer_project : entity is "audio_mixer_project.hwdef";
 end audio_mixer_project;

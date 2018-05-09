@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
---Date        : Tue May  8 22:48:46 2018
+--Date        : Wed May  9 12:47:34 2018
 --Host        : archlinux running 64-bit Arch Linux
 --Command     : generate_target audio_mixer_project_wrapper.bd
 --Design      : audio_mixer_project_wrapper

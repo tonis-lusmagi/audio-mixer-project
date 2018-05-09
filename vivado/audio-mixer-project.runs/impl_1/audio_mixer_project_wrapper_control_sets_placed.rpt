@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Tue May  8 23:43:12 2018
+| Date         : Wed May  9 12:51:17 2018
 | Host         : archlinux running 64-bit Arch Linux
 | Command      : report_control_sets -file audio_mixer_project_wrapper_control_sets_placed.rpt
 | Design       : audio_mixer_project_wrapper
@@ -21,7 +21,7 @@ Table of Contents
 +-------------------------------+-------+
 |             Status            | Count |
 +-------------------------------+-------+
-| Number of unique control sets |   532 |
+| Number of unique control sets |   528 |
 +-------------------------------+-------+
 
 
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             339 |          131 |
+| No           | No                    | No                     |             339 |          143 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             736 |          209 |
-| Yes          | No                    | No                     |            3649 |          873 |
-| Yes          | No                    | Yes                    |             792 |          177 |
-| Yes          | Yes                   | No                     |            8926 |         2721 |
+| No           | Yes                   | No                     |             736 |          210 |
+| Yes          | No                    | No                     |            3649 |          863 |
+| Yes          | No                    | Yes                    |             792 |          183 |
+| Yes          | Yes                   | No                     |            8894 |         2765 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 

@@ -117,6 +117,7 @@ architecture arch_imp of pmod_controller_v1_0_S00_AXI is
 	signal slv_reg1	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg2	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg3	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	signal rotary_outputs	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg_rden	: std_logic;
 	signal slv_reg_wren	: std_logic;
 	signal reg_data_out	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -130,7 +131,11 @@ architecture arch_imp of pmod_controller_v1_0_S00_AXI is
         Button : in std_logic;
         Switch : in std_logic;
         clk : in std_logic;
-        Rotary_event : out std_logic);   
+        Rotary_event : out std_logic;
+        Rotary_a_out : out std_logic;
+        ROtary_b_out : out std_logic;
+        Switch_out : out std_logic;
+        Button_out : out std_logic);   
 	end component rotary_controller;
 
 begin
@@ -373,7 +378,7 @@ begin
 	      when b"10" =>
 	        reg_data_out <= slv_reg2;
 	      when b"11" =>
-	        reg_data_out <= slv_reg3;
+	        reg_data_out <= rotary_outputs;
 	      when others =>
 	        reg_data_out  <= (others => '0');
 	    end case;
@@ -407,7 +412,12 @@ begin
         Button => Button,
         Switch => Switch,
         clk => S_AXI_ACLK,
-        Rotary_event => Rotary_event);
+        Rotary_event => Rotary_event,
+        Rotary_a_out => rotary_outputs(0),
+        Rotary_b_out => rotary_outputs(1),
+        Switch_out => rotary_outputs(2),
+        Button_out => rotary_outputs(3)
+        );
     
     
 	-- User logic ends

@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
--- Date        : Tue Apr 24 18:31:57 2018
+-- Date        : Tue Apr 24 18:49:58 2018
 -- Host        : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
 -- Command     : write_vhdl -force -mode synth_stub -rename_top audio_mixer_project_rst_ps7_0_100M_0 -prefix
 --               audio_mixer_project_rst_ps7_0_100M_0_ audio_mixer_project_rst_ps7_0_100M_0_stub.vhdl

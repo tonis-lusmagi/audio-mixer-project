@@ -42,7 +42,6 @@ set_property ip_repo_paths {
 set_property ip_output_repo /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xbar_0/audio_mixer_project_xbar_0.xci
-set_property used_in_implementation false [get_files -all /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xbar_0/audio_mixer_project_xbar_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -52,8 +51,6 @@ set_property used_in_implementation false [get_files -all /home/clarke/workspace
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 
 set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_xbar_0_synth_1 -new_name audio_mixer_project_xbar_0 -ip [get_ips audio_mixer_project_xbar_0]]
 

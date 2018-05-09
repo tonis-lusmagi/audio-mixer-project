@@ -38,7 +38,12 @@ entity rotary_controller is
     Button : in std_logic;
     Switch : in std_logic;
     clk : in std_logic;
-    Rotary_event : out std_logic);
+    Rotary_event : out std_logic;
+    
+    Rotary_a_out : out std_logic;
+    ROtary_b_out : out std_logic;
+    Switch_out : out std_logic;
+    Button_out : out std_logic);
 end rotary_controller;
 
 architecture Behavioral of rotary_controller is
@@ -78,6 +83,13 @@ begin
         clk => clk,
         input => alltopulse,
         pulse_out => Rotary_event);
+        
+        
     alltopulse <= Rotary_a or Rotary_b or debounced_Button or debounced_Switch;
+    
+    Rotary_a_out <= Rotary_a;
+    Rotary_b_out <= Rotary_b;
+    Switch_out <= debounced_Switch;
+    Button_out <= debounced_button;
     
 end Behavioral;

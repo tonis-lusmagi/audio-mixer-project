@@ -121,29 +121,36 @@ int main(int argc, char *argv[])
         //VOLUME 0
         int fd = open ("/dev/uio2", O_RDWR);
         if (fd < 1) { perror(argv[0]); return -1; }
+        printf("fd init done\n");
 
         //FILTER 0
         int fd2 = open ("/dev/uio1", O_RDWR);
         if (fd2 < 1) { perror(argv[0]); return -1; }
+        printf("fd2 init done\n");
 
         //VOLUME 1
         int fd3 = open ("/dev/uio4", O_RDWR);
         if (fd3 < 1) { perror(argv[0]); return -1; }
+        printf("fd3 init done\n");
         
         //FILTER 1
         int fd4 = open ("/dev/uio3", O_RDWR);
         if (fd4 < 1) { perror(argv[0]); return -1; }
+        printf("fd4 init done\n");
         
         //open dev/uio0 AXI_TO_AUDIO
         int fd5 = open ("/dev/uio0", O_RDWR);
         if (fd5 < 1) { perror(argv[0]); return -1; }
+        printf("fd5 init done\n");
 
         //open dev/uio0 PMOD_CONTROLLER_0
         int fd6 = open ("/dev/uio5", O_RDWR);
         if (fd6 < 1) { perror(argv[0]); return -1; }
+        printf("fd6 init done\n");
         
         mkfifo("/tmp/myfifo", 0660);
 		int fd_fifo = open("/tmp/myfifo", O_WRONLY);
+		printf("fifo init done\n");
  
   
         //Redirect stdout/printf into /dev/kmsg file (so it will be printed using printk)
@@ -172,9 +179,11 @@ int main(int argc, char *argv[])
         
         //void *ptr5; //AXI_TO_AUDIO
         ptr5 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd5, pageSize*0);
+        printf("ptr5 init done\n");
 		
         void *ptr6; //PMOD_CONTROLLER
         ptr6 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd6, pageSize*0);
+        printf("ptr6 init done\n");
 		
         //write into registers
 

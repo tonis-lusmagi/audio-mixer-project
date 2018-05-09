@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="audio_mixer_project" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1525808938"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1525808938"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1525808938"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1525808938"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1525859255"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1525859255"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1525859255"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1525859255"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
