@@ -98,6 +98,7 @@ Change working branch:
 	$ picocom -b 115200 /dev/ttyACM0
 	$ mount /dev/mmcblk0p1 /mnt
 	$ cd /mnt
+	$ ./change_ip_and_mac.sh [xx]
 	$ insmod uio_pdrv_genirq.ko of_id=generic-uio
 	$ ./uiodriver_full 512 512 0 0 0
 
@@ -116,7 +117,8 @@ Change working branch:
 	3. Launch SDK
 
 # FSBL
-
+	
+	SDK:
 	1. File --> New --> Application Project
 	2. Project name: "FSBL"; leave settings default; Next
 	3. "Zynq FSBL"; Finish
@@ -131,6 +133,7 @@ Change working branch:
 
 Build BOOT.BIN:
 
+	SDK:
 	1. Xilinx --> Create Boot Image
 	2. Create new BIF file
 	3. Output BIF file path: /home/clarke/workspace/audio-mixer-project/sd-temp/output.bif
