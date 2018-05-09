@@ -23,7 +23,7 @@ IPs:
 	Mixer: 
 	OLED: 
 	GPIO: AXI stock
-	PMOD: Lemps
+	PMOD Rotary Encoder: Lemps
 
 Software:
 
@@ -37,18 +37,19 @@ Scripts:
 
 # Features
 
-	You should be able to receive an audio from the network from Linux
-	You should be able to read audio from Line In
-	Both of the audio streams should be mixed together in hardware outputted to the headphones
-	The volume of both audio streams should be controllable separately
-	Both audio streams should have separately controllable filters
-	All of this should be controllable from a user interface (UI). The exact way the UI will function is up to you, but it has to include the following elements:
+	Receive an audio stream from network
+	Receive an audio stream from line-in
+	Audio streams are mixed together in hardware
+	Volume of both audio streams controllable separetly
+	Filters for both audio streams controllable separetly
+	Controllable from Linux user interface (UI).
+	Following elements used:
 		Linux command line
 		ZedBoard's built-in OLED display
 		ZedBoard's buttons/switches/LEDs (at least one of them)
-		Rotary encoder
+		PMOD Rotary encoder
 
-![](http://ati.ttu.ee/socdesign/images/thumb/f/fa/Audio_system.png/800px-Audio_system.png)
+![](/assets/audio-mixer-project-schematic.png?raw=true)
 
 # Git
 
@@ -107,6 +108,12 @@ Change working branch:
 
 	$ cd ~/workspace/audio-mixer-project/sd-temp
 	$ dtc -I dts -O dtb -o ../sd-image/devicetree.dtb zynq-zed.dts
+
+# Vivado to SDK
+
+	1. Generate Bitstream
+	2. Export Hardware (inlcuding Bitstream)
+	3. Launch SDK
 
 # FSBL
 
