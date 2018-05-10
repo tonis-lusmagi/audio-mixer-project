@@ -50,6 +50,18 @@ Scripts:
 
 ![](/assets/audio-mixer-project-schematic.png?raw=true)
 
+# Zynq
+
+	$ picocom -b 115200 /dev/ttyACM0
+	$ mount /dev/mmcblk0p1 /mnt
+	$ cd /mnt
+	$ ./change_ip_and_mac.sh [xx]
+	$ insmod uio_pdrv_genirq.ko of_id=generic-uio
+	$ ./uiodriver_full 512 512 0 0 0
+
+	$ rmmod uio_pdrv_genirq
+	$ umount /dev/mmcblk0p1
+
 # Git
 
 	$ git clone https://github.com/Lusberg/audio-mixer-project.git
@@ -86,7 +98,9 @@ Change working branch:
 	uio5 intcxx ZEDBOARDOLED_0
 	uio6 intc34 PMOD_CONTROLLER_0
 
-# Setting up tools and workspace (DIY)
+## TECHNICAL DETAILS
+
+# Setting up tools and workspace
 
 	1. Download and install Vivado + SDK + toolchain 2017.3:
 		1.1 https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Vivado_SDK_2017.3_1005_1.tar.gz
@@ -127,7 +141,7 @@ Change working branch:
 		$ wget http://ati.ttu.ee/~kjans/soc_design/files/uramdisk.image.gz
 		6.1 login as: root
 
-# Compile Devicetree
+# Compile devicetree
 
 	$ cd ~/workspace/audio-mixer-project/sd-temp
 	$ dtc -I dts -O dtb -o ../sd-image/devicetree.dtb zynq-zed.dts
@@ -148,7 +162,7 @@ Change working branch:
 	$ cd ~/workspace/audio-mixer-project
 	$ cp vivado/audio-mixer-project.sdk/FSBL/Debug/FSBL.elf sd-temp/
 
-# Create Boot image
+# Create boot image
 
 	$ cd ~/workspace/audio-mixer-project
 	$ cp vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/audio_mixer_project_wrapper.bit sd-temp/
@@ -173,18 +187,6 @@ Build BOOT.BIN:
 			$ export CC=/usr/bin/arm-linux-gnueabihf-gcc
 	$ cd ~/workspace/audio-mixer-project/driver/src/uio
 	$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
-
-# Zynq
-
-	$ picocom -b 115200 /dev/ttyACM0
-	$ mount /dev/mmcblk0p1 /mnt
-	$ cd /mnt
-	$ ./change_ip_and_mac.sh [xx]
-	$ insmod uio_pdrv_genirq.ko of_id=generic-uio
-	$ ./uiodriver_full 512 512 0 0 0
-
-	$ rmmod uio_pdrv_genirq
-	$ umount /dev/mmcblk0p1
 
 # MAC and IP
 
