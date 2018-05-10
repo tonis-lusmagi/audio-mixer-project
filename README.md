@@ -50,7 +50,7 @@ Scripts:
 
 ![](/assets/audio-mixer-project-schematic.png?raw=true)
 
-# HOW IT WORKS
+# Run:
 
 ## Zynq
 
@@ -64,7 +64,7 @@ Scripts:
 	$ rmmod uio_pdrv_genirq
 	$ umount /dev/mmcblk0p1
 
-# HELP DOCUMENTATION
+# Help doc:
 
 ## Git
 
@@ -102,7 +102,7 @@ Change working branch:
 	uio5 intcxx ZEDBOARDOLED_0
 	uio6 intc34 PMOD_CONTROLLER_0
 
-# TECHNICAL DETAILS
+# Tech details:
 
 ## Setting up tools and workspace
 
