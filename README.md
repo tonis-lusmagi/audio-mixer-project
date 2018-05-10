@@ -127,7 +127,7 @@ Change working branch:
 		$ wget http://ati.ttu.ee/~kjans/soc_design/files/uramdisk.image.gz
 		6.1 login as: root
 
-# Devicetree
+# Compile Devicetree
 
 	$ cd ~/workspace/audio-mixer-project/sd-temp
 	$ dtc -I dts -O dtb -o ../sd-image/devicetree.dtb zynq-zed.dts
@@ -138,7 +138,7 @@ Change working branch:
 	2. Export Hardware (inlcuding Bitstream)
 	3. Launch SDK
 
-# FSBL
+# Create FSBL
 	
 	SDK:
 	1. File --> New --> Application Project
@@ -148,7 +148,7 @@ Change working branch:
 	$ cd ~/workspace/audio-mixer-project
 	$ cp vivado/audio-mixer-project.sdk/FSBL/Debug/FSBL.elf sd-temp/
 
-# Boot image
+# Create Boot image
 
 	$ cd ~/workspace/audio-mixer-project
 	$ cp vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/audio_mixer_project_wrapper.bit sd-temp/
