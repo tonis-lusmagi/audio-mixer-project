@@ -32,8 +32,8 @@ set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
 set_property ip_repo_paths {
   /home/clarke/workspace/audio-mixer-project/ip-repo/SoC_Design/HDL/Audio_Mixer
-  /home/clarke/workspace/audio-mixer-project/ip-repo/pmod_controller_1.0
   /home/clarke/workspace/audio-mixer-project/ip-repo/axi_to_audio_1.0
+  /home/clarke/workspace/audio-mixer-project/ip-repo/pmod_controller_1.0
   /home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio
   /home/clarke/workspace/audio-mixer-project/ip-repo/ip_repo_vivado/FILTER_IIR_1.0
   /home/clarke/workspace/audio-mixer-project/ip-repo/Volume_Pregain

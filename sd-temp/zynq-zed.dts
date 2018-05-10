@@ -17,6 +17,16 @@
     	compatible = "xlnx,xps-gpio-1.00.a";
     	reg = < 0x41200000 0x10000 >;
     	gpio-controller;
+    	interrupt-parent = <&intc>;
+    	interrupts = <0 35 1>;
+	};
+
+	axi_gpio_1: axi_gpio_1@41210000 {
+    	compatible = "xlnx,xps-gpio-1.00.a";
+    	reg = < 0x41210000 0x10000 >;
+    	gpio-controller;
+    	interrupt-parent = <&intc>;
+    	interrupts = <0 36 1>;
 	};
 	
 	AXI_TO_AUDIO_0: AXI_TO_AUDIO_0@43C50000 {

@@ -58,6 +58,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_pro
 # IP: bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/audio_mixer_project_pmod_controller_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_pmod_controller_0_0 || ORIG_REF_NAME==audio_mixer_project_pmod_controller_0_0} -quiet] -quiet
 
+# IP: bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_1_0/audio_mixer_project_axi_gpio_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_axi_gpio_1_0 || ORIG_REF_NAME==audio_mixer_project_axi_gpio_1_0} -quiet] -quiet
+
 # IP: bd/audio_mixer_project/ip/audio_mixer_project_auto_pc_0/audio_mixer_project_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_auto_pc_0 || ORIG_REF_NAME==audio_mixer_project_auto_pc_0} -quiet] -quiet
 

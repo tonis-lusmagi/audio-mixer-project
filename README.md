@@ -102,6 +102,17 @@ Change working branch:
 	uio5 intcxx ZEDBOARDOLED_0
 	uio6 intc34 PMOD_CONTROLLER_0
 
+## AXI GPIO map
+
+	axi_gpio_0 intc 35
+		GPIO btns_5bits
+		GPIO2 leds_8bits
+	axi_gpio_1 intc 36
+		GPIO sws_8bits
+
+	$ cd /sys/class/gpio
+	$ ls
+
 # Tech details:
 
 ## Setting up tools and workspace

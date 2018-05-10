@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Tue Apr 24 18:33:36 2018
-| Host         : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+| Date         : Thu May 10 23:22:55 2018
+| Host         : archlinux running 64-bit Arch Linux
 | Command      : report_utilization -file audio_mixer_project_axi_gpio_0_0_utilization_synth.rpt -pb audio_mixer_project_axi_gpio_0_0_utilization_synth.pb
 | Design       : audio_mixer_project_axi_gpio_0_0
 | Device       : 7z020clg484-1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   42 |     0 |     53200 |  0.08 |
-|   LUT as Logic          |   42 |     0 |     53200 |  0.08 |
+| Slice LUTs*             |   95 |     0 |     53200 |  0.18 |
+|   LUT as Logic          |   95 |     0 |     53200 |  0.18 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |   78 |     0 |    106400 |  0.07 |
-|   Register as Flip Flop |   78 |     0 |    106400 |  0.07 |
+| Slice Registers         |  203 |     0 |    106400 |  0.19 |
+|   Register as Flip Flop |  203 |     0 |    106400 |  0.19 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 5     |          Yes |         Set |            - |
-| 73    |          Yes |       Reset |            - |
+| 17    |          Yes |         Set |            - |
+| 186   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,13 +146,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   73 |        Flop & Latch |
-| LUT5     |   16 |                 LUT |
-| LUT6     |    9 |                 LUT |
-| LUT2     |    9 |                 LUT |
-| LUT4     |    8 |                 LUT |
-| LUT3     |    8 |                 LUT |
-| FDSE     |    5 |        Flop & Latch |
+| FDRE     |  186 |        Flop & Latch |
+| LUT5     |   48 |                 LUT |
+| LUT3     |   21 |                 LUT |
+| LUT4     |   18 |                 LUT |
+| FDSE     |   17 |        Flop & Latch |
+| LUT6     |   16 |                 LUT |
+| LUT2     |   16 |                 LUT |
 | LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
 

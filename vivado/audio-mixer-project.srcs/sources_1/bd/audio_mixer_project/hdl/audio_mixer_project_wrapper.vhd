@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
---Date        : Wed May  9 12:47:34 2018
+--Date        : Thu May 10 23:21:08 2018
 --Host        : archlinux running 64-bit Arch Linux
 --Command     : generate_target audio_mixer_project_wrapper.bd
 --Design      : audio_mixer_project_wrapper
@@ -53,7 +53,9 @@ entity audio_mixer_project_wrapper is
     Switch : in STD_LOGIC;
     VBAT : out STD_LOGIC;
     VDD : out STD_LOGIC;
-    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    leds_8bits_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 end audio_mixer_project_wrapper;
 
@@ -82,6 +84,8 @@ architecture STRUCTURE of audio_mixer_project_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    leds_8bits_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     AC_ADR0 : out STD_LOGIC;
     AC_ADR1 : out STD_LOGIC;
     AC_GPIO0 : out STD_LOGIC;
@@ -146,6 +150,8 @@ audio_mixer_project_i: component audio_mixer_project
       Switch => Switch,
       VBAT => VBAT,
       VDD => VDD,
-      btns_5bits_tri_i(4 downto 0) => btns_5bits_tri_i(4 downto 0)
+      btns_5bits_tri_i(4 downto 0) => btns_5bits_tri_i(4 downto 0),
+      leds_8bits_tri_o(7 downto 0) => leds_8bits_tri_o(7 downto 0),
+      sws_8bits_tri_i(7 downto 0) => sws_8bits_tri_i(7 downto 0)
     );
 end STRUCTURE;

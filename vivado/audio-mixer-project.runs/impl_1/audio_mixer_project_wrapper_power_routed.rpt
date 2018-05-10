@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date             : Wed May  9 12:52:19 2018
+| Date             : Thu May 10 23:31:19 2018
 | Host             : archlinux running 64-bit Arch Linux
 | Command          : report_power -file audio_mixer_project_wrapper_power_routed.rpt -pb audio_mixer_project_wrapper_power_summary_routed.pb -rpx audio_mixer_project_wrapper_power_routed.rpx
 | Design           : audio_mixer_project_wrapper
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.031 |        5 |       --- |             --- |
-| Slice Logic             |     0.027 |    28228 |       --- |             --- |
-|   LUT as Logic          |     0.023 |    10033 |     53200 |           18.86 |
+| Clocks                  |     0.032 |        5 |       --- |             --- |
+| Slice Logic             |     0.027 |    28734 |       --- |             --- |
+|   LUT as Logic          |     0.023 |    10205 |     53200 |           19.18 |
 |   CARRY4                |     0.003 |      648 |     13300 |            4.87 |
-|   Register              |     0.001 |    14410 |    106400 |           13.54 |
+|   Register              |     0.001 |    14682 |    106400 |           13.80 |
 |   LUT as Shift Register |    <0.001 |       68 |     17400 |            0.39 |
-|   F7/F8 Muxes           |    <0.001 |      300 |     53200 |            0.56 |
-|   Others                |     0.000 |      305 |       --- |             --- |
-| Signals                 |     0.024 |    22859 |       --- |             --- |
+|   Others                |     0.000 |      319 |       --- |             --- |
+|   F7/F8 Muxes           |     0.000 |      300 |     53200 |            0.56 |
+| Signals                 |     0.024 |    23193 |       --- |             --- |
 | Block RAM               |     0.001 |        1 |       140 |            0.71 |
 | MMCM                    |     0.121 |        1 |         4 |           25.00 |
-| I/O                     |     0.003 |       24 |       200 |           12.00 |
+| I/O                     |     0.003 |       40 |       200 |           20.00 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.150 |          |           |                 |
 | Total                   |     1.887 |          |           |                 |
@@ -221,6 +221,16 @@ Table of Contents
 |         AXI_LITE_IPIF_I                              |    <0.001 |
 |           I_SLAVE_ATTACHMENT                         |    <0.001 |
 |             I_DECODER                                |    <0.001 |
+|         INTR_CTRLR_GEN.INTERRUPT_CONTROL_I           |    <0.001 |
+|         gpio_core_1                                  |    <0.001 |
+|           Dual.INPUT_DOUBLE_REGS4                    |    <0.001 |
+|           Dual.INPUT_DOUBLE_REGS5                    |    <0.001 |
+|     axi_gpio_1                                       |    <0.001 |
+|       U0                                             |    <0.001 |
+|         AXI_LITE_IPIF_I                              |    <0.001 |
+|           I_SLAVE_ATTACHMENT                         |    <0.001 |
+|             I_DECODER                                |    <0.001 |
+|         INTR_CTRLR_GEN.INTERRUPT_CONTROL_I           |    <0.001 |
 |         gpio_core_1                                  |    <0.001 |
 |           Not_Dual.INPUT_DOUBLE_REGS3                |    <0.001 |
 |     axi_to_audio_0                                   |    <0.001 |
@@ -250,7 +260,7 @@ Table of Contents
 |               RD.r_channel_0                         |    <0.001 |
 |                 rd_data_fifo_0                       |    <0.001 |
 |                 transaction_fifo_0                   |    <0.001 |
-|               SI_REG                                 |     0.001 |
+|               SI_REG                                 |    <0.001 |
 |                 gen_simple_ar.ar_pipe                |    <0.001 |
 |                 gen_simple_aw.aw_pipe                |    <0.001 |
 |                 gen_simple_b.b_pipe                  |    <0.001 |
@@ -280,8 +290,8 @@ Table of Contents
 |           SEQ_COUNTER                                |    <0.001 |
 |     xlconcat_0                                       |     0.000 |
 |     xlconstant_0                                     |     0.000 |
-|     zed_audio_0                                      |     0.123 |
-|       U0                                             |     0.123 |
+|     zed_audio_0                                      |     0.124 |
+|       U0                                             |     0.124 |
 |         Inst_adau1761_izedboard                      |     0.002 |
 |           Inst_i2c                                   |     0.001 |
 |             Inst_adau1761_configuraiton_data         |    <0.001 |
