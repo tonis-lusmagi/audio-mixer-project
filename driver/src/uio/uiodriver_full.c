@@ -253,7 +253,7 @@ int main(int argc, char *argv[])
         while(1) //get stream and send to axi_to_audio
         {
 			udp_client_recv((unsigned int*)&buffer, 1024);
-			write(fd_fifo, buffer, 512);
+			write(fd_fifo, buffer, 1024);
 		}
 		
 		pthread_join( thread, NULL);
