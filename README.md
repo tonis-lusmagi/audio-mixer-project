@@ -34,7 +34,6 @@ Scripts:
 
 	Script for setting the MAC and IP addresses: 
 
-
 # Features
 
 	Receive an audio stream from network
@@ -44,7 +43,6 @@ Scripts:
 	Filters for both audio streams controllable separetly
 	Controllable from Linux user interface (UI).
 	Following elements used:
-		Linux command line
 		Linux command line menu
 		ZedBoard's built-in OLED display
 		ZedBoard's buttons/switches/LEDs (at least one of them)
@@ -88,23 +86,47 @@ Change working branch:
 	uio5 intcxx ZEDBOARDOLED_0
 	uio6 intc34 PMOD_CONTROLLER_0
 
-# Compile driver
-	
-	$ export PATH=$PATH:/cad/x_16/SDK/2016.1/gnu/arm/lin/bin
-	$ cd ~/workspace/audio-mixer-project/driver/src/uio
-	$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
+# Setting up tools and workspace (DIY)
 
-# Zynq
-
-	$ picocom -b 115200 /dev/ttyACM0
-	$ mount /dev/mmcblk0p1 /mnt
-	$ cd /mnt
-	$ ./change_ip_and_mac.sh [xx]
-	$ insmod uio_pdrv_genirq.ko of_id=generic-uio
-	$ ./uiodriver_full 512 512 0 0 0
-
-	$ rmmod uio_pdrv_genirq
-	$ umount /dev/mmcblk0p1
+	1. Download and install Vivado + SDK + toolchain 2017.3:
+		1.1 https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Vivado_SDK_2017.3_1005_1.tar.gz
+		1.2 Install WebPACK edition [free]
+	$ mkdir -p workspace/linux
+	$ cd ~/workspace
+	2. Download Audio Mixer Project:
+		$ git clone https://github.com/Lusberg/audio-mixer-project.git
+	3. Download Xilinx Linux kernel 4.9:
+		$ git config --global http.sslVerify false
+		$ git clone https://gitlab.pld.ttu.ee/Karl.Janson/xilinx_linux.git
+		$ mv ~/workspace/xilinx_linux ~/workspace/linux-xlnx
+		$ cd ~/workspace/linux-xlnx
+		$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- O=~/workspace/linux xilinx_zynq_defconfig
+		$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- O=~/workspace/linux menuconfig
+			Configure:
+			1. [*] Device Drivers -> GPIO support -> Memory mapped GPIO drivers -> Xilinx GPIO support
+			2. [M] Device Drivers -> Userspace I/O Drivers -> Userspace I/O platform driver with generic IRQ handling
+			3. [*] Kernel hacking -> "printk and dmesg options" -> Show timing information on printks
+		$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j1 O=~/workspace/linux
+		$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j7 O=~/workspace/linux
+		UIMAGE_LOADADDR=0x8000 uImage
+		$ cp ~/workspace/linux/arch/arm/boot/uImage ~/workspace/audio-mixer-project/sd-image/
+	4. Download Xilinx U-Boot:
+		$ cd ~/workspace
+		$ git clone https://github.com/Xilinx/u-boot-xlnx.git
+		$ cd u-boot-xlnx
+		$ make -j7 CROSS_COMPILE=arm-linux-gnueabihf- zynq_zed_defconfig
+		$ make -j7 CROSS_COMPILE=arm-linux-gnueabihf-
+		$ cp u-boot ~/workspace/audio-mixer-project/sd-temp/u-boot.elf
+	5. Setup devicetree files:
+		$ cd ~/workspace/audio-mixer-project/sd-temp/
+		$ cp ~/workspace/u-boot-xlnx/arch/arm/dts/zynq-zed.dts .
+		$ cp ~/workspace/u-boot-xlnx/arch/arm/dts/zynq-7000.dtsi .
+			5.1 Modify zynq-zed.dts:
+				5.1.1 Replace the line: #include "zynq-7000.dtsi" with /include/"zynq-7000.dtsi"
+	6. Download Ramdisk image:
+		$ cd ~/workspace/audio-mixer-project/sd-image/
+		$ wget http://ati.ttu.ee/~kjans/soc_design/files/uramdisk.image.gz
+		6.1 login as: root
 
 # Devicetree
 
@@ -144,6 +166,26 @@ Build BOOT.BIN:
 		~/workspace/audio-mixer-project/sd-temp/audio_mixer_project_wrapper.bit (Partition type: datafile)
 		~/workspace/audio-mixer-project/sd-temp/u-boot.elf (Partition type: datafile)
 	6. Create Image
+
+# Compile driver
+	
+	$ export PATH=$PATH:/cad/x_16/SDK/2016.1/gnu/arm/lin/bin
+		when using standalone arm-linux-gnueabihf-gcc:
+			$ export CC=/usr/bin/arm-linux-gnueabihf-gcc
+	$ cd ~/workspace/audio-mixer-project/driver/src/uio
+	$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
+
+# Zynq
+
+	$ picocom -b 115200 /dev/ttyACM0
+	$ mount /dev/mmcblk0p1 /mnt
+	$ cd /mnt
+	$ ./change_ip_and_mac.sh [xx]
+	$ insmod uio_pdrv_genirq.ko of_id=generic-uio
+	$ ./uiodriver_full 512 512 0 0 0
+
+	$ rmmod uio_pdrv_genirq
+	$ umount /dev/mmcblk0p1
 
 # MAC and IP
 
