@@ -2,17 +2,17 @@
 
 ![](https://upload.wikimedia.org/wikipedia/commons/6/60/ARM_logo.svg)
                 
-# About
+## About
 
 Xilinx Linux kernel 4.9
 
 Vivado 2017.3
 
-# Authors
+## Authors
 
 Lembitu | Martin | Tonis
 
-# Liscences
+## Liscences
 
 IPs:
 
@@ -34,7 +34,7 @@ Scripts:
 
 	Script for setting the MAC and IP addresses: 
 
-# Features
+## Features
 
 	Receive an audio stream from network
 	Receive an audio stream from line-in
@@ -50,7 +50,9 @@ Scripts:
 
 ![](/assets/audio-mixer-project-schematic.png?raw=true)
 
-# Zynq
+# HOW IT WORKS
+
+## Zynq
 
 	$ picocom -b 115200 /dev/ttyACM0
 	$ mount /dev/mmcblk0p1 /mnt
@@ -62,7 +64,9 @@ Scripts:
 	$ rmmod uio_pdrv_genirq
 	$ umount /dev/mmcblk0p1
 
-# Git
+# HELP DOCUMENTATION
+
+## Git
 
 	$ git clone https://github.com/Lusberg/audio-mixer-project.git
 
@@ -87,7 +91,7 @@ Change working branch:
 
 	$ git checkout [branch name]
 
-# UIO map
+## UIO map
 
 	$ cat /sys/class/uio/uio0/name
 	uio0 intc33 AXI_TO_AUDIO_0	
@@ -98,9 +102,9 @@ Change working branch:
 	uio5 intcxx ZEDBOARDOLED_0
 	uio6 intc34 PMOD_CONTROLLER_0
 
-## TECHNICAL DETAILS
+# TECHNICAL DETAILS
 
-# Setting up tools and workspace
+## Setting up tools and workspace
 
 	1. Download and install Vivado + SDK + toolchain 2017.3:
 		1.1 https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Vivado_SDK_2017.3_1005_1.tar.gz
@@ -141,18 +145,18 @@ Change working branch:
 		$ wget http://ati.ttu.ee/~kjans/soc_design/files/uramdisk.image.gz
 		6.1 login as: root
 
-# Compile devicetree
+## Compile devicetree
 
 	$ cd ~/workspace/audio-mixer-project/sd-temp
 	$ dtc -I dts -O dtb -o ../sd-image/devicetree.dtb zynq-zed.dts
 
-# Vivado to SDK
+## Vivado to SDK
 
 	1. Generate Bitstream
 	2. Export Hardware (inlcuding Bitstream)
 	3. Launch SDK
 
-# Create FSBL
+## Create FSBL
 	
 	SDK:
 	1. File --> New --> Application Project
@@ -162,7 +166,7 @@ Change working branch:
 	$ cd ~/workspace/audio-mixer-project
 	$ cp vivado/audio-mixer-project.sdk/FSBL/Debug/FSBL.elf sd-temp/
 
-# Create boot image
+## Create boot image
 
 	$ cd ~/workspace/audio-mixer-project
 	$ cp vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/audio_mixer_project_wrapper.bit sd-temp/
@@ -180,7 +184,7 @@ Build BOOT.BIN:
 		~/workspace/audio-mixer-project/sd-temp/u-boot.elf (Partition type: datafile)
 	6. Create Image
 
-# Compile driver
+## Compile driver
 	
 	$ export PATH=$PATH:/cad/x_16/SDK/2016.1/gnu/arm/lin/bin
 		when using standalone arm-linux-gnueabihf-gcc:
@@ -188,7 +192,7 @@ Build BOOT.BIN:
 	$ cd ~/workspace/audio-mixer-project/driver/src/uio
 	$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
 
-# MAC and IP
+## MAC and IP
 
 Use the number of the computer as the parameter for the script (a red sticker on the computer case). For example, if you are working in front of computer called LX22, then choose 22 as the parameter for your script:
 
