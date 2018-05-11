@@ -105,7 +105,6 @@ int main(int argc, char *argv[])
 	short int buffer[512];
 	int i;
 	int fd_fifo;
-	unsigned oledBaseAdress = 0x43c20000;
 
     if (*argv[1] == 'p') {
         printf("::::START_USAGE::::\n");
@@ -147,10 +146,15 @@ int main(int argc, char *argv[])
         if (fd5 < 1) { perror(argv[0]); return -1; }
         printf("fd5 init done\n");
 
-        //open dev/uio0 PMOD_CONTROLLER_0
-        int fd6 = open ("/dev/uio5", O_RDWR);
+        //open dev/uio6 PMOD_CONTROLLER_0
+        int fd6 = open ("/dev/uio6", O_RDWR);
         if (fd6 < 1) { perror(argv[0]); return -1; }
         printf("fd6 init done\n");
+        
+        //open dev/uio5 ZEDBOARDOLED_0
+        int fd7 = open ("/dev/uio5", O_RDWR);
+        if (fd7 < 1) { perror(argv[0]); return -1; }
+        printf("fd7 init done\n");
         
 
 		mkfifo("/tmp/myfifo", 0644);
@@ -187,6 +191,10 @@ int main(int argc, char *argv[])
         void *ptr6; //PMOD_CONTROLLER
         ptr6 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd6, pageSize*0);
         printf("ptr6 init done\n");
+        
+        void *ptr7; //ZEDBOARDOLED_0
+        ptr7 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd7, pageSize*0);
+        printf("ptr7 init done\n");
 		
         //write into registers
 
@@ -253,7 +261,7 @@ int main(int argc, char *argv[])
         else
             printf("fifo write open\n");
             
-        oled_print_message("WERKS!?", 0, &oledBaseAdress);
+        oled_print_message("WERKS!?", 0, ptr7);
         
         while(1) //get stream and send to axi_to_audio
         {
