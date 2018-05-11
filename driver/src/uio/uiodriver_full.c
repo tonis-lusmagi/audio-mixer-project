@@ -105,6 +105,7 @@ int main(int argc, char *argv[])
 	short int buffer[512];
 	int i;
 	int fd_fifo;
+	unsigned oledBaseAdress = 0x43c20000;
 
     if (*argv[1] == 'p') {
         printf("::::START_USAGE::::\n");
@@ -252,7 +253,7 @@ int main(int argc, char *argv[])
         else
             printf("fifo write open\n");
             
-        oled_print_message("WERKS!?", 0, (void *)0x43c20000);
+        oled_print_message("WERKS!?", 0, &oledBaseAdress);
         
         while(1) //get stream and send to axi_to_audio
         {
