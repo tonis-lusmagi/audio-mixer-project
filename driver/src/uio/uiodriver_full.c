@@ -108,6 +108,7 @@ int main(int argc, char *argv[])
 {
 	pthread_t thread;
 	pthread_t pmod_thread;
+	pthread_t recv_thread;
 	short int buffer[512];
 	int i;
 	int fd_fifo;
@@ -251,11 +252,6 @@ int main(int argc, char *argv[])
         FILTER_1_REG_19 = Low;
         
         
-        if(udp_client_setup("10.255.255.255", 7891))
-			printf("Connection error\n");
-		else
-			printf("Stream connected\n");
-			
 		int iret1 = pthread_create(&thread, NULL, send_audio_function, NULL);
 		if(iret1)
 		{
@@ -268,24 +264,24 @@ int main(int argc, char *argv[])
 			printf("Error - pthread_create() return code: %d\n",iret2);
 		}
 		
-        if ((fd_fifo = open("/tmp/myfifo", O_WRONLY)) < 0)
-            printf("fifo write open error\n");
-        else
-            printf("fifo write open\n");
-            
-        oled_print_message("werks", 0, ptr7);
-        oled_print_message("wreks", 1, ptr7);
-        oled_print_message("borks", 2, ptr7);
-        oled_print_message("breks", 3, ptr7);
-        
-        while(1) //get stream and send to axi_to_audio
+		int iret3 = pthread_create(&recv_thread, NULL, recv_function, NULL);
+		if(iret3)
+		{
+			printf("Error - pthread_create() return code: %d\n",iret3);
+		}
+		
+		
+		while(1)
         {
-			udp_client_recv((unsigned int*)&buffer, 1024);
-			write(fd_fifo, buffer, 1024);
+			oled_print_message("werks", 0, ptr7);
+			oled_print_message("wreks", 1, ptr7);
+			oled_print_message("borks", 2, ptr7);
+			oled_print_message("breks", 3, ptr7);
 		}
 		
 		pthread_join( thread, NULL);
 		pthread_join( pmod_thread, NULL);
+		pthread_join( recv_thread, NULL);
         //unmap
         munmap(ptr, pageSize);
         munmap(ptr2, pageSize);
@@ -376,5 +372,24 @@ void *pmod_function(void *arg)
 		printf("Rotary event detected: %d", &pmod_data);
 		IRQEnable = 1;
 		write(fd6, &IRQEnable, sizeof(IRQEnable));
+	}
+}
+
+void *recv_function(void *arg)
+{
+	if ((fd_fifo = open("/tmp/myfifo", O_WRONLY)) < 0)
+		printf("fifo write open error\n");
+	else
+		printf("fifo write open\n");
+		
+	if(udp_client_setup("10.255.255.255", 7891))
+		printf("Connection error\n");
+	else
+		printf("Stream connected\n");
+	
+	while(1) //get stream and send to axi_to_audio
+	{
+		udp_client_recv((unsigned int*)&buffer, 1024);
+		write(fd_fifo, buffer, 1024);
 	}
 }
