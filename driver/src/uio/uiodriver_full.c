@@ -24,6 +24,8 @@
 #include <sys/stat.h>		//fifo
 #include <pthread.h>
 
+#include "ZedboardOLED.c"
+
 
 #define VOLUME_0_REG_0   *((unsigned *)(ptr + 0))
 #define VOLUME_0_REG_1   *((unsigned *)(ptr + 4))
@@ -249,6 +251,8 @@ int main(int argc, char *argv[])
             printf("fifo write open error\n");
         else
             printf("fifo write open\n");
+            
+        oled_print_message("WERKS!?", 0, 0x43c20000);
         
         while(1) //get stream and send to axi_to_audio
         {
