@@ -339,6 +339,6 @@ void *send_audio_function(void *arg)
 		read(fd5, &IRQEnable, sizeof(IRQEnable));
 		read(fd, &buf, 2);
 		AXI_TO_AUDIO_REG_0 = (int)buf;
-		printf("%08X ")(int)buf;
+		printf("%08X ",(int)buf);
 	}
 }
