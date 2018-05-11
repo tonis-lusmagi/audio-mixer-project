@@ -261,7 +261,10 @@ int main(int argc, char *argv[])
         else
             printf("fifo write open\n");
             
-        oled_print_message("WERKS!?", 0, ptr7);
+        oled_print_message("( ͡° ͜ʖ ͡°)", 0, ptr7);
+        oled_print_message("( ͡° ͜ʖ ͡°)", 1, ptr7);
+        oled_print_message("( ͡° ͜ʖ ͡°)", 2, ptr7);
+        oled_print_message("( ͡° ͜ʖ ͡°)", 3, ptr7);
         
         while(1) //get stream and send to axi_to_audio
         {
