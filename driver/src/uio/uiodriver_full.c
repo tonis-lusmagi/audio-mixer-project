@@ -142,7 +142,7 @@ int main(int argc, char *argv[])
         printf("fd4 init done\n");
         
         //open dev/uio0 AXI_TO_AUDIO
-        int fd5 = open ("/dev/uio0", O_RDWR);
+        fd5 = open ("/dev/uio0", O_RDWR);
         if (fd5 < 1) { perror(argv[0]); return -1; }
         printf("fd5 init done\n");
 
@@ -337,8 +337,8 @@ void *send_audio_function(void *arg)
 	while (1)
 	{
 		read(fd5, &IRQEnable, sizeof(IRQEnable));
-		read(fd, &buf, 2);
-		AXI_TO_AUDIO_REG_0 = (int)buf;
+		//read(fd, &buf, 2);
+		//AXI_TO_AUDIO_REG_0 = (int)buf;
 		printf("%08X ",(int)buf);
 	}
 }
