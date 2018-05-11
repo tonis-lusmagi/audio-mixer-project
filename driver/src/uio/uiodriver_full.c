@@ -95,6 +95,7 @@
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );
 void *send_audio_function(void *arg);
+void *pmod_function(void *arg);
 
 struct sockaddr_in receiving_address;
 int client_socket; 
@@ -368,7 +369,7 @@ void *send_audio_function(void *arg)
 	}
 }
 
-void pmod_function(void *arg)
+void *pmod_function(void *arg)
 {
 	int position = 0;
 	int IRQEnable = 1;
