@@ -371,7 +371,7 @@ void *pmod_function(void *arg)
 	while(1)
 	{
 		read(fd6, &IRQEnable, sizeof(IRQEnable));
-		printf("Rotary event detected\n");
+		printf("Rotary event detected: %d", (int)PMOD_REG_3);
 		IRQEnable = 1;
 		write(fd6, &IRQEnable, sizeof(IRQEnable));
 	}
