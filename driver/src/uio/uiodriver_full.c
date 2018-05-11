@@ -106,6 +106,7 @@ void *ptr5; //AXI_TO_AUDIO
 int main(int argc, char *argv[])
 {
 	pthread_t thread;
+	pthread_t pmod_thread;
 	short int buffer[512];
 	int i;
 	int fd_fifo;
@@ -260,6 +261,12 @@ int main(int argc, char *argv[])
 			printf("Error - pthread_create() return code: %d\n",iret1);
 		}
 		
+		int iret2 = pthread_create(&pmod_thread, NULL, pmod_function, NULL);
+		if(iret2)
+		{
+			printf("Error - pthread_create() return code: %d\n",iret2);
+		}
+		
         if ((fd_fifo = open("/tmp/myfifo", O_WRONLY)) < 0)
             printf("fifo write open error\n");
         else
@@ -277,6 +284,7 @@ int main(int argc, char *argv[])
 		}
 		
 		pthread_join( thread, NULL);
+		pthread_join( pmod_thread, NULL);
         //unmap
         munmap(ptr, pageSize);
         munmap(ptr2, pageSize);
@@ -333,7 +341,7 @@ void *send_audio_function(void *arg)
 	int IRQEnable = 1; 
 	//write(fd5, &IRQEnable, sizeof(IRQEnable));
 	write(fd5, &IRQEnable, sizeof(IRQEnable));
-	printf("Interrupt Enabled\n");
+	printf("audio sample Interrupt Enabled\n");
 	if ((fd = open("/tmp/myfifo", O_RDONLY)) < 1)
 		printf("fifo read open error");
 	else
@@ -357,5 +365,19 @@ void *send_audio_function(void *arg)
             }
 
 		
+	}
+}
+
+void pmod_function(void *arg)
+{
+	int position = 0;
+	int IRQEnable = 1;
+	write(fd6, &IRQEnable, sizeof(IRQEnable));
+	printf(" Pmod Interrupt Enabled\n");
+	
+	while(1)
+	{
+		read(fd6, &IRQEnable, sizeof(IRQEnable));
+		printf("Rotary event detected\n");
 	}
 }
