@@ -365,13 +365,15 @@ void *pmod_function(void *arg)
 {
 	int position = 0;
 	int IRQEnable = 1;
+	int pmod_data;
 	write(fd6, &IRQEnable, sizeof(IRQEnable));
 	printf(" Pmod Interrupt Enabled\n");
 	
 	while(1)
 	{
 		read(fd6, &IRQEnable, sizeof(IRQEnable));
-		printf("Rotary event detected: %d", (int)PMOD_REG_3);
+		pmod_data = PMOD_REG_3;
+		printf("Rotary event detected: %d", &pmod_data);
 		IRQEnable = 1;
 		write(fd6, &IRQEnable, sizeof(IRQEnable));
 	}
