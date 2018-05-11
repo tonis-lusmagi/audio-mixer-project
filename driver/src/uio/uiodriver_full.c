@@ -110,9 +110,7 @@ int main(int argc, char *argv[])
 	pthread_t thread;
 	pthread_t pmod_thread;
 	pthread_t recv_thread;
-	short int buffer[512];
 	int i;
-	int fd_fifo;
 
     if (*argv[1] == 'p') {
         printf("::::START_USAGE::::\n");
@@ -378,6 +376,9 @@ void *pmod_function(void *arg)
 
 void *recv_function(void *arg)
 {
+	short int buffer[512];
+	int fd_fifo;
+		
 	if ((fd_fifo = open("/tmp/myfifo", O_WRONLY)) < 0)
 		printf("fifo write open error\n");
 	else
