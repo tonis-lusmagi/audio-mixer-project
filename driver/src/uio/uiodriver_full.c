@@ -261,10 +261,10 @@ int main(int argc, char *argv[])
         else
             printf("fifo write open\n");
             
-        oled_print_message("( ͡° ͜ʖ ͡°)", 0, ptr7);
-        oled_print_message("( ͡° ͜ʖ ͡°)", 1, ptr7);
-        oled_print_message("( ͡° ͜ʖ ͡°)", 2, ptr7);
-        oled_print_message("( ͡° ͜ʖ ͡°)", 3, ptr7);
+        oled_print_message("werks", 0, ptr7);
+        oled_print_message("wreks", 1, ptr7);
+        oled_print_message("borks", 2, ptr7);
+        oled_print_message("breks", 3, ptr7);
         
         while(1) //get stream and send to axi_to_audio
         {
@@ -280,6 +280,7 @@ int main(int argc, char *argv[])
         munmap(ptr4, pageSize);
         munmap(ptr5, pageSize);
         munmap(ptr6, pageSize);
+        munmap(ptr7, pageSize);
         //close
         fclose(stdout);
     }
@@ -338,5 +339,6 @@ void *send_audio_function(void *arg)
 		read(fd5, &IRQEnable, sizeof(IRQEnable));
 		read(fd, &buf, 2);
 		AXI_TO_AUDIO_REG_0 = (int)buf;
+		printf("%08X ")(int)buf;
 	}
 }
