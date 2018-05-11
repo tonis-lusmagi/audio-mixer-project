@@ -132,6 +132,7 @@ int main(int argc, char *argv[])
 			"menuitem 7  ",
 			"menuitem 8  "};
 	int setting[MENULENGTH] = {0,0,0,0,0,0,0,0};
+	int settingRange[MENULENGTH] = {100,100,100,100,1,1,1,1};
 
     if (*argv[1] == 'p') {
         printf("::::START_USAGE::::\n");
@@ -270,7 +271,7 @@ int main(int argc, char *argv[])
 					if (menuDown)
 					{
 						while(menuDown);
-						if(setting[menuPos+cursorPos]<100)
+						if(setting[menuPos+cursorPos]<settingRange[menuPos+cursorPos])
 							setting[menuPos+cursorPos]++;
 					}
 					else if (menuUp)
