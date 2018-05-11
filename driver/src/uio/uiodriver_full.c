@@ -24,6 +24,7 @@
 #include <sys/stat.h>		//fifo
 #include <pthread.h>
 
+
 #include "ZedboardOLED.c"
 
 #include <unistd.h>
@@ -331,7 +332,7 @@ void *send_audio_function(void *arg)
 	int fd;
 	int IRQEnable = 1; 
 	//write(fd5, &IRQEnable, sizeof(IRQEnable));
-	write(fd6, &IRQEnable, sizeof(IRQEnable));
+	write(fd5, &IRQEnable, sizeof(IRQEnable));
 	printf("Interrupt Enabled\n");
 	if ((fd = open("/tmp/myfifo", O_RDONLY)) < 1)
 		printf("fifo read open error");
@@ -344,7 +345,7 @@ void *send_audio_function(void *arg)
 		//usleep(20);
 		read(fd, &buf, 2);
 		AXI_TO_AUDIO_REG_0 = (int)buf;
-		IRQEnable = 1; 
+		//IRQEnable = 1; 
 		write(fd5, &IRQEnable, sizeof(IRQEnable));
 		//printf("lol\n");
 	}
