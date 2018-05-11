@@ -93,6 +93,10 @@
 #define PMOD_REG_3   *((unsigned *)(ptr6 + 12)) //we only use this, first 4 bits
 
 #define MENULENGTH 8
+#define A 2
+#define B 1
+#define SWITCH 4
+#define BUTTON 8
 
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );
@@ -111,14 +115,16 @@ void *ptr6; //PMOD_CONTROLLER
 int menuUp = 0;
 int menuDown = 0;
 int menuSelect = 0;
+int volSwitch = 0;
 
 int main(int argc, char *argv[])
 {
 	pthread_t thread;
 	pthread_t pmod_thread;
 	pthread_t recv_thread;
-	int i;
+	int i,j;
 	
+	int globalVol = 0;
 	char menuBuf[16];
 	int cursorPos = 0;
 	int menuPos = 0;
@@ -286,6 +292,29 @@ int main(int argc, char *argv[])
 				}
 				while(menuSelect);
 			}
+			else if (volSwitch)
+			{
+				if (menuDown)
+				{
+					while(menuDown);
+					if(globalVol<100)
+						globalVol++;
+				}
+				else if (menuUp)
+				{
+					while(menuUp);
+					if(globalVol>1)
+						globalVol--;
+				}
+				for(j=0;j<16;j++)
+				{
+					if (globalVol > j*6,25)
+						menuBuf[j] = 35;
+					else
+						menuBuf[j] = 32;
+				}
+				for(i=0;i<4;oled_print_message(&menuBuf[0], i++, ptr7));
+			}
 			for(i=0;i<4;i++);
 			{
 				if(i==cursorPos)
@@ -381,15 +410,40 @@ void *pmod_function(void *arg)
 {
 	int position = 0;
 	int IRQEnable = 1;
-	int pmod_data;
+	int pmodData;
+	static int prevPmodData = A|B;
 	write(fd6, &IRQEnable, sizeof(IRQEnable));
 	printf(" Pmod Interrupt Enabled\n");
 	
 	while(1)
 	{
 		read(fd6, &IRQEnable, sizeof(IRQEnable));
-		pmod_data = PMOD_REG_3;
-		printf("Rotary event detected: %d", &pmod_data);
+		pmodData = PMOD_REG_3;
+		printf("Rotary event detected: %d", &pmodData);
+		
+		if(pmodData & BUTTON)
+			menuSelect = 1;
+		else
+			menuSelect = 0;
+		
+		if(pmodData & SWITCH)
+			volSwitch = 1;
+		else
+			volSwitch = 0;
+		
+		if(pmodData&(A|B) == 0)
+		{
+			if(prevPmodData&A)
+				menuDown = 1;
+			else
+				menuDown = 0;
+				
+			if(prevPmodData&B)
+				menuUp = 1;
+			else
+				menuUp = 0;
+		}
+		prevPmodData = pmodData;
 		IRQEnable = 1;
 		write(fd6, &IRQEnable, sizeof(IRQEnable));
 	}
