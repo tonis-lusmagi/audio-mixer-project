@@ -380,5 +380,6 @@ void *pmod_function(void *arg)
 	{
 		read(fd6, &IRQEnable, sizeof(IRQEnable));
 		printf("Rotary event detected\n");
+		IRQEnable = 0;
 	}
 }
