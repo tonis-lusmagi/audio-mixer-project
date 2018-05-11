@@ -1,4 +1,4 @@
-23:33:06 **** Build of project FSBL_bsp ****
+13:10:56 **** Build of project FSBL_bsp ****
 make -k all 
 Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
 make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
@@ -161,7 +161,7 @@ Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
 make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
 Compiling scutimer
 Finished building libraries
-23:33:15 **** Build of configuration Debug for project FSBL ****
+13:11:05 **** Build of configuration Debug for project FSBL ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -236,7 +236,7 @@ arm-none-eabi-size FSBL.elf  |tee "FSBL.elf.size"
   79052	  11484	  74360	 164896	  28420	FSBL.elf
 Finished building: FSBL.elf.size
  
-23:33:17 **** Auto Build of configuration Debug for project FSBL ****
+13:11:07 **** Auto Build of configuration Debug for project FSBL ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
