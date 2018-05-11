@@ -58,7 +58,7 @@ Scripts:
 	$ mount /dev/mmcblk0p1 /mnt && cd /mnt
 	$ ./change_ip_and_mac.sh [xx]
 	$ insmod uio_pdrv_genirq.ko of_id=generic-uio
-	$ ./uiodriver_full 512 512 0 0 0
+	$ ./uiodriver_full 5000 5000 0 0 0
 
 	$ rmmod uio_pdrv_genirq
 	$ umount /dev/mmcblk0p1
