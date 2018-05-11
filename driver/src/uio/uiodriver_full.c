@@ -122,7 +122,6 @@ int main(int argc, char *argv[])
 	char menuBuf[16];
 	int cursorPos = 0;
 	int menuPos = 0;
-	int setting = 0;
 	char menuitem[MENULENGTH][12] = {
 			"menuitem 1  ",
 			"menuitem 2  ",
@@ -132,6 +131,7 @@ int main(int argc, char *argv[])
 			"menuitem 6  ",
 			"menuitem 7  ",
 			"menuitem 8  "};
+	int setting[MENULENGTH] = {0,0,0,0,0,0,0,0};
 
     if (*argv[1] == 'p') {
         printf("::::START_USAGE::::\n");
@@ -268,7 +268,7 @@ int main(int argc, char *argv[])
 					menuBuf[0] = 62;
 				else
 					menuBuf[0] = 32;
-				sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+i], setting);
+				sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+i], setting[menuPos+i]);
 				oled_print_message(&menuBuf[0], 0, ptr7);
 			}
 		}
