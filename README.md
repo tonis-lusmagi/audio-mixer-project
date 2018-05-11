@@ -128,6 +128,7 @@ Change working branch:
 		$ git clone https://gitlab.pld.ttu.ee/Karl.Janson/xilinx_linux.git
 		$ mv ~/workspace/xilinx_linux ~/workspace/linux-xlnx
 		$ cd ~/workspace/linux-xlnx
+		$ export PATH=$PATH:/cad/x_17/SDK/2017.3/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/
 		$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- O=~/workspace/linux xilinx_zynq_defconfig
 		$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- O=~/workspace/linux menuconfig
 			Configure:
