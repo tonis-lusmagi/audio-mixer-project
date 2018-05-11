@@ -349,23 +349,15 @@ void *send_audio_function(void *arg)
 		printf("FIFO READ open\n");
 
 	while (1)
-	{
-		read(fd5, &IRQEnable, sizeof(IRQEnable));
-		IRQEnable = 1; 
-		write(fd5, &IRQEnable, sizeof(IRQEnable));        
+	{  
 		read(fd, buf, 1024);
-            for (int i = 0; i < 512; i = i+1)
-            {
-               if(i != 0){
-                read(fd5, &IRQEnable, sizeof(IRQEnable));
-               
-               IRQEnable = 1;
-               write(fd5, &IRQEnable, sizeof(IRQEnable));
-               }
-               AXI_TO_AUDIO_REG_0 = (int)buf[i];
-            }
-
-		
+		for (int i = 0; i < 512; i = i+1)
+		{
+			read(fd5, &IRQEnable, sizeof(IRQEnable));
+			IRQEnable = 1;
+			write(fd5, &IRQEnable, sizeof(IRQEnable));
+			AXI_TO_AUDIO_REG_0 = (int)buf[i];
+		}
 	}
 }
 
@@ -380,6 +372,7 @@ void *pmod_function(void *arg)
 	{
 		read(fd6, &IRQEnable, sizeof(IRQEnable));
 		printf("Rotary event detected\n");
-		IRQEnable = 0;
+		IRQEnable = 1;
+		write(fd6, &IRQEnable, sizeof(IRQEnable));
 	}
 }
