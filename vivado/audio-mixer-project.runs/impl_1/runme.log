@@ -583,3 +583,67 @@ INFO: [Common 17-83] Releasing license: Implementation
 write_bitstream completed successfully
 write_bitstream: Time (s): cpu = 00:00:46 ; elapsed = 00:00:23 . Memory (MB): peak = 2934.961 ; gain = 271.191 ; free physical = 8474 ; free virtual = 11973
 INFO: [Common 17-206] Exiting Vivado at Thu May 10 23:31:45 2018...
+
+*** Running vivado
+    with args -log audio_mixer_project_wrapper.vdi -applog -m64 -tempDir /home/clarke/tmp -product Vivado -messageDb vivado.pb -mode batch -source audio_mixer_project_wrapper.tcl -notrace
+
+
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source audio_mixer_project_wrapper.tcl -notrace
+Command: open_checkpoint audio_mixer_project_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1149.449 ; gain = 0.000 ; free physical = 12204 ; free virtual = 13848
+INFO: [Netlist 29-17] Analyzing 972 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-6051-archlinux/dcp3/audio_mixer_project_wrapper_board.xdc]
+Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-6051-archlinux/dcp3/audio_mixer_project_wrapper_board.xdc]
+Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-6051-archlinux/dcp3/audio_mixer_project_wrapper_early.xdc]
+Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-6051-archlinux/dcp3/audio_mixer_project_wrapper_early.xdc]
+Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-6051-archlinux/dcp3/audio_mixer_project_wrapper.xdc]
+Finished Parsing XDC File [/home/clarke/tmp/.Xil_clarke/Vivado-6051-archlinux/dcp3/audio_mixer_project_wrapper.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.98 . Memory (MB): peak = 1490.777 ; gain = 30.969 ; free physical = 11752 ; free virtual = 13486
+Restored from archive | CPU: 0.980000 secs | Memory: 26.068382 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.98 . Memory (MB): peak = 1490.777 ; gain = 30.969 ; free physical = 11752 ; free virtual = 13486
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  SRLC32E => SRL16E: 1 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.3 (64-bit) build 2018833
+open_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1490.777 ; gain = 341.328 ; free physical = 11790 ; free virtual = 13483
+Command: write_bitstream -force audio_mixer_project_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./audio_mixer_project_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri May 11 13:10:09 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.3/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:35 ; elapsed = 00:00:22 . Memory (MB): peak = 2055.891 ; gain = 565.113 ; free physical = 11641 ; free virtual = 13354
+INFO: [Common 17-206] Exiting Vivado at Fri May 11 13:10:09 2018...
