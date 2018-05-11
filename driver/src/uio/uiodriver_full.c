@@ -252,7 +252,7 @@ int main(int argc, char *argv[])
         else
             printf("fifo write open\n");
             
-        oled_print_message("WERKS!?", 0, 0x43c20000);
+        oled_print_message("WERKS!?", 0, (void *)0x43c20000);
         
         while(1) //get stream and send to axi_to_audio
         {
