@@ -196,7 +196,7 @@ Build BOOT.BIN:
 
 ## Compile driver
 	
-	$ export PATH=$PATH:/cad/x_16/SDK/2016.1/gnu/arm/lin/bin
+	$ export PATH=$PATH:/cad/x_17/SDK/2017.3/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/
 		when using standalone arm-linux-gnueabihf-gcc:
 			$ export CC=/usr/bin/arm-linux-gnueabihf-gcc
 	$ cd ~/workspace/audio-mixer-project/driver/src/uio
