@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
---Date        : Thu May 10 23:21:07 2018
+--Date        : Fri May 11 14:19:19 2018
 --Host        : archlinux running 64-bit Arch Linux
 --Command     : generate_target audio_mixer_project.bd
 --Design      : audio_mixer_project
@@ -3053,28 +3053,6 @@ architecture STRUCTURE of audio_mixer_project is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component audio_mixer_project_rst_ps7_0_100M_0;
-  component audio_mixer_project_zed_audio_0_0 is
-  port (
-    clk_100 : in STD_LOGIC;
-    AC_ADR0 : out STD_LOGIC;
-    AC_ADR1 : out STD_LOGIC;
-    AC_GPIO0 : out STD_LOGIC;
-    AC_GPIO1 : in STD_LOGIC;
-    AC_GPIO2 : in STD_LOGIC;
-    AC_GPIO3 : in STD_LOGIC;
-    hphone_l : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    hphone_l_valid : in STD_LOGIC;
-    hphone_r : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    hphone_r_valid_dummy : in STD_LOGIC;
-    line_in_l : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    line_in_r : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    new_sample : out STD_LOGIC;
-    sample_clk_48k : out STD_LOGIC;
-    AC_MCLK : out STD_LOGIC;
-    AC_SCK : out STD_LOGIC;
-    AC_SDA : inout STD_LOGIC
-  );
-  end component audio_mixer_project_zed_audio_0_0;
   component audio_mixer_project_xlconstant_0_0 is
   port (
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
@@ -3337,6 +3315,28 @@ architecture STRUCTURE of audio_mixer_project is
     gpio_io_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component audio_mixer_project_axi_gpio_1_0;
+  component audio_mixer_project_zed_audio_0_0 is
+  port (
+    clk_100 : in STD_LOGIC;
+    AC_ADR0 : out STD_LOGIC;
+    AC_ADR1 : out STD_LOGIC;
+    AC_GPIO0 : out STD_LOGIC;
+    AC_GPIO1 : in STD_LOGIC;
+    AC_GPIO2 : in STD_LOGIC;
+    AC_GPIO3 : in STD_LOGIC;
+    hphone_l : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    hphone_l_valid : in STD_LOGIC;
+    hphone_r : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    hphone_r_valid_dummy : in STD_LOGIC;
+    line_in_l : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    line_in_r : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    new_sample : out STD_LOGIC;
+    sample_clk_48k : out STD_LOGIC;
+    AC_MCLK : out STD_LOGIC;
+    AC_SCK : out STD_LOGIC;
+    AC_SDA : inout STD_LOGIC
+  );
+  end component audio_mixer_project_zed_audio_0_0;
   signal AC_GPIO1_1 : STD_LOGIC;
   signal AC_GPIO2_1 : STD_LOGIC;
   signal AC_GPIO3_1 : STD_LOGIC;

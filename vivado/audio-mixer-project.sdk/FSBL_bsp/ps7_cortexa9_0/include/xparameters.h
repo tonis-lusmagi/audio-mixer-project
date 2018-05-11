@@ -359,6 +359,7 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_ZED_AUDIO_0_SAMPLE_CLK_48K_INTR 65U
 #define XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR 67U
 #define XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR 68U
 

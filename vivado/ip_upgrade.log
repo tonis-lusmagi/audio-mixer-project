@@ -1,0 +1,25 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+| Date         : Fri May 11 14:19:00 2018
+| Host         : archlinux running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'audio_mixer_project_zed_audio_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of audio_mixer_project_zed_audio_0_0 (user.org:user:zed_audio:1.0) from (Rev. 1) to (Rev. 2)
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'audio_mixer_project_zed_audio_0_0'.
+
+
+-Upgrade has added interface 'sample_clk_48k' (xilinx.com:signal:interrupt:1.0)
+
+

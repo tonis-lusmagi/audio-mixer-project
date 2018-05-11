@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
 // Date        : Tue Apr 24 18:49:58 2018
 // Host        : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
-// Command     : write_verilog -force -mode funcsim
-//               /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/audio_mixer_project_rst_ps7_0_100M_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top audio_mixer_project_rst_ps7_0_100M_0 -prefix
+//               audio_mixer_project_rst_ps7_0_100M_0_ audio_mixer_project_rst_ps7_0_100M_0_sim_netlist.v
 // Design      : audio_mixer_project_rst_ps7_0_100M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -69,7 +69,6 @@ module audio_mixer_project_rst_ps7_0_100M_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module audio_mixer_project_rst_ps7_0_100M_0_cdc_sync
    (lpf_asr_reg,
     scndry_out,
@@ -251,7 +250,6 @@ module audio_mixer_project_rst_ps7_0_100M_0_cdc_sync_0
         .O(lpf_exr_reg));
 endmodule
 
-(* ORIG_REF_NAME = "lpf" *) 
 module audio_mixer_project_rst_ps7_0_100M_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -400,7 +398,6 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "zynq" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
-(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module audio_mixer_project_rst_ps7_0_100M_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -517,7 +514,6 @@ module audio_mixer_project_rst_ps7_0_100M_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "sequence_psr" *) 
 module audio_mixer_project_rst_ps7_0_100M_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -758,7 +754,6 @@ module audio_mixer_project_rst_ps7_0_100M_0_sequence_psr
         .R(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module audio_mixer_project_rst_ps7_0_100M_0_upcnt_n
    (Q,
     seq_clr,

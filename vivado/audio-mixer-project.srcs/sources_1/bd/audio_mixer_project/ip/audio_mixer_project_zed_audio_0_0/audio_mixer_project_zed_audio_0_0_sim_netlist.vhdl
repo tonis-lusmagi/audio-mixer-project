@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
--- Date        : Tue Apr 24 18:33:32 2018
--- Host        : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+-- Date        : Fri May 11 14:20:17 2018
+-- Host        : archlinux running 64-bit Arch Linux
 -- Command     : write_vhdl -force -mode funcsim
---               /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0_sim_netlist.vhdl
+--               /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0_sim_netlist.vhdl
 -- Design      : audio_mixer_project_zed_audio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -6828,6 +6828,10 @@ end audio_mixer_project_zed_audio_0_0;
 
 architecture STRUCTURE of audio_mixer_project_zed_audio_0_0 is
   signal \<const1>\ : STD_LOGIC;
+  attribute x_interface_info : string;
+  attribute x_interface_info of sample_clk_48k : signal is "xilinx.com:signal:interrupt:1.0 sample_clk_48k INTERRUPT";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of sample_clk_48k : signal is "XIL_INTERFACENAME sample_clk_48k, SENSITIVITY LEVEL_HIGH, PortWidth 1";
 begin
   AC_ADR0 <= \<const1>\;
   AC_ADR1 <= \<const1>\;

@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-// Date        : Tue Apr 24 18:31:56 2018
-// Host        : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+// Date        : Thu May 10 23:23:00 2018
+// Host        : archlinux running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
-//               /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xlconcat_0_0/audio_mixer_project_xlconcat_0_0_sim_netlist.v
+//               /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xlconcat_0_0/audio_mixer_project_xlconcat_0_0_sim_netlist.v
 // Design      : audio_mixer_project_xlconcat_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,18 +19,34 @@ module audio_mixer_project_xlconcat_0_0
     In1,
     In2,
     In3,
+    In4,
+    In5,
+    In6,
+    In7,
     dout);
   input [0:0]In0;
   input [0:0]In1;
   input [0:0]In2;
   input [0:0]In3;
-  output [3:0]dout;
+  input [0:0]In4;
+  input [0:0]In5;
+  input [0:0]In6;
+  input [0:0]In7;
+  output [7:0]dout;
 
   wire [0:0]In0;
   wire [0:0]In1;
   wire [0:0]In2;
   wire [0:0]In3;
+  wire [0:0]In4;
+  wire [0:0]In5;
+  wire [0:0]In6;
+  wire [0:0]In7;
 
+  assign dout[7] = In7;
+  assign dout[6] = In6;
+  assign dout[5] = In5;
+  assign dout[4] = In4;
   assign dout[3] = In3;
   assign dout[2] = In2;
   assign dout[1] = In1;

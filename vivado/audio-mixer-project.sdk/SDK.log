@@ -1,9 +1,9 @@
-13:10:28 INFO  : Registering command handlers for SDK TCF services
-13:10:30 INFO  : Launching XSCT server: xsct -n -interactive /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/temp_xsdb_launch_script.tcl
-13:10:31 INFO  : XSCT server has started successfully.
-13:10:31 INFO  : Successfully done setting XSCT server connection channel  
-13:10:31 INFO  : Successfully done setting SDK workspace  
-13:10:31 INFO  : Processing command line option -hwspec /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper.hdf.
-13:13:14 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/clarke/workspace/audio-mixer-project/sd-image/BOOT.BIN -w on
-13:13:14 INFO  : Overwriting existing bif file /home/clarke/workspace/audio-mixer-project/sd-temp/output.bif
-13:13:14 INFO  : Bootgen command execution is done.
+14:25:29 INFO  : Registering command handlers for SDK TCF services
+14:25:31 INFO  : Launching XSCT server: xsct -n -interactive /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/temp_xsdb_launch_script.tcl
+14:25:32 INFO  : XSCT server has started successfully.
+14:25:32 INFO  : Successfully done setting XSCT server connection channel  
+14:25:32 INFO  : Successfully done setting SDK workspace  
+14:25:32 INFO  : Processing command line option -hwspec /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper.hdf.
+14:27:54 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/clarke/workspace/audio-mixer-project/sd-image/BOOT.BIN
+14:27:54 INFO  : Creating new bif file /home/clarke/workspace/audio-mixer-project/sd-temp/output.bif
+14:27:55 INFO  : Bootgen command execution is done.

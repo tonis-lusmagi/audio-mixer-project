@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:zed_audio:1.0
--- IP Revision: 1
+-- IP Revision: 2
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -105,6 +105,10 @@ ARCHITECTURE audio_mixer_project_zed_audio_0_0_arch OF audio_mixer_project_zed_a
   ATTRIBUTE X_CORE_INFO OF audio_mixer_project_zed_audio_0_0_arch: ARCHITECTURE IS "audio_top,Vivado 2017.3";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF audio_mixer_project_zed_audio_0_0_arch : ARCHITECTURE IS "audio_mixer_project_zed_audio_0_0,audio_top,{}";
+  ATTRIBUTE X_INTERFACE_INFO : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER OF sample_clk_48k: SIGNAL IS "XIL_INTERFACENAME sample_clk_48k, SENSITIVITY LEVEL_HIGH, PortWidth 1";
+  ATTRIBUTE X_INTERFACE_INFO OF sample_clk_48k: SIGNAL IS "xilinx.com:signal:interrupt:1.0 sample_clk_48k INTERRUPT";
 BEGIN
   U0 : audio_top
     PORT MAP (

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May 10 23:21:25 2018" VIVADOVERSION="2017.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri May 11 14:19:20 2018" VIVADOVERSION="2017.3">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.3" DEVICE="7z020" NAME="audio_mixer_project" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -3509,7 +3509,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="IRQ_F2P" RIGHT="0" SENSITIVITY="LEVEL_HIGH:LEVEL_HIGH:NULL:NULL:NULL:NULL:NULL:NULL" SIGIS="INTERRUPT" SIGNAME="xlconcat_0_dout">
+        <PORT DIR="I" LEFT="7" NAME="IRQ_F2P" RIGHT="0" SENSITIVITY="LEVEL_HIGH:LEVEL_HIGH:NULL:LEVEL_HIGH:NULL:NULL:NULL:NULL" SIGIS="INTERRUPT" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
           </CONNECTIONS>
@@ -3521,7 +3521,6 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="FILTER_IIR_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Volume_Pregain_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="zed_audio_0" PORT="clk_100"/>
             <CONNECTION INSTANCE="ZedboardOLED_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="FILTER_IIR_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="Volume_Pregain_1" PORT="s00_axi_aclk"/>
@@ -3539,6 +3538,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M07_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M08_ACLK"/>
+            <CONNECTION INSTANCE="zed_audio_0" PORT="clk_100"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -5670,7 +5670,7 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="new_sample" SIGIS="undef"/>
-        <PORT DIR="O" NAME="sample_clk_48k" SIGIS="undef" SIGNAME="zed_audio_0_sample_clk_48k">
+        <PORT DIR="O" NAME="sample_clk_48k" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="zed_audio_0_sample_clk_48k">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="In4"/>
           </CONNECTIONS>

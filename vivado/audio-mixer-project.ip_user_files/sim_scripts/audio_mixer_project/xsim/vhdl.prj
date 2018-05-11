@@ -1,0 +1,38 @@
+vhdl xil_defaultlib  \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0_sim_netlist.vhdl" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/sim/audio_mixer_project_axi_gpio_0_0.vhd" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/sim/audio_mixer_project_rst_ps7_0_100M_0.vhd" \
+"/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0_sim_netlist.vhdl" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_xlconstant_0_0/audio_mixer_project_xlconstant_0_0_sim_netlist.vhdl" \
+"../../../bd/audio_mixer_project/ipshared/c90e/src/Multiplier.vhd" \
+"../../../bd/audio_mixer_project/ipshared/c90e/src/IIR_Biquad_II_v3.vhd" \
+"../../../bd/audio_mixer_project/ipshared/c90e/src/Filter_Top_Level.vhd" \
+"../../../bd/audio_mixer_project/ipshared/c90e/hdl/FILTER_IIR_v1_0_S00_AXI.vhd" \
+"../../../bd/audio_mixer_project/ipshared/c90e/hdl/FILTER_IIR_v1_0.vhd" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_FILTER_IIR_0_0/sim/audio_mixer_project_FILTER_IIR_0_0.vhd" \
+"../../../bd/audio_mixer_project/ipshared/e999/src/MultiplierFP.vhd" \
+"../../../bd/audio_mixer_project/ipshared/e999/src/AmplifierFP.vhd" \
+"../../../bd/audio_mixer_project/ipshared/e999/src/Volume_Pregain_Top_Module.vhd" \
+"../../../bd/audio_mixer_project/ipshared/e999/hdl/Volume_Pregain_v1_0_S00_AXI.vhd" \
+"../../../bd/audio_mixer_project/ipshared/e999/hdl/Volume_Pregain_v1_0.vhd" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_Volume_Pregain_0_0/sim/audio_mixer_project_Volume_Pregain_0_0.vhd" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_xlconcat_0_0/audio_mixer_project_xlconcat_0_0_sim_netlist.vhdl" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_mixer_0_0/audio_mixer_project_mixer_0_0_sim_netlist.vhdl" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_xbar_0/audio_mixer_project_xbar_0_sim_netlist.vhdl" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_ZedboardOLED_0_0/audio_mixer_project_ZedboardOLED_0_0_sim_netlist.vhdl" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_FILTER_IIR_1_0/sim/audio_mixer_project_FILTER_IIR_1_0.vhd" \
+"../../../bd/audio_mixer_project/ipshared/ce64/hdl/axi_to_audio_v1_0_S00_AXI.vhd" \
+"../../../bd/audio_mixer_project/ipshared/ce64/hdl/axi_to_audio_v1_0.vhd" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_axi_to_audio_0_0/sim/audio_mixer_project_axi_to_audio_0_0.vhd" \
+"../../../bd/audio_mixer_project/sim/audio_mixer_project.vhd" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_Volume_Pregain_1_1/sim/audio_mixer_project_Volume_Pregain_1_1.vhd" \
+"../../../bd/audio_mixer_project/ipshared/46fd/debouncer.vhd" \
+"../../../bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd" \
+"../../../bd/audio_mixer_project/ipshared/46fd/pulse_generator.vhd" \
+"../../../bd/audio_mixer_project/ipshared/46fd/rotary_controller.vhd" \
+"../../../bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0.vhd" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/sim/audio_mixer_project_pmod_controller_0_0.vhd" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_1_0/sim/audio_mixer_project_axi_gpio_1_0.vhd" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_auto_pc_0/audio_mixer_project_auto_pc_0_sim_netlist.vhdl" \
+
+nosort

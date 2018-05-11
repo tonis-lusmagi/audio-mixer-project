@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-// Date        : Tue Apr 24 18:33:32 2018
-// Host        : lx21 running 64-bit SUSE Linux Enterprise Desktop 12 SP2
+// Date        : Fri May 11 14:20:17 2018
+// Host        : archlinux running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
-//               /home/martin.perman/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0_sim_netlist.v
+//               /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0_sim_netlist.v
 // Design      : audio_mixer_project_zed_audio_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -47,7 +47,7 @@ module audio_mixer_project_zed_audio_0_0
   output [23:0]line_in_l;
   output [23:0]line_in_r;
   output new_sample;
-  output sample_clk_48k;
+  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 sample_clk_48k INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME sample_clk_48k, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output sample_clk_48k;
   output AC_MCLK;
   output AC_SCK;
   inout AC_SDA;

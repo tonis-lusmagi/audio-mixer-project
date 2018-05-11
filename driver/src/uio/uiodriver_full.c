@@ -340,11 +340,12 @@ void *send_audio_function(void *arg)
 
 	while (1)
 	{
-		//read(fd5, &IRQEnable, sizeof(IRQEnable));
-		//read(fd6, &IRQEnable, sizeof(IRQEnable));
-		usleep(20);
+		read(fd5, &IRQEnable, sizeof(IRQEnable));
+		//usleep(20);
 		read(fd, &buf, 2);
 		AXI_TO_AUDIO_REG_0 = (int)buf;
+		IRQEnable = 1; 
+		write(fd5, &IRQEnable, sizeof(IRQEnable));
 		//printf("lol\n");
 	}
 }

@@ -4,6 +4,39 @@
   <spirit:library>customized_ip</spirit:library>
   <spirit:name>audio_mixer_project_zed_audio_0_0</spirit:name>
   <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>sample_clk_48k</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="interrupt" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="interrupt_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>INTERRUPT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sample_clk_48k</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>SENSITIVITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SAMPLE_CLK_48K.SENSITIVITY" spirit:choiceRef="choice_list_99a1d2b9">LEVEL_HIGH</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PortWidth</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SAMPLE_CLK_48K.PortWidth">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
   <spirit:model>
     <spirit:views>
       <spirit:view>
@@ -16,11 +49,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 24 15:29:48 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 11:19:20 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:cb14d3e7</spirit:value>
+            <spirit:value>7:e5cdf97e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -35,11 +68,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 24 15:29:48 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 11:19:20 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:cb14d3e7</spirit:value>
+            <spirit:value>7:e5cdf97e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -53,11 +86,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 24 15:29:48 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 11:19:20 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:0276aa1e</spirit:value>
+            <spirit:value>7:9a7596c4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -72,11 +105,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 24 15:29:48 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 11:19:20 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:0276aa1e</spirit:value>
+            <spirit:value>7:9a7596c4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -90,11 +123,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 24 15:33:32 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 11:20:17 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:cb14d3e7</spirit:value>
+            <spirit:value>7:e5cdf97e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -352,39 +385,48 @@
       </spirit:port>
     </spirit:ports>
   </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_99a1d2b9</spirit:name>
+      <spirit:enumeration>LEVEL_HIGH</spirit:enumeration>
+      <spirit:enumeration>LEVEL_LOW</spirit:enumeration>
+      <spirit:enumeration>EDGE_RISING</spirit:enumeration>
+      <spirit:enumeration>EDGE_FALLING</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
   <spirit:fileSets>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/ADAU1761_interface.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/ADAU1761_interface.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/adau1761_configuraiton_data.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/adau1761_configuraiton_data.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/adau1761_izedboard.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/adau1761_izedboard.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/audio_top.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/audio_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/clocking.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/clocking.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/i2c.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/i2c.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/i2s_data_interface.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/i2s_data_interface.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/i3c2.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/i3c2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -399,35 +441,35 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/ADAU1761_interface.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/ADAU1761_interface.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/adau1761_configuraiton_data.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/adau1761_configuraiton_data.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/adau1761_izedboard.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/adau1761_izedboard.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/audio_top.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/audio_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/clocking.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/clocking.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/i2c.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/i2c.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/i2s_data_interface.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/i2s_data_interface.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6e53/hdl/i3c2.vhd</spirit:name>
+        <spirit:name>../../ipshared/61a3/hdl/i3c2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -486,17 +528,21 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>zed_audio_v1_0</xilinx:displayName>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="user.org:user:audio_testbench:1.0_ARCHIVE_LOCATION">/home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio</xilinx:tag>
         <xilinx:tag xilinx:name="user.org:user:zed_audio:1.0_ARCHIVE_LOCATION">/home/clarke/workspace/audio-mixer-project/ip-repo/zedboard_audio</xilinx:tag>
       </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SAMPLE_CLK_48K.PortWidth" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+      </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2017.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="38ab7a59"/>
       <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5cf4b828"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="a49f3146"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="8f3bbffd"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="2d79047c"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
