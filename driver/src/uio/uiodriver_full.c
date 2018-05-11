@@ -328,7 +328,7 @@ int udp_client_recv(unsigned *buffer,int buffer_size ){
 
 void *send_audio_function(void *arg)
 {
-	short int buf;
+	short int buf[512];
 	int fd;
 	int IRQEnable = 1; 
 	//write(fd5, &IRQEnable, sizeof(IRQEnable));
@@ -343,8 +343,19 @@ void *send_audio_function(void *arg)
 	{
 		read(fd5, &IRQEnable, sizeof(IRQEnable));
 		IRQEnable = 1; 
-		write(fd5, &IRQEnable, sizeof(IRQEnable));
-		read(fd, &buf, 2);
-		AXI_TO_AUDIO_REG_0 = (int)buf;
+		write(fd5, &IRQEnable, sizeof(IRQEnable));        
+		read(fd, buf, 1024);
+            for (int i = 0; i < 512; i = i+1)
+            {
+               if(i != 0){
+                read(fd5, &IRQEnable, sizeof(IRQEnable));
+               
+               IRQEnable = 1;
+               write(fd5, &IRQEnable, sizeof(IRQEnable));
+               }
+               AXI_TO_AUDIO_REG_0 = (int)buf[i];
+            }
+
+		
 	}
 }

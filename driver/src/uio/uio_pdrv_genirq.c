@@ -73,7 +73,7 @@ static irqreturn_t uio_pdrv_genirq_handler(int irq, struct uio_info *dev_info)
 		disable_irq_nosync(irq);
 	spin_unlock(&priv->lock);
 
-	printk("DEBUG_KERNELSPACE: IRQ \n");
+	//printk("DEBUG_KERNELSPACE: IRQ \n");
 
 	return IRQ_HANDLED;
 }
