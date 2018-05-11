@@ -97,6 +97,7 @@ struct sockaddr_in receiving_address;
 int client_socket; 
 socklen_t addr_size;
 int fd5;
+int fd6;
 void *ptr5; //AXI_TO_AUDIO
 
 int main(int argc, char *argv[])
@@ -147,7 +148,7 @@ int main(int argc, char *argv[])
         printf("fd5 init done\n");
 
         //open dev/uio6 PMOD_CONTROLLER_0
-        int fd6 = open ("/dev/uio6", O_RDWR);
+        fd6 = open ("/dev/uio6", O_RDWR);
         if (fd6 < 1) { perror(argv[0]); return -1; }
         printf("fd6 init done\n");
         
@@ -327,7 +328,8 @@ void *send_audio_function(void *arg)
 	short int buf;
 	int fd;
 	int IRQEnable = 1; 
-	write(fd5, &IRQEnable, sizeof(IRQEnable));
+	//write(fd5, &IRQEnable, sizeof(IRQEnable));
+	write(fd6, &IRQEnable, sizeof(IRQEnable));
 	printf("Interrupt Enabled\n");
 	if ((fd = open("/tmp/myfifo", O_RDONLY)) < 1)
 		printf("fifo read open error");
@@ -336,7 +338,8 @@ void *send_audio_function(void *arg)
 
 	while (1)
 	{
-		read(fd5, &IRQEnable, sizeof(IRQEnable));
+		//read(fd5, &IRQEnable, sizeof(IRQEnable));
+		read(fd6, &IRQEnable, sizeof(IRQEnable));
 		//read(fd, &buf, 2);
 		//AXI_TO_AUDIO_REG_0 = (int)buf;
 		printf("%08X ",(int)buf);
