@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
--- Date        : Wed May  9 12:48:33 2018
+-- Date        : Fri May 11 14:51:11 2018
 -- Host        : archlinux running 64-bit Arch Linux
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/audio_mixer_project_pmod_controller_0_0_sim_netlist.vhdl
@@ -2942,8 +2942,10 @@ end audio_mixer_project_pmod_controller_0_0;
 architecture STRUCTURE of audio_mixer_project_pmod_controller_0_0 is
   signal \<const0>\ : STD_LOGIC;
   attribute x_interface_info : string;
-  attribute x_interface_info of s00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
+  attribute x_interface_info of Rotary_event : signal is "xilinx.com:signal:interrupt:1.0 Rotary_event INTERRUPT";
   attribute x_interface_parameter : string;
+  attribute x_interface_parameter of Rotary_event : signal is "XIL_INTERFACENAME Rotary_event, SENSITIVITY LEVEL_HIGH, PortWidth 1";
+  attribute x_interface_info of s00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
   attribute x_interface_parameter of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN audio_mixer_project_processing_system7_0_0_FCLK_CLK0";
   attribute x_interface_info of s00_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S00_AXI_RST RST";
   attribute x_interface_parameter of s00_axi_aresetn : signal is "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW";

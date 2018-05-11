@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Fri May 11 14:24:49 2018
+| Date         : Fri May 11 14:56:56 2018
 | Host         : archlinux running 64-bit Arch Linux
 | Command      : report_timing_summary -file audio_mixer_project_wrapper_timing_summary_routed.rpt -warn_on_violation -rpx audio_mixer_project_wrapper_timing_summary_routed.rpx
 | Design       : audio_mixer_project_wrapper

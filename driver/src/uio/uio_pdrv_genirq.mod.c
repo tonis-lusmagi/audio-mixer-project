@@ -27,7 +27,6 @@ __attribute__((section("__versions"))) = {
 	{ 0xa200cc5, __VMLINUX_SYMBOL_STR(platform_get_irq) },
 	{ 0xb960247c, __VMLINUX_SYMBOL_STR(dev_err) },
 	{ 0x5cd79e0d, __VMLINUX_SYMBOL_STR(devm_kmalloc) },
-	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
 	{ 0x5fc56a46, __VMLINUX_SYMBOL_STR(_raw_spin_unlock) },
 	{ 0x9c0bd51f, __VMLINUX_SYMBOL_STR(_raw_spin_lock) },
 	{ 0x27bbf221, __VMLINUX_SYMBOL_STR(disable_irq_nosync) },

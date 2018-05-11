@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed May  9 12:47:42 2018
-# Process ID: 31134
+# Start of session at: Fri May 11 14:50:19 2018
+# Process ID: 23760
 # Current directory: /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_pmod_controller_0_0_synth_1
 # Command line: vivado -log audio_mixer_project_pmod_controller_0_0.vds -tempDir /home/clarke/tmp -product Vivado -mode batch -messageDb vivado.pb -notrace -source audio_mixer_project_pmod_controller_0_0.tcl
 # Log file: /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_pmod_controller_0_0_synth_1/audio_mixer_project_pmod_controller_0_0.vds
@@ -15,42 +15,42 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 31142 
+INFO: Helper process launched with PID 23776 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1240.848 ; gain = 74.000 ; free physical = 11161 ; free virtual = 13459
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1240.844 ; gain = 74.000 ; free physical = 10495 ; free virtual = 13340
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'audio_mixer_project_pmod_controller_0_0' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/synth/audio_mixer_project_pmod_controller_0_0.vhd:87]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'pmod_controller_v1_0' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0.vhd:5' bound to instance 'U0' of component 'pmod_controller_v1_0' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/synth/audio_mixer_project_pmod_controller_0_0.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'pmod_controller_v1_0' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0.vhd:53]
+INFO: [Synth 8-3491] module 'pmod_controller_v1_0' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0.vhd:5' bound to instance 'U0' of component 'pmod_controller_v1_0' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/synth/audio_mixer_project_pmod_controller_0_0.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'pmod_controller_v1_0' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0.vhd:53]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'pmod_controller_v1_0_S00_AXI' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd:5' bound to instance 'pmod_controller_v1_0_S00_AXI_inst' of component 'pmod_controller_v1_0_S00_AXI' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0.vhd:95]
-INFO: [Synth 8-638] synthesizing module 'pmod_controller_v1_0_S00_AXI' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd:91]
+INFO: [Synth 8-3491] module 'pmod_controller_v1_0_S00_AXI' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd:5' bound to instance 'pmod_controller_v1_0_S00_AXI_inst' of component 'pmod_controller_v1_0_S00_AXI' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'pmod_controller_v1_0_S00_AXI' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd:91]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-226] default block is never used [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd:243]
-INFO: [Synth 8-226] default block is never used [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd:373]
-WARNING: [Synth 8-614] signal 'rotary_outputs' is read in the process but is not in the sensitivity list [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd:368]
-INFO: [Synth 8-3491] module 'rotary_controller' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/rotary_controller.vhd:34' bound to instance 'controller1' of component 'rotary_controller' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd:408]
-INFO: [Synth 8-638] synthesizing module 'rotary_controller' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/rotary_controller.vhd:49]
-INFO: [Synth 8-3491] module 'debouncer' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/debouncer.vhd:35' bound to instance 'Button_debouncer' of component 'debouncer' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/rotary_controller.vhd:69]
-INFO: [Synth 8-638] synthesizing module 'debouncer' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/debouncer.vhd:43]
+INFO: [Synth 8-226] default block is never used [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd:243]
+INFO: [Synth 8-226] default block is never used [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd:373]
+WARNING: [Synth 8-614] signal 'rotary_outputs' is read in the process but is not in the sensitivity list [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd:368]
+INFO: [Synth 8-3491] module 'rotary_controller' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/rotary_controller.vhd:34' bound to instance 'controller1' of component 'rotary_controller' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd:408]
+INFO: [Synth 8-638] synthesizing module 'rotary_controller' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/rotary_controller.vhd:49]
+INFO: [Synth 8-3491] module 'debouncer' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/debouncer.vhd:35' bound to instance 'Button_debouncer' of component 'debouncer' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/rotary_controller.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/debouncer.vhd:43]
 	Parameter counter_size bound to: 19 - type: integer 
-WARNING: [Synth 8-3848] Net counter_set in module/entity debouncer does not have driver. [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/debouncer.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'debouncer' (1#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/debouncer.vhd:43]
-INFO: [Synth 8-3491] module 'debouncer' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/debouncer.vhd:35' bound to instance 'Switch_debouncer' of component 'debouncer' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/rotary_controller.vhd:75]
-INFO: [Synth 8-3491] module 'pulse_generator' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/pulse_generator.vhd:34' bound to instance 'pulsegen' of component 'pulse_generator' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/rotary_controller.vhd:81]
-INFO: [Synth 8-638] synthesizing module 'pulse_generator' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/pulse_generator.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'pulse_generator' (2#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/pulse_generator.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'rotary_controller' (3#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/rotary_controller.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd:239]
-WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd:241]
-INFO: [Synth 8-256] done synthesizing module 'pmod_controller_v1_0_S00_AXI' (4#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd:91]
-INFO: [Synth 8-256] done synthesizing module 'pmod_controller_v1_0' (5#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0.vhd:53]
+WARNING: [Synth 8-3848] Net counter_set in module/entity debouncer does not have driver. [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/debouncer.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (1#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/debouncer.vhd:43]
+INFO: [Synth 8-3491] module 'debouncer' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/debouncer.vhd:35' bound to instance 'Switch_debouncer' of component 'debouncer' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/rotary_controller.vhd:75]
+INFO: [Synth 8-3491] module 'pulse_generator' declared at '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/pulse_generator.vhd:34' bound to instance 'pulsegen' of component 'pulse_generator' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/rotary_controller.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'pulse_generator' [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/pulse_generator.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'pulse_generator' (2#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/pulse_generator.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'rotary_controller' (3#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/rotary_controller.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd:239]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd:241]
+INFO: [Synth 8-256] done synthesizing module 'pmod_controller_v1_0_S00_AXI' (4#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'pmod_controller_v1_0' (5#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0.vhd:53]
 INFO: [Synth 8-256] done synthesizing module 'audio_mixer_project_pmod_controller_0_0' (6#1) [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/synth/audio_mixer_project_pmod_controller_0_0.vhd:87]
 WARNING: [Synth 8-3331] design pmod_controller_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design pmod_controller_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
@@ -59,7 +59,7 @@ WARNING: [Synth 8-3331] design pmod_controller_v1_0_S00_AXI has unconnected port
 WARNING: [Synth 8-3331] design pmod_controller_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design pmod_controller_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1283.379 ; gain = 116.531 ; free physical = 11175 ; free virtual = 13474
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1283.375 ; gain = 116.531 ; free physical = 10510 ; free virtual = 13355
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -69,7 +69,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1283.379 ; gain = 116.531 ; free physical = 11175 ; free virtual = 13473
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1283.375 ; gain = 116.531 ; free physical = 10509 ; free virtual = 13354
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -81,26 +81,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 1651.402 ; gain = 0.000 ; free physical = 10910 ; free virtual = 13214
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1651.391 ; gain = 0.000 ; free physical = 10220 ; free virtual = 13073
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10971 ; free virtual = 13282
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10308 ; free virtual = 13148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10971 ; free virtual = 13282
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10308 ; free virtual = 13148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10973 ; free virtual = 13284
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10310 ; free virtual = 13150
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element counter_out_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/debouncer.vhd:56]
+WARNING: [Synth 8-6014] Unused sequential element counter_out_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/debouncer.vhd:56]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10966 ; free virtual = 13277
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10301 ; free virtual = 13141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -163,8 +163,8 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element U0/pmod_controller_v1_0_S00_AXI_inst/controller1/Button_debouncer/counter_out_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/debouncer.vhd:56]
-WARNING: [Synth 8-6014] Unused sequential element U0/pmod_controller_v1_0_S00_AXI_inst/controller1/Switch_debouncer/counter_out_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/46fd/debouncer.vhd:56]
+WARNING: [Synth 8-6014] Unused sequential element U0/pmod_controller_v1_0_S00_AXI_inst/controller1/Button_debouncer/counter_out_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/debouncer.vhd:56]
+WARNING: [Synth 8-6014] Unused sequential element U0/pmod_controller_v1_0_S00_AXI_inst/controller1/Switch_debouncer/counter_out_reg was removed.  [/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ipshared/be0e/debouncer.vhd:56]
 WARNING: [Synth 8-3331] design audio_mixer_project_pmod_controller_0_0 has unconnected port s00_axi_awprot[2]
 WARNING: [Synth 8-3331] design audio_mixer_project_pmod_controller_0_0 has unconnected port s00_axi_awprot[1]
 WARNING: [Synth 8-3331] design audio_mixer_project_pmod_controller_0_0 has unconnected port s00_axi_awprot[0]
@@ -184,7 +184,7 @@ INFO: [Synth 8-3332] Sequential element (U0/pmod_controller_v1_0_S00_AXI_inst/ax
 INFO: [Synth 8-3332] Sequential element (U0/pmod_controller_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module audio_mixer_project_pmod_controller_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/pmod_controller_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module audio_mixer_project_pmod_controller_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10952 ; free virtual = 13266
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10295 ; free virtual = 13142
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -195,15 +195,15 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-Reading /home/clarke/tmp/.Xil_clarke/Vivado-31134-archlinux/realtime/audio_mixer_project_pmod_controller_0_0_synth.xdc
+Reading /home/clarke/tmp/.Xil_clarke/Vivado-23760-archlinux/realtime/audio_mixer_project_pmod_controller_0_0_synth.xdc
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10828 ; free virtual = 13135
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10173 ; free virtual = 13013
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10828 ; free virtual = 13135
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10173 ; free virtual = 13012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -215,7 +215,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10826 ; free virtual = 13133
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10172 ; free virtual = 13012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -239,7 +239,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10826 ; free virtual = 13133
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10172 ; free virtual = 13012
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -252,7 +252,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10826 ; free virtual = 13133
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10172 ; free virtual = 13012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -264,25 +264,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10826 ; free virtual = 13133
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10172 ; free virtual = 13012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10826 ; free virtual = 13133
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10172 ; free virtual = 13012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10826 ; free virtual = 13133
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10172 ; free virtual = 13012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10826 ; free virtual = 13133
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10172 ; free virtual = 13012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -322,11 +322,11 @@ Report Instance Areas:
 |7     |        pulsegen                      |pulse_generator              |     3|
 +------+--------------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10826 ; free virtual = 13133
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10172 ; free virtual = 13012
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1651.402 ; gain = 116.531 ; free physical = 10884 ; free virtual = 13191
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1651.402 ; gain = 484.555 ; free physical = 10884 ; free virtual = 13191
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1651.391 ; gain = 116.531 ; free physical = 10230 ; free virtual = 13069
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.391 ; gain = 484.547 ; free physical = 10230 ; free virtual = 13069
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -338,11 +338,11 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 43 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.402 ; gain = 497.926 ; free physical = 10875 ; free virtual = 13182
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.391 ; gain = 497.918 ; free physical = 10222 ; free virtual = 13062
 INFO: [Common 17-1381] The checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_pmod_controller_0_0_synth_1/audio_mixer_project_pmod_controller_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/audio_mixer_project_pmod_controller_0_0.xci
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.runs/audio_mixer_project_pmod_controller_0_0_synth_1/audio_mixer_project_pmod_controller_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file audio_mixer_project_pmod_controller_0_0_utilization_synth.rpt -pb audio_mixer_project_pmod_controller_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1675.414 ; gain = 0.000 ; free physical = 10875 ; free virtual = 13183
-INFO: [Common 17-206] Exiting Vivado at Wed May  9 12:48:33 2018...
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1675.402 ; gain = 0.000 ; free physical = 10223 ; free virtual = 13062
+INFO: [Common 17-206] Exiting Vivado at Fri May 11 14:51:11 2018...

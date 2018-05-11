@@ -50,7 +50,7 @@ vcom -work proc_sys_reset_v5_0_12 -64 -93 \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/audio_mixer_project/ip/audio_mixer_project_rst_ps7_0_100M_0/sim/audio_mixer_project_rst_ps7_0_100M_0.vhd" \
-"/home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0_sim_netlist.vhdl" \
+"../../../bd/audio_mixer_project/ip/audio_mixer_project_zed_audio_0_0/audio_mixer_project_zed_audio_0_0_sim_netlist.vhdl" \
 "../../../bd/audio_mixer_project/ip/audio_mixer_project_xlconstant_0_0/audio_mixer_project_xlconstant_0_0_sim_netlist.vhdl" \
 "../../../bd/audio_mixer_project/ipshared/c90e/src/Multiplier.vhd" \
 "../../../bd/audio_mixer_project/ipshared/c90e/src/IIR_Biquad_II_v3.vhd" \
@@ -82,11 +82,11 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/audio_mixer_project/ip/audio_mixer_project_axi_to_audio_0_0/sim/audio_mixer_project_axi_to_audio_0_0.vhd" \
 "../../../bd/audio_mixer_project/sim/audio_mixer_project.vhd" \
 "../../../bd/audio_mixer_project/ip/audio_mixer_project_Volume_Pregain_1_1/sim/audio_mixer_project_Volume_Pregain_1_1.vhd" \
-"../../../bd/audio_mixer_project/ipshared/46fd/debouncer.vhd" \
-"../../../bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0_S00_AXI.vhd" \
-"../../../bd/audio_mixer_project/ipshared/46fd/pulse_generator.vhd" \
-"../../../bd/audio_mixer_project/ipshared/46fd/rotary_controller.vhd" \
-"../../../bd/audio_mixer_project/ipshared/46fd/hdl/pmod_controller_v1_0.vhd" \
+"../../../bd/audio_mixer_project/ipshared/be0e/debouncer.vhd" \
+"../../../bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0_S00_AXI.vhd" \
+"../../../bd/audio_mixer_project/ipshared/be0e/pulse_generator.vhd" \
+"../../../bd/audio_mixer_project/ipshared/be0e/rotary_controller.vhd" \
+"../../../bd/audio_mixer_project/ipshared/be0e/hdl/pmod_controller_v1_0.vhd" \
 "../../../bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_0/sim/audio_mixer_project_pmod_controller_0_0.vhd" \
 "../../../bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_1_0/sim/audio_mixer_project_axi_gpio_1_0.vhd" \
 "../../../bd/audio_mixer_project/ip/audio_mixer_project_auto_pc_0/audio_mixer_project_auto_pc_0_sim_netlist.vhdl" \
