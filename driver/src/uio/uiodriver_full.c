@@ -108,9 +108,9 @@ int fd6;
 void *ptr5; //AXI_TO_AUDIO
 void *ptr6; //PMOD_CONTROLLER
 
-int rotary = 0;
 int menuUp = 0;
 int menuDown = 0;
+int menuSelect = 0;
 
 int main(int argc, char *argv[])
 {
@@ -248,7 +248,7 @@ int main(int argc, char *argv[])
         {
 			if (menuDown)
 			{
-				menuDown = 0;
+				while(menuDown);
 				if(cursorPos<3)
 					cursorPos++;
 				else if (menuPos < MENULENGTH-4)
@@ -256,11 +256,34 @@ int main(int argc, char *argv[])
 			}
 			else if (menuUp)
 			{
-				menuUp = 0;
+				while(menuUp);
 				if(cursorPos>1)
 					cursorPos--;
 				else if (menuPos>0)
 					menuPos--;
+			}
+			else if (menuSelect)
+			{
+				while(menuSelect);
+				while(!menuSelect)
+				{
+					if (menuDown)
+					{
+						while(menuDown);
+						if(setting[menuPos+cursorPos]<100)
+							setting[menuPos+cursorPos]++;
+					}
+					else if (menuUp)
+					{
+						while(menuUp);
+						if(setting[menuPos+cursorPos]>0)
+							setting[menuPos+cursorPos]--;
+					}
+					menuBuf[0] = 62;
+					sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+cursorPos], setting[menuPos+cursorPos]);
+					oled_print_message(&menuBuf[0], cursorPos, ptr7);
+				}
+				while(menuSelect);
 			}
 			for(i=0;i<4;i++);
 			{
@@ -269,7 +292,7 @@ int main(int argc, char *argv[])
 				else
 					menuBuf[0] = 32;
 				sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+i], setting[menuPos+i]);
-				oled_print_message(&menuBuf[0], 0, ptr7);
+				oled_print_message(&menuBuf[0], i, ptr7);
 			}
 		}
 		
