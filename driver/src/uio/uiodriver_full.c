@@ -92,6 +92,8 @@
 #define PMOD_REG_2   *((unsigned *)(ptr6 + 8))
 #define PMOD_REG_3   *((unsigned *)(ptr6 + 12)) //we only use this, first 4 bits
 
+#define MENULENGTH 8
+
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );
 void *send_audio_function(void *arg);
@@ -104,7 +106,11 @@ socklen_t addr_size;
 int fd5;
 int fd6;
 void *ptr5; //AXI_TO_AUDIO
-void *ptr6;
+void *ptr6; //PMOD_CONTROLLER
+
+int rotary = 0;
+int menuUp = 0;
+int menuDown = 0;
 
 int main(int argc, char *argv[])
 {
@@ -112,6 +118,20 @@ int main(int argc, char *argv[])
 	pthread_t pmod_thread;
 	pthread_t recv_thread;
 	int i;
+	
+	char menuBuf[16];
+	int cursorPos = 0;
+	int menuPos = 0;
+	int setting = 0;
+	char menuitem[MENULENGTH][12] = {
+			"menuitem 1  ",
+			"menuitem 2  ",
+			"menuitem 3  ",
+			"menuitem 4  ",
+			"menuitem 5  ",
+			"menuitem 6  ",
+			"menuitem 7  ",
+			"menuitem 8  "};
 
     if (*argv[1] == 'p') {
         printf("::::START_USAGE::::\n");
@@ -127,58 +147,38 @@ int main(int argc, char *argv[])
         unsigned Band = atoi(argv[4]);
         unsigned Low = atoi(argv[5]);
 
-  
         //VOLUME 0
         int fd = open ("/dev/uio2", O_RDWR);
         if (fd < 1) { perror(argv[0]); return -1; }
         printf("fd init done\n");
-
         //FILTER 0
         int fd2 = open ("/dev/uio1", O_RDWR);
         if (fd2 < 1) { perror(argv[0]); return -1; }
         printf("fd2 init done\n");
-
         //VOLUME 1
         int fd3 = open ("/dev/uio4", O_RDWR);
         if (fd3 < 1) { perror(argv[0]); return -1; }
         printf("fd3 init done\n");
-        
         //FILTER 1
         int fd4 = open ("/dev/uio3", O_RDWR);
         if (fd4 < 1) { perror(argv[0]); return -1; }
         printf("fd4 init done\n");
-        
         //open dev/uio0 AXI_TO_AUDIO
         fd5 = open ("/dev/uio0", O_RDWR);
         if (fd5 < 1) { perror(argv[0]); return -1; }
         printf("fd5 init done\n");
-
         //open dev/uio6 PMOD_CONTROLLER_0
         fd6 = open ("/dev/uio6", O_RDWR);
         if (fd6 < 1) { perror(argv[0]); return -1; }
         printf("fd6 init done\n");
-        
         //open dev/uio5 ZEDBOARDOLED_0
         int fd7 = open ("/dev/uio5", O_RDWR);
         if (fd7 < 1) { perror(argv[0]); return -1; }
         printf("fd7 init done\n");
         
-
 		mkfifo("/tmp/myfifo", 0644);
   
-        //Redirect stdout/printf into /dev/kmsg file (so it will be printed using printk)
-        //freopen ("/dev/kmsg","w",stdout);
-        //printf("freopen\n");
-        //get architecture specific page size
         unsigned pageSize = sysconf(_SC_PAGESIZE);
-        /*************************************************************************************************
-         * TASK 1: Map the physical address to virtual address.                                          *
-         *************************************************************************************************
-         * HINT 0: You can look at how you did this in the /dev/mem task.                                *
-         * HINT 1: When mapping in UIO, there are some differences from doing it in /dev/mem.            *
-         *         check the "Mapping usage in UIO" section in Lab 3 additional materials for details.   *
-         *************************************************************************************************/
-
         void *ptr; //VOL 0
         ptr = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd, pageSize*0);
         printf("ptr init done\n");
@@ -194,63 +194,36 @@ int main(int argc, char *argv[])
         //void *ptr5; //AXI_TO_AUDIO
         ptr5 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd5, pageSize*0);
         printf("ptr5 init done\n");
-		
         //void *ptr6; //PMOD_CONTROLLER
         ptr6 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd6, pageSize*0);
         printf("ptr6 init done\n");
-        
         void *ptr7; //ZEDBOARDOLED_0
         ptr7 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd7, pageSize*0);
         printf("ptr7 init done\n");
 		
         //write into registers
-
-        VOLUME_0_REG_0 = Right;
-        VOLUME_0_REG_1 = Left;
-        FILTER_0_REG_0 = 0x00002CB6;
-        FILTER_0_REG_1 = 0x0000596C;
-        FILTER_0_REG_2 = 0x00002CB6;
-        FILTER_0_REG_3 = 0x8097A63A;
-        FILTER_0_REG_4 = 0x3F690C9D;
-        FILTER_0_REG_5 = 0x074D9236;
-        FILTER_0_REG_6 = 0x00000000;
-        FILTER_0_REG_7 = 0xF8B26DCA;
-        FILTER_0_REG_8 = 0x9464B81B;
-        FILTER_0_REG_9 = 0x3164DB93;
-        FILTER_0_REG_10 = 0x12BEC333;
-        FILTER_0_REG_11 = 0xDA82799A;
-        FILTER_0_REG_12 = 0x12BEC333;
-        FILTER_0_REG_13 = 0x00000000;
-        FILTER_0_REG_14 = 0x0AFB0CCC;
-        FILTER_0_REG_15 = 0;
-        FILTER_0_REG_16 = 1;
-        FILTER_0_REG_17 = High;
-        FILTER_0_REG_18 = Band;
-        FILTER_0_REG_19 = Low;
-        
-        VOLUME_1_REG_0 = Right;
-        VOLUME_1_REG_1 = Left;
-        FILTER_1_REG_0 = 0x00002CB6;
-        FILTER_1_REG_1 = 0x0000596C;
-        FILTER_1_REG_2 = 0x00002CB6;
-        FILTER_1_REG_3 = 0x8097A63A;
-        FILTER_1_REG_4 = 0x3F690C9D;
-        FILTER_1_REG_5 = 0x074D9236;
-        FILTER_1_REG_6 = 0x00000000;
-        FILTER_1_REG_7 = 0xF8B26DCA;
-        FILTER_1_REG_8 = 0x9464B81B;
-        FILTER_1_REG_9 = 0x3164DB93;
-        FILTER_1_REG_10 = 0x12BEC333;
-        FILTER_1_REG_11 = 0xDA82799A;
-        FILTER_1_REG_12 = 0x12BEC333;
-        FILTER_1_REG_13 = 0x00000000;
-        FILTER_1_REG_14 = 0x0AFB0CCC;
-        FILTER_1_REG_15 = 0;
-        FILTER_1_REG_16 = 1;
-        FILTER_1_REG_17 = High;
-        FILTER_1_REG_18 = Band;
-        FILTER_1_REG_19 = Low;
-        
+        VOLUME_1_REG_0  = VOLUME_0_REG_0  = Right;
+        VOLUME_1_REG_1  = VOLUME_0_REG_1  = Left;
+        FILTER_1_REG_0  = FILTER_0_REG_0  = 0x00002CB6;
+        FILTER_1_REG_1  = FILTER_0_REG_1  = 0x0000596C;
+        FILTER_1_REG_2  = FILTER_0_REG_2  = 0x00002CB6;
+        FILTER_1_REG_3  = FILTER_0_REG_3  = 0x8097A63A;
+        FILTER_1_REG_4  = FILTER_0_REG_4  = 0x3F690C9D;
+        FILTER_1_REG_5  = FILTER_0_REG_5  = 0x074D9236;
+        FILTER_1_REG_6  = FILTER_0_REG_6  = 0x00000000;
+        FILTER_1_REG_7  = FILTER_0_REG_7  = 0xF8B26DCA;
+        FILTER_1_REG_8  = FILTER_0_REG_8  = 0x9464B81B;
+        FILTER_1_REG_9  = FILTER_0_REG_9  = 0x3164DB93;
+        FILTER_1_REG_10 = FILTER_0_REG_10 = 0x12BEC333;
+        FILTER_1_REG_11 = FILTER_0_REG_11 = 0xDA82799A;
+        FILTER_1_REG_12 = FILTER_0_REG_12 = 0x12BEC333;
+        FILTER_1_REG_13 = FILTER_0_REG_13 = 0x00000000;
+        FILTER_1_REG_14 = FILTER_0_REG_14 = 0x0AFB0CCC;
+        FILTER_1_REG_15 = FILTER_0_REG_15 = 0;
+        FILTER_1_REG_16 = FILTER_0_REG_16 = 1;
+        FILTER_1_REG_17 = FILTER_0_REG_17 = High;
+        FILTER_1_REG_18 = FILTER_0_REG_18 = Band;
+        FILTER_1_REG_19 = FILTER_0_REG_19 = Low;
         
 		int iret1 = pthread_create(&thread, NULL, send_audio_function, NULL);
 		if(iret1)
@@ -273,15 +246,37 @@ int main(int argc, char *argv[])
 		
 		while(1)
         {
-			oled_print_message("werks", 0, ptr7);
-			oled_print_message("wreks", 1, ptr7);
-			oled_print_message("borks", 2, ptr7);
-			oled_print_message("breks", 3, ptr7);
+			if (menuDown)
+			{
+				menuDown = 0;
+				if(cursorPos<3)
+					cursorPos++;
+				else if (menuPos < MENULENGTH-4)
+					menuPos++;
+			}
+			else if (menuUp)
+			{
+				menuUp = 0;
+				if(cursorPos>1)
+					cursorPos--;
+				else if (menuPos>0)
+					menuPos--;
+			}
+			for(i=0;i<4;i++);
+			{
+				if(i==cursorPos)
+					menuBuf[0] = 62;
+				else
+					menuBuf[0] = 32;
+				sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+i], setting);
+				oled_print_message(&menuBuf[0], 0, ptr7);
+			}
 		}
 		
-		pthread_join( thread, NULL);
-		pthread_join( pmod_thread, NULL);
-		pthread_join( recv_thread, NULL);
+		//join
+		pthread_join(thread, NULL);
+		pthread_join(pmod_thread, NULL);
+		pthread_join(recv_thread, NULL);
         //unmap
         munmap(ptr, pageSize);
         munmap(ptr2, pageSize);
@@ -336,6 +331,7 @@ void *send_audio_function(void *arg)
 	short int buf[512];
 	int fd;
 	int IRQEnable = 1; 
+	int i;
 	//write(fd5, &IRQEnable, sizeof(IRQEnable));
 	write(fd5, &IRQEnable, sizeof(IRQEnable));
 	printf("audio sample Interrupt Enabled\n");
@@ -345,9 +341,9 @@ void *send_audio_function(void *arg)
 		printf("FIFO READ open\n");
 
 	while (1)
-	{  
+	{
 		read(fd, buf, 1024);
-		for (int i = 0; i < 512; i = i+1)
+		for (i=0;i<512;i++)
 		{
 			read(fd5, &IRQEnable, sizeof(IRQEnable));
 			IRQEnable = 1;
@@ -379,12 +375,12 @@ void *recv_function(void *arg)
 {
 	short int buffer[512];
 	int fd_fifo;
-		
+	
 	if ((fd_fifo = open("/tmp/myfifo", O_WRONLY)) < 0)
 		printf("fifo write open error\n");
 	else
 		printf("fifo write open\n");
-		
+	
 	if(udp_client_setup("10.255.255.255", 7891))
 		printf("Connection error\n");
 	else
