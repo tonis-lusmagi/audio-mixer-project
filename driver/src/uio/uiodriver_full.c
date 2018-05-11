@@ -103,6 +103,7 @@ socklen_t addr_size;
 int fd5;
 int fd6;
 void *ptr5; //AXI_TO_AUDIO
+void *ptr6;
 
 int main(int argc, char *argv[])
 {
@@ -194,7 +195,7 @@ int main(int argc, char *argv[])
         ptr5 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd5, pageSize*0);
         printf("ptr5 init done\n");
 		
-        void *ptr6; //PMOD_CONTROLLER
+        //void *ptr6; //PMOD_CONTROLLER
         ptr6 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd6, pageSize*0);
         printf("ptr6 init done\n");
         
