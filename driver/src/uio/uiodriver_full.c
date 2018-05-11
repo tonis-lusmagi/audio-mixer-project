@@ -26,6 +26,8 @@
 
 #include "ZedboardOLED.c"
 
+#include <unistd.h>
+
 
 #define VOLUME_0_REG_0   *((unsigned *)(ptr + 0))
 #define VOLUME_0_REG_1   *((unsigned *)(ptr + 4))
@@ -339,9 +341,10 @@ void *send_audio_function(void *arg)
 	while (1)
 	{
 		//read(fd5, &IRQEnable, sizeof(IRQEnable));
-		read(fd6, &IRQEnable, sizeof(IRQEnable));
+		//read(fd6, &IRQEnable, sizeof(IRQEnable));
 		//read(fd, &buf, 2);
 		//AXI_TO_AUDIO_REG_0 = (int)buf;
+		usleep(20);
 		printf("lol\n");
 	}
 }
