@@ -1,8 +1,5 @@
 #!/bin/sh
 
-mount /dev/mmcblk0p1 /mnt
-cd /mnt
-
 TEAM_NR=$1
 if [ "$#" -ne 1 ]; then
 	echo "Illegal number of parameters"
