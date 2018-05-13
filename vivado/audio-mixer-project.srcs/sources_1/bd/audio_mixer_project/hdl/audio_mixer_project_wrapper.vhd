@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
---Date        : Fri May 11 14:53:14 2018
+--Date        : Sun May 13 21:03:38 2018
 --Host        : archlinux running 64-bit Arch Linux
 --Command     : generate_target audio_mixer_project_wrapper.bd
 --Design      : audio_mixer_project_wrapper
@@ -101,9 +101,9 @@ architecture STRUCTURE of audio_mixer_project_wrapper is
     DC : out STD_LOGIC;
     SCLK : out STD_LOGIC;
     SDIN : out STD_LOGIC;
-    Button : in STD_LOGIC;
     Rotary_a : in STD_LOGIC;
     Rotary_b : in STD_LOGIC;
+    Button : in STD_LOGIC;
     Switch : in STD_LOGIC
   );
   end component audio_mixer_project;

@@ -265,12 +265,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>Button</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>Rotary_a</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -278,6 +272,12 @@
         </spirit:port>
         <spirit:port>
           <spirit:name>Rotary_b</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>Button</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
@@ -681,7 +681,7 @@
         <spirit:instanceName>pmod_controller_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="pmod_controller" spirit:vendor="ttu.ee" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">audio_mixer_project_pmod_controller_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">audio_mixer_project_pmod_controller_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -727,14 +727,14 @@
         <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="Volume_Pregain_1"/>
       </spirit:interconnection>
       <spirit:interconnection>
-        <spirit:name>ps7_0_axi_periph_M07_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M07_AXI" spirit:componentRef="ps7_0_axi_periph"/>
-        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="pmod_controller_0"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
         <spirit:name>ps7_0_axi_periph_M08_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M08_AXI" spirit:componentRef="ps7_0_axi_periph"/>
         <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_gpio_1"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>ps7_0_axi_periph_M07_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M07_AXI" spirit:componentRef="ps7_0_axi_periph"/>
+        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="pmod_controller_0"/>
       </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
@@ -978,14 +978,19 @@
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In4"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
+        <spirit:name>axi_gpio_0_ip2intc_irpt</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="ip2intc_irpt"/>
+        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In6"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_gpio_1_ip2intc_irpt</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="ip2intc_irpt"/>
+        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In7"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
         <spirit:name>pmod_controller_0_Rotary_event</spirit:name>
         <spirit:internalPortReference spirit:componentRef="pmod_controller_0" spirit:portRef="Rotary_event"/>
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In5"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Button_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="Button"/>
-        <spirit:internalPortReference spirit:componentRef="pmod_controller_0" spirit:portRef="Button"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Rotary_a_1</spirit:name>
@@ -998,19 +1003,14 @@
         <spirit:internalPortReference spirit:componentRef="pmod_controller_0" spirit:portRef="Rotary_b"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
+        <spirit:name>Button_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="Button"/>
+        <spirit:internalPortReference spirit:componentRef="pmod_controller_0" spirit:portRef="Button"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
         <spirit:name>Switch_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="Switch"/>
         <spirit:internalPortReference spirit:componentRef="pmod_controller_0" spirit:portRef="Switch"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>axi_gpio_0_ip2intc_irpt</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="ip2intc_irpt"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In6"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>axi_gpio_1_ip2intc_irpt</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="ip2intc_irpt"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In7"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

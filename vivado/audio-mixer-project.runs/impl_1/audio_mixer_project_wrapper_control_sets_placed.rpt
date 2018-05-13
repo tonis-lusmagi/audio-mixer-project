@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Fri May 11 14:56:04 2018
+| Date         : Sun May 13 21:11:35 2018
 | Host         : archlinux running 64-bit Arch Linux
 | Command      : report_control_sets -file audio_mixer_project_wrapper_control_sets_placed.rpt
 | Design       : audio_mixer_project_wrapper
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             383 |          142 |
+| No           | No                    | No                     |             392 |          152 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             842 |          242 |
-| Yes          | No                    | No                     |            3684 |          887 |
-| Yes          | No                    | Yes                    |             792 |          184 |
-| Yes          | Yes                   | No                     |            8981 |         2831 |
+| No           | Yes                   | No                     |             842 |          243 |
+| Yes          | No                    | No                     |            3684 |          863 |
+| Yes          | No                    | Yes                    |             792 |          187 |
+| Yes          | Yes                   | No                     |            8981 |         2771 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 

@@ -15,8 +15,8 @@ preplace port leds_8bits -pg 1 -y 1810 -defaultsOSRD
 preplace port DC -pg 1 -y 1610 -defaultsOSRD
 preplace port btns_5bits -pg 1 -y 1780 -defaultsOSRD
 preplace port Rotary_a -pg 1 -y 1460 -defaultsOSRD
-preplace port Rotary_b -pg 1 -y 1490 -defaultsOSRD
 preplace port Button -pg 1 -y 1520 -defaultsOSRD
+preplace port Rotary_b -pg 1 -y 1490 -defaultsOSRD
 preplace port AC_SCK -pg 1 -y 210 -defaultsOSRD
 preplace port AC_SDA -pg 1 -y 240 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 1300 -defaultsOSRD
@@ -107,7 +107,7 @@ levelinfo -pg 1 -30 160 440 850 1370 1930 2200 -top 0 -bot 2000
 ",
 }
 {
-   da_axi4_cnt: "14",
+   da_axi4_cnt: "15",
    da_board_cnt: "3",
    da_ps7_cnt: "1",
 }
