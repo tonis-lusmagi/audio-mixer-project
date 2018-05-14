@@ -91,7 +91,7 @@
 #define PMOD_REG_2   *((unsigned *)(ptr6 + 8))
 #define PMOD_REG_3   *((unsigned *)(ptr6 + 12)) //we only use this, first 4 bits
 
-#define MENULENGTH 8
+#define MENULENGTH 10
 #define A 1
 #define B 2
 #define SWITCH 4
@@ -146,16 +146,18 @@ int main(int argc, char *argv[])
 	int cursorPos = 0;
 	int menuPos = 0;
 	char menuitem[MENULENGTH][13] = {
-			"menuitem 1  \0",
-			"menuitem 2  \0",
-			"menuitem 3  \0",
-			"menuitem 4  \0",
-			"menuitem 5  \0",
-			"menuitem 6  \0",
-			"menuitem 7  \0",
-			"menuitem 8  \0"};
-	int setting[MENULENGTH] = {0,0,0,0,0,0,0,0};
-	int settingRange[MENULENGTH] = {100,100,100,100,1,1,1,1};
+			"VOL_AUX_L   \0",
+			"VOL_AUX_R   \0",
+			"VOL_STREAM_L\0",
+			"VOL_STREAM_R\0",
+			"AUX_LowP    \0",
+			"AUX_BandP   \0",
+			"AUX_HighP   \0",
+			"STREAM_LowP \0",
+			"STREAM_BandP\0",
+			"STREAM_HighP\0"};
+	int setting[MENULENGTH] = {5,5,5,5,0,0,0,0,0,0};
+	int settingRange[MENULENGTH] = {10,10,10,10,1,1,1,1,1,1};
 
     if (*argv[1] == 'p') {
         printf("::::START_USAGE::::\n");
@@ -276,30 +278,28 @@ int main(int argc, char *argv[])
 		GPIO_LED_6 = open("/sys/class/gpio/gpio934/value", O_RDWR);
 		GPIO_LED_7 = open("/sys/class/gpio/gpio935/value", O_RDWR);
         
-		
-        //write into registers
-        VOLUME_1_REG_0  = VOLUME_0_REG_0  = Right;
-        VOLUME_1_REG_1  = VOLUME_0_REG_1  = Left;
-        FILTER_1_REG_0  = FILTER_0_REG_0  = 0x00002CB6;
-        FILTER_1_REG_1  = FILTER_0_REG_1  = 0x0000596C;
-        FILTER_1_REG_2  = FILTER_0_REG_2  = 0x00002CB6;
-        FILTER_1_REG_3  = FILTER_0_REG_3  = 0x8097A63A;
-        FILTER_1_REG_4  = FILTER_0_REG_4  = 0x3F690C9D;
-        FILTER_1_REG_5  = FILTER_0_REG_5  = 0x074D9236;
-        FILTER_1_REG_6  = FILTER_0_REG_6  = 0x00000000;
-        FILTER_1_REG_7  = FILTER_0_REG_7  = 0xF8B26DCA;
-        FILTER_1_REG_8  = FILTER_0_REG_8  = 0x9464B81B;
-        FILTER_1_REG_9  = FILTER_0_REG_9  = 0x3164DB93;
-        FILTER_1_REG_10 = FILTER_0_REG_10 = 0x12BEC333;
-        FILTER_1_REG_11 = FILTER_0_REG_11 = 0xDA82799A;
-        FILTER_1_REG_12 = FILTER_0_REG_12 = 0x12BEC333;
-        FILTER_1_REG_13 = FILTER_0_REG_13 = 0x00000000;
-        FILTER_1_REG_14 = FILTER_0_REG_14 = 0x0AFB0CCC;
-        FILTER_1_REG_15 = FILTER_0_REG_15 = 0;
-        FILTER_1_REG_16 = FILTER_0_REG_16 = 1;
-        FILTER_1_REG_17 = FILTER_0_REG_17 = High;
-        FILTER_1_REG_18 = FILTER_0_REG_18 = Band;
-        FILTER_1_REG_19 = FILTER_0_REG_19 = Low;
+		VOLUME_1_REG_0  = VOLUME_0_REG_0  = Right;
+		VOLUME_1_REG_1  = VOLUME_0_REG_1  = Left;
+		FILTER_1_REG_0  = FILTER_0_REG_0  = 0x00002CB6;
+		FILTER_1_REG_1  = FILTER_0_REG_1  = 0x0000596C;
+		FILTER_1_REG_2  = FILTER_0_REG_2  = 0x00002CB6;
+		FILTER_1_REG_3  = FILTER_0_REG_3  = 0x8097A63A;
+		FILTER_1_REG_4  = FILTER_0_REG_4  = 0x3F690C9D;
+		FILTER_1_REG_5  = FILTER_0_REG_5  = 0x074D9236;
+		FILTER_1_REG_6  = FILTER_0_REG_6  = 0x00000000;
+		FILTER_1_REG_7  = FILTER_0_REG_7  = 0xF8B26DCA;
+		FILTER_1_REG_8  = FILTER_0_REG_8  = 0x9464B81B;
+		FILTER_1_REG_9  = FILTER_0_REG_9  = 0x3164DB93;
+		FILTER_1_REG_10 = FILTER_0_REG_10 = 0x12BEC333;
+		FILTER_1_REG_11 = FILTER_0_REG_11 = 0xDA82799A;
+		FILTER_1_REG_12 = FILTER_0_REG_12 = 0x12BEC333;
+		FILTER_1_REG_13 = FILTER_0_REG_13 = 0x00000000;
+		FILTER_1_REG_14 = FILTER_0_REG_14 = 0x0AFB0CCC;
+		FILTER_1_REG_15 = FILTER_0_REG_15 = 0;
+		FILTER_1_REG_16 = FILTER_0_REG_16 = 1;
+		FILTER_1_REG_17 = FILTER_0_REG_17 = High;
+		FILTER_1_REG_18 = FILTER_0_REG_18 = Band;
+		FILTER_1_REG_19 = FILTER_0_REG_19 = Low;
         
 		int iret1 = pthread_create(&thread, NULL, send_audio_function, NULL);
 		if(iret1)
@@ -322,8 +322,8 @@ int main(int argc, char *argv[])
 		if(iret4)
 		{
 			printf("Error - pthread_create() return code: %d\n",iret3);
-		}
-		*/
+		}*/
+		
 		while(1)
         {
 			if (volSwitch)
@@ -412,6 +412,16 @@ int main(int argc, char *argv[])
 			else if (menuSelect)
 			{
 				menuSelect = 0;
+				oled_clear(ptr7);
+				for(i=0;i<4;i++)
+				{
+					if(i==cursorPos)
+						menuBuf[0] = 45;
+					else
+						menuBuf[0] = 0;//32;
+					sprintf(&menuBuf[1], "%s%3d",menuitem[menuPos+i], setting[menuPos+i]);
+					oled_print_message(&menuBuf[0], i, ptr7);
+				}
 				while(!menuSelect)
 				{
 					if (menuUp)
@@ -452,6 +462,16 @@ int main(int argc, char *argv[])
 					//oled_print_message(&menuBuf[0], cursorPos, ptr7);
 				}
 				menuSelect = 0;
+				oled_clear(ptr7);
+				for(i=0;i<4;i++)
+				{
+					if(i==cursorPos)
+						menuBuf[0] = 62;
+					else
+						menuBuf[0] = 0;//32;
+					sprintf(&menuBuf[1], "%s%3d",menuitem[menuPos+i], setting[menuPos+i]);
+					oled_print_message(&menuBuf[0], i, ptr7);
+				}
 			}
 			else
 			{
@@ -507,6 +527,22 @@ int main(int argc, char *argv[])
 				write(GPIO_LED_7,"1", 2);
 			else
 				write(GPIO_LED_7,"0", 2);
+				
+			
+			
+			//stream
+			VOLUME_1_REG_0  = 32*globalVol*setting[2];
+			VOLUME_1_REG_1  = 32*globalVol*setting[3];
+			FILTER_1_REG_17 = setting[9];
+			FILTER_1_REG_18 = setting[8];
+			FILTER_1_REG_19 = setting[7];
+			
+			//line in
+			VOLUME_0_REG_0  = 32*globalVol*setting[0];
+			VOLUME_0_REG_1  = 32*globalVol*setting[1];
+			FILTER_0_REG_17 = setting[6];
+			FILTER_0_REG_18 = setting[5];
+			FILTER_0_REG_19 = setting[4];
 		}
 		
 		//join
@@ -752,11 +788,11 @@ void *button_function(void *arg)
 		IRQEnable = 1;
 		write(fd, &IRQEnable, sizeof(IRQEnable));
 		read(fd, &IRQEnable, sizeof(IRQEnable));
-		//printf("Got gpio btn interrupt\n");
-		read(GPIO_BTN_0, &button, sizeof(int));
+		printf("Got gpio btn interrupt\n");
+		/*read(GPIO_BTN_0, &button, sizeof(int));
 		if (button)
 			printf("GPIO_BTN_0 val is %d\n", button);
-		/*read(GPIO_BTN_1, &button, 1);
+		read(GPIO_BTN_1, &button, 1);
 		if (button)
 			printf("GPIO_BTN_1 pressed\n");
 		read(GPIO_BTN_2, &button, 1);
