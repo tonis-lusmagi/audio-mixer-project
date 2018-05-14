@@ -52,7 +52,7 @@ https://github.com/karljans/SoC_Design
 	7. Following elements used:
 		7.1. Linux command line
 		7.2. ZedBoard's built-in OLED display
-		7.3. ZedBoard's buttons/switches/LEDs (at least one of them) (btns: unused, sws: unused, LEDs: used)
+		7.3. ZedBoard's buttons/switches/LEDs (btns: unused, sws: unused, LEDs: used)
 		7.4. PMOD Rotary encoder
 
 ![](/assets/audio-mixer-project-schematic.png?raw=true)
