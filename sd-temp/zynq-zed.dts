@@ -31,7 +31,7 @@
 	
 	axi_gpio_2: axi_gpio_2@41220000 {
     	compatible = "xlnx,xps-gpio-1.00.a";
-    	reg = < 0x42210000 0x10000 >;
+    	reg = < 0x41220000 0x10000 >;
     	gpio-controller;
     	interrupt-parent = <&intc>;
     	interrupts = <0 37 1>;
