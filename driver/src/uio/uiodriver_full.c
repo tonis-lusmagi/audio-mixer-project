@@ -23,7 +23,6 @@
 #include <sys/types.h> 		//fifo
 #include <sys/stat.h>		//fifo
 #include <pthread.h>
-#include <linux/gpio.h>
 
 #include "ZedboardOLED.c"
 
@@ -98,20 +97,27 @@
 #define SWITCH 4
 #define BUTTON 8
 
-unsigned int GPIO_LED_0 = 992;
-unsigned int GPIO_LED_1 = 993;
-unsigned int GPIO_LED_2 = 994;
-unsigned int GPIO_LED_3 = 995;
-unsigned int GPIO_LED_4 = 996;
-unsigned int GPIO_LED_5 = 997;
-unsigned int GPIO_LED_6 = 998;
-unsigned int GPIO_LED_7 = 999;
+int GPIO_BTN_0;
+int GPIO_BTN_1;
+int GPIO_BTN_2;
+int GPIO_BTN_3;
+int GPIO_BTN_4;
+
+int GPIO_LED_0;
+int GPIO_LED_1;
+int GPIO_LED_2;
+int GPIO_LED_3;
+int GPIO_LED_4;
+int GPIO_LED_5;
+int GPIO_LED_6;
+int GPIO_LED_7;
 
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );
 void *send_audio_function(void *arg);
 void *pmod_function(void *arg);
 void *recv_function(void *arg);
+void *button_function(void *arg);
 
 struct sockaddr_in receiving_address;
 int client_socket; 
@@ -125,42 +131,17 @@ int menuUp = 0;
 int menuDown = 0;
 int menuSelect = 0;
 int volSwitch = 0;
+int globalVol = 8;
 
 int main(int argc, char *argv[])
 {
 	pthread_t thread;
 	pthread_t pmod_thread;
 	pthread_t recv_thread;
+	pthread_t button_thread;
 	int i,j;
+	int exportfd, directionfd;
 	
-	gpio_request(GPIO_LED_0, "sysfs");
-	gpio_request(GPIO_LED_1, "sysfs");
-	gpio_request(GPIO_LED_2, "sysfs");
-	gpio_request(GPIO_LED_3, "sysfs");
-	gpio_request(GPIO_LED_4, "sysfs");
-	gpio_request(GPIO_LED_5, "sysfs");
-	gpio_request(GPIO_LED_6, "sysfs");
-	gpio_request(GPIO_LED_7, "sysfs");
-	
-	gpio_direction_output(GPIO_LED_0, ledOn);
-	gpio_direction_output(GPIO_LED_1, ledOn);
-	gpio_direction_output(GPIO_LED_2, ledOn);
-	gpio_direction_output(GPIO_LED_3, ledOn);
-	gpio_direction_output(GPIO_LED_4, ledOn);
-	gpio_direction_output(GPIO_LED_5, ledOn);
-	gpio_direction_output(GPIO_LED_6, ledOn);
-	gpio_direction_output(GPIO_LED_7, ledOn);
-	
-	gpio_export(GPIO_LED_0, false);
-	gpio_export(GPIO_LED_1, false);
-	gpio_export(GPIO_LED_2, false);
-	gpio_export(GPIO_LED_3, false);
-	gpio_export(GPIO_LED_4, false);
-	gpio_export(GPIO_LED_5, false);
-	gpio_export(GPIO_LED_6, false);
-	gpio_export(GPIO_LED_7, false);
-	
-	int globalVol = 0;
 	char menuBuf[17] = {65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65};
 	int cursorPos = 0;
 	int menuPos = 0;
@@ -243,6 +224,58 @@ int main(int argc, char *argv[])
         void *ptr7; //ZEDBOARDOLED_0
         ptr7 = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd7, pageSize*0);
         printf("ptr7 init done\n");
+        
+        
+        exportfd = open("/sys/class/gpio/export", O_WRONLY);
+		if (exportfd < 0)
+		{
+			printf("Cannot open GPIO to export it\n");
+			exit(1);
+		}
+		write(exportfd, "928", 4);
+		write(exportfd, "929", 4);
+		write(exportfd, "930", 4);
+		write(exportfd, "931", 4);
+		write(exportfd, "932", 4);
+		write(exportfd, "933", 4);
+		write(exportfd, "934", 4);
+		write(exportfd, "935", 4);
+		close(exportfd);
+		printf("GPIO exported successfully\n");
+		directionfd = open("/sys/class/gpio/gpio928/direction", O_RDWR);
+		write(directionfd, "out", 4);
+		close(directionfd);
+		directionfd = open("/sys/class/gpio/gpio929/direction", O_RDWR);
+		write(directionfd, "out", 4);
+		close(directionfd);
+		directionfd = open("/sys/class/gpio/gpio930/direction", O_RDWR);
+		write(directionfd, "out", 4);
+		close(directionfd);
+		directionfd = open("/sys/class/gpio/gpio931/direction", O_RDWR);
+		write(directionfd, "out", 4);
+		close(directionfd);
+		directionfd = open("/sys/class/gpio/gpio932/direction", O_RDWR);
+		write(directionfd, "out", 4);
+		close(directionfd);
+		directionfd = open("/sys/class/gpio/gpio933/direction", O_RDWR);
+		write(directionfd, "out", 4);
+		close(directionfd);
+		directionfd = open("/sys/class/gpio/gpio934/direction", O_RDWR);
+		write(directionfd, "out", 4);
+		close(directionfd);
+		directionfd = open("/sys/class/gpio/gpio935/direction", O_RDWR);
+		write(directionfd, "out", 4);
+		close(directionfd);
+		printf("GPIO direction set as output successfully\n");
+		GPIO_LED_0 = open("/sys/class/gpio/gpio928/value", O_RDWR);
+		GPIO_LED_1 = open("/sys/class/gpio/gpio929/value", O_RDWR);
+		GPIO_LED_2 = open("/sys/class/gpio/gpio930/value", O_RDWR);
+		GPIO_LED_3 = open("/sys/class/gpio/gpio931/value", O_RDWR);
+		GPIO_LED_4 = open("/sys/class/gpio/gpio932/value", O_RDWR);
+		GPIO_LED_5 = open("/sys/class/gpio/gpio933/value", O_RDWR);
+		GPIO_LED_6 = open("/sys/class/gpio/gpio934/value", O_RDWR);
+		GPIO_LED_7 = open("/sys/class/gpio/gpio935/value", O_RDWR);
+        
 		
         //write into registers
         VOLUME_1_REG_0  = VOLUME_0_REG_0  = Right;
@@ -285,8 +318,12 @@ int main(int argc, char *argv[])
 		{
 			printf("Error - pthread_create() return code: %d\n",iret3);
 		}
-		
-		
+		/*int iret4 = pthread_create(&button_thread, NULL, button_function, NULL);
+		if(iret4)
+		{
+			printf("Error - pthread_create() return code: %d\n",iret3);
+		}
+		*/
 		while(1)
         {
 			if (volSwitch)
@@ -431,13 +468,45 @@ int main(int argc, char *argv[])
 				}*/
 			}
 			
-			for (i = 0; i < 8 ; i++)
-			{
-				if(globalVol <= i*2)
-					gpio_set_value(GPIO_LED_0 +i, ledOn);
-				else
-					gpio_set_value(GPIO_LED_0 +i, ledOff);
-			}
+			if(globalVol >= 16)
+				write(GPIO_LED_0,"1", 2);
+			else
+				write(GPIO_LED_0,"0", 2);
+				
+			if(globalVol >= 14)
+				write(GPIO_LED_1,"1", 2);
+			else
+				write(GPIO_LED_1,"0", 2);
+			
+			if(globalVol >= 12)
+				write(GPIO_LED_2,"1", 2);
+			else
+				write(GPIO_LED_2,"0", 2);
+				
+			if(globalVol >= 10)
+				write(GPIO_LED_3,"1", 2);
+			else
+				write(GPIO_LED_3,"0", 2);
+			
+			if(globalVol >= 8)
+				write(GPIO_LED_4,"1", 2);
+			else
+				write(GPIO_LED_4,"0", 2);
+				
+			if(globalVol >= 6)
+				write(GPIO_LED_5,"1", 2);
+			else
+				write(GPIO_LED_5,"0", 2);
+			
+			if(globalVol >= 4)
+				write(GPIO_LED_6,"1", 2);
+			else
+				write(GPIO_LED_6,"0", 2);
+				
+			if(globalVol >= 2)
+				write(GPIO_LED_7,"1", 2);
+			else
+				write(GPIO_LED_7,"0", 2);
 		}
 		
 		//join
@@ -583,5 +652,132 @@ void *recv_function(void *arg)
 	{
 		udp_client_recv((unsigned int*)&buffer, 1024);
 		write(fd_fifo, buffer, 1024);
+	}
+}
+void *button_function(void *arg)
+{
+	int exportfd, directionfd;
+	int IRQEnable =1;
+	int button;
+	exportfd = open("/sys/class/gpio/export", O_WRONLY);
+	if (exportfd < 0)
+    {
+        printf("Cannot open GPIO to export it\n");
+        exit(1);
+    }
+	write(exportfd, "992", 4);
+	write(exportfd, "993", 4);
+	write(exportfd, "994", 4);
+	write(exportfd, "995", 4);
+	write(exportfd, "996", 4);
+	close(exportfd);
+	printf("GPIO exported successfully\n");
+	directionfd = open("/sys/class/gpio/gpio992/direction", O_RDWR);
+    if (directionfd < 0)
+    {
+        printf("Cannot open GPIO direction it\n");
+        exit(1);
+    }
+    write(directionfd, "out", 4);
+    close(directionfd);
+    directionfd = open("/sys/class/gpio/gpio993/direction", O_RDWR);
+    if (directionfd < 0)
+    {
+        printf("Cannot open GPIO direction it\n");
+        exit(1);
+    }
+    write(directionfd, "out", 4);
+    close(directionfd);
+    directionfd = open("/sys/class/gpio/gpio994/direction", O_RDWR);
+    if (directionfd < 0)
+    {
+        printf("Cannot open GPIO direction it\n");
+        exit(1);
+    }
+    write(directionfd, "out", 4);
+    close(directionfd);
+	directionfd = open("/sys/class/gpio/gpio995/direction", O_RDWR);
+    if (directionfd < 0)
+    {
+        printf("Cannot open GPIO direction it\n");
+        exit(1);
+    }
+    write(directionfd, "out", 4);
+    close(directionfd);
+    directionfd = open("/sys/class/gpio/gpio996/direction", O_RDWR);
+    if (directionfd < 0)
+    {
+        printf("Cannot open GPIO direction it\n");
+        exit(1);
+    }
+    write(directionfd, "out", 4);
+    close(directionfd);
+    printf("GPIO direction set as output successfully\n");
+    GPIO_BTN_0 = open("/sys/class/gpio/gpio992/value", O_RDWR);
+    if (GPIO_BTN_0 < 0)
+    {
+        printf("Cannot open GPIO value\n");
+        exit(1);
+    }
+    GPIO_BTN_1 = open("/sys/class/gpio/gpio993/value", O_RDWR);
+    if (GPIO_BTN_1 < 0)
+    {
+        printf("Cannot open GPIO value\n");
+        exit(1);
+    }
+    GPIO_BTN_2 = open("/sys/class/gpio/gpio994/value", O_RDWR);
+    if (GPIO_BTN_2 < 0)
+    {
+        printf("Cannot open GPIO value\n");
+        exit(1);
+    }
+    GPIO_BTN_3 = open("/sys/class/gpio/gpio995/value", O_RDWR);
+    if (GPIO_BTN_3 < 0)
+    {
+        printf("Cannot open GPIO value\n");
+        exit(1);
+    }
+    GPIO_BTN_4 = open("/sys/class/gpio/gpio996/value", O_RDWR);
+    if (GPIO_BTN_4 < 0)
+    {
+        printf("Cannot open GPIO value\n");
+        exit(1);
+    }
+    
+    int fd = open ("/dev/gpiochip0", O_RDWR);
+    if (fd < 1) { printf("/dev/gpiochip0 error\n"); }
+    
+    while(1)
+    {
+		IRQEnable = 1;
+		write(fd, &IRQEnable, sizeof(IRQEnable));
+		read(fd, &IRQEnable, sizeof(IRQEnable));
+		//printf("Got gpio btn interrupt\n");
+		read(GPIO_BTN_0, &button, sizeof(int));
+		if (button)
+			printf("GPIO_BTN_0 val is %d\n", button);
+		/*read(GPIO_BTN_1, &button, 1);
+		if (button)
+			printf("GPIO_BTN_1 pressed\n");
+		read(GPIO_BTN_2, &button, 1);
+		if (button)
+			printf("GPIO_BTN_2 pressed\n");
+		read(GPIO_BTN_3, &button, 1);
+		if (button)
+			printf("GPIO_BTN_3 pressed\n");
+		read(GPIO_BTN_4, &button, 1);
+		if (button)
+			printf("GPIO_BTN_4 pressed\n");*/
+		/*
+		if (read(GPIO_BTN_1, &IRQEnable, sizeof(IRQEnable)))
+			//menuUp = 1;
+			printf("GPIO_BTN_1 pressed\n");
+		if (read(GPIO_BTN_2, &IRQEnable, sizeof(IRQEnable)))
+			//menuSelect = 1;
+			printf("GPIO_BTN_2 pressed\n");
+		if (read(GPIO_BTN_3, &IRQEnable, sizeof(IRQEnable)))
+			printf("GPIO_BTN_3 pressed\n");
+		if (read(GPIO_BTN_4, &IRQEnable, sizeof(IRQEnable)))
+			printf("GPIO_BTN_4 pressed\n");*/
 	}
 }
