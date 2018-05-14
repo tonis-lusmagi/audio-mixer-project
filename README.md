@@ -54,14 +54,22 @@ Scripts:
 
 ## Zynq
 
+	Mount and run. [./run.sh [xx]]
 	$ picocom -b 115200 /dev/ttyACM0
 	$ mount /dev/mmcblk0p1 /mnt && cd /mnt
-	$ ./change_ip_and_mac.sh [xx]
-	$ insmod uio_pdrv_genirq.ko of_id=generic-uio
-	$ ./uiodriver_full 5000 5000 0 0 0
+	$ ./run.sh 
 
-	$ rmmod uio_pdrv_genirq
-	$ umount /dev/mmcblk0p1
+		or manually:
+		$ ./change_ip_and_mac.sh [xx]
+		$ insmod uio_pdrv_genirq.ko of_id=generic-uio
+		$ ./uiodriver_full 5000 5000 0 0 0
+
+	Unmount:
+	$ ./unmount.sh
+
+		or manually:
+		$ rmmod uio_pdrv_genirq
+		$ umount /dev/mmcblk0p1
 
 # Help doc:
 
