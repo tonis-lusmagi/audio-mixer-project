@@ -148,11 +148,11 @@ void oled_clear_4(void *oled_base_addr) {
 		Xil_Out32(oled_base_addr + (i), int_seq[i]);
 	}
 
-	for (i = 46; i <= DELAY; i++) {
+	for (i = 47; i <= DELAY; i++) {
 		Xil_Out32(oled_base_addr + 64, 1);
     }
 
-	for (i = 46; i <= DELAY; i++) {
+	for (i = 47; i <= DELAY; i++) {
 		Xil_Out32(oled_base_addr + 64, 0);
     }
 }
