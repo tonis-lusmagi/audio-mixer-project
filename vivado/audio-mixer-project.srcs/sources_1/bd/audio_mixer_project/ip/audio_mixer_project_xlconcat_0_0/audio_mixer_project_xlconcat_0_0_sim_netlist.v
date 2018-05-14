@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-// Date        : Thu May 10 23:23:00 2018
+// Date        : Mon May 14 17:08:15 2018
 // Host        : archlinux running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xlconcat_0_0/audio_mixer_project_xlconcat_0_0_sim_netlist.v
@@ -23,6 +23,7 @@ module audio_mixer_project_xlconcat_0_0
     In5,
     In6,
     In7,
+    In8,
     dout);
   input [0:0]In0;
   input [0:0]In1;
@@ -32,7 +33,8 @@ module audio_mixer_project_xlconcat_0_0
   input [0:0]In5;
   input [0:0]In6;
   input [0:0]In7;
-  output [7:0]dout;
+  input [0:0]In8;
+  output [8:0]dout;
 
   wire [0:0]In0;
   wire [0:0]In1;
@@ -42,7 +44,9 @@ module audio_mixer_project_xlconcat_0_0
   wire [0:0]In5;
   wire [0:0]In6;
   wire [0:0]In7;
+  wire [0:0]In8;
 
+  assign dout[8] = In8;
   assign dout[7] = In7;
   assign dout[6] = In6;
   assign dout[5] = In5;

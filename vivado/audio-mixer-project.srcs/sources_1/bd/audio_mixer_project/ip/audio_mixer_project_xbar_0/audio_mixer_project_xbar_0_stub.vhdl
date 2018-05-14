@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
--- Date        : Thu May 10 23:23:36 2018
+-- Date        : Mon May 14 17:08:41 2018
 -- Host        : archlinux running 64-bit Arch Linux
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xbar_0/audio_mixer_project_xbar_0_stub.vhdl
@@ -35,25 +35,25 @@ entity audio_mixer_project_xbar_0 is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_rready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_awaddr : out STD_LOGIC_VECTOR ( 287 downto 0 );
-    m_axi_awprot : out STD_LOGIC_VECTOR ( 26 downto 0 );
-    m_axi_awvalid : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    m_axi_awready : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    m_axi_wdata : out STD_LOGIC_VECTOR ( 287 downto 0 );
-    m_axi_wstrb : out STD_LOGIC_VECTOR ( 35 downto 0 );
-    m_axi_wvalid : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    m_axi_wready : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    m_axi_bresp : in STD_LOGIC_VECTOR ( 17 downto 0 );
-    m_axi_bvalid : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    m_axi_bready : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    m_axi_araddr : out STD_LOGIC_VECTOR ( 287 downto 0 );
-    m_axi_arprot : out STD_LOGIC_VECTOR ( 26 downto 0 );
-    m_axi_arvalid : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    m_axi_arready : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    m_axi_rdata : in STD_LOGIC_VECTOR ( 287 downto 0 );
-    m_axi_rresp : in STD_LOGIC_VECTOR ( 17 downto 0 );
-    m_axi_rvalid : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    m_axi_rready : out STD_LOGIC_VECTOR ( 8 downto 0 )
+    m_axi_awaddr : out STD_LOGIC_VECTOR ( 319 downto 0 );
+    m_axi_awprot : out STD_LOGIC_VECTOR ( 29 downto 0 );
+    m_axi_awvalid : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    m_axi_awready : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    m_axi_wdata : out STD_LOGIC_VECTOR ( 319 downto 0 );
+    m_axi_wstrb : out STD_LOGIC_VECTOR ( 39 downto 0 );
+    m_axi_wvalid : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    m_axi_wready : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    m_axi_bresp : in STD_LOGIC_VECTOR ( 19 downto 0 );
+    m_axi_bvalid : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    m_axi_bready : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    m_axi_araddr : out STD_LOGIC_VECTOR ( 319 downto 0 );
+    m_axi_arprot : out STD_LOGIC_VECTOR ( 29 downto 0 );
+    m_axi_arvalid : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    m_axi_arready : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    m_axi_rdata : in STD_LOGIC_VECTOR ( 319 downto 0 );
+    m_axi_rresp : in STD_LOGIC_VECTOR ( 19 downto 0 );
+    m_axi_rvalid : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    m_axi_rready : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
 
 end audio_mixer_project_xbar_0;
@@ -62,7 +62,7 @@ architecture stub of audio_mixer_project_xbar_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "aclk,aresetn,s_axi_awaddr[31:0],s_axi_awprot[2:0],s_axi_awvalid[0:0],s_axi_awready[0:0],s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid[0:0],s_axi_wready[0:0],s_axi_bresp[1:0],s_axi_bvalid[0:0],s_axi_bready[0:0],s_axi_araddr[31:0],s_axi_arprot[2:0],s_axi_arvalid[0:0],s_axi_arready[0:0],s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid[0:0],s_axi_rready[0:0],m_axi_awaddr[287:0],m_axi_awprot[26:0],m_axi_awvalid[8:0],m_axi_awready[8:0],m_axi_wdata[287:0],m_axi_wstrb[35:0],m_axi_wvalid[8:0],m_axi_wready[8:0],m_axi_bresp[17:0],m_axi_bvalid[8:0],m_axi_bready[8:0],m_axi_araddr[287:0],m_axi_arprot[26:0],m_axi_arvalid[8:0],m_axi_arready[8:0],m_axi_rdata[287:0],m_axi_rresp[17:0],m_axi_rvalid[8:0],m_axi_rready[8:0]";
+attribute black_box_pad_pin of stub : architecture is "aclk,aresetn,s_axi_awaddr[31:0],s_axi_awprot[2:0],s_axi_awvalid[0:0],s_axi_awready[0:0],s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid[0:0],s_axi_wready[0:0],s_axi_bresp[1:0],s_axi_bvalid[0:0],s_axi_bready[0:0],s_axi_araddr[31:0],s_axi_arprot[2:0],s_axi_arvalid[0:0],s_axi_arready[0:0],s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid[0:0],s_axi_rready[0:0],m_axi_awaddr[319:0],m_axi_awprot[29:0],m_axi_awvalid[9:0],m_axi_awready[9:0],m_axi_wdata[319:0],m_axi_wstrb[39:0],m_axi_wvalid[9:0],m_axi_wready[9:0],m_axi_bresp[19:0],m_axi_bvalid[9:0],m_axi_bready[9:0],m_axi_araddr[319:0],m_axi_arprot[29:0],m_axi_arvalid[9:0],m_axi_arready[9:0],m_axi_rdata[319:0],m_axi_rresp[19:0],m_axi_rvalid[9:0],m_axi_rready[9:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "axi_crossbar_v2_1_15_axi_crossbar,Vivado 2017.3";
 begin

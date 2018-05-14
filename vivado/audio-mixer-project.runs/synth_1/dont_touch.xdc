@@ -13,9 +13,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_pro
 # IP: bd/audio_mixer_project/ip/audio_mixer_project_processing_system7_0_0/audio_mixer_project_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_processing_system7_0_0 || ORIG_REF_NAME==audio_mixer_project_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_0/audio_mixer_project_axi_gpio_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_axi_gpio_0_0 || ORIG_REF_NAME==audio_mixer_project_axi_gpio_0_0} -quiet] -quiet
-
 # IP: bd/audio_mixer_project/ip/audio_mixer_project_ps7_0_axi_periph_0/audio_mixer_project_ps7_0_axi_periph_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_ps7_0_axi_periph_0 || ORIG_REF_NAME==audio_mixer_project_ps7_0_axi_periph_0} -quiet] -quiet
 
@@ -60,6 +57,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_pro
 
 # IP: bd/audio_mixer_project/ip/audio_mixer_project_pmod_controller_0_1/audio_mixer_project_pmod_controller_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_pmod_controller_0_1 || ORIG_REF_NAME==audio_mixer_project_pmod_controller_0_1} -quiet] -quiet
+
+# IP: bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_2_0/audio_mixer_project_axi_gpio_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_axi_gpio_2_0 || ORIG_REF_NAME==audio_mixer_project_axi_gpio_2_0} -quiet] -quiet
+
+# IP: bd/audio_mixer_project/ip/audio_mixer_project_axi_gpio_0_2/audio_mixer_project_axi_gpio_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_axi_gpio_0_2 || ORIG_REF_NAME==audio_mixer_project_axi_gpio_0_2} -quiet] -quiet
 
 # IP: bd/audio_mixer_project/ip/audio_mixer_project_auto_pc_0/audio_mixer_project_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==audio_mixer_project_auto_pc_0 || ORIG_REF_NAME==audio_mixer_project_auto_pc_0} -quiet] -quiet

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Sun May 13 21:10:51 2018
+| Date         : Mon May 14 17:13:14 2018
 | Host         : archlinux running 64-bit Arch Linux
 | Command      : report_drc -file audio_mixer_project_wrapper_drc_opted.rpt -pb audio_mixer_project_wrapper_drc_opted.pb -rpx audio_mixer_project_wrapper_drc_opted.rpx
 | Design       : audio_mixer_project_wrapper

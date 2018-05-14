@@ -98,14 +98,14 @@
 #define SWITCH 4
 #define BUTTON 8
 
-unsigned int GPIO_LED_0 = 61;
-unsigned int GPIO_LED_1 = 62;
-unsigned int GPIO_LED_2 = 63;
-unsigned int GPIO_LED_3 = 64;
-unsigned int GPIO_LED_4 = 65;
-unsigned int GPIO_LED_5 = 66;
-unsigned int GPIO_LED_6 = 67;
-unsigned int GPIO_LED_7 = 68;
+unsigned int GPIO_LED_0 = 992;
+unsigned int GPIO_LED_1 = 993;
+unsigned int GPIO_LED_2 = 994;
+unsigned int GPIO_LED_3 = 995;
+unsigned int GPIO_LED_4 = 996;
+unsigned int GPIO_LED_5 = 997;
+unsigned int GPIO_LED_6 = 998;
+unsigned int GPIO_LED_7 = 999;
 
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );

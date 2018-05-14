@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
---Date        : Sun May 13 21:03:38 2018
+--Date        : Mon May 14 17:06:53 2018
 --Host        : archlinux running 64-bit Arch Linux
 --Command     : generate_target audio_mixer_project_wrapper.bd
 --Design      : audio_mixer_project_wrapper
@@ -83,8 +83,6 @@ architecture STRUCTURE of audio_mixer_project_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    leds_8bits_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     AC_ADR0 : out STD_LOGIC;
     AC_ADR1 : out STD_LOGIC;
@@ -104,7 +102,9 @@ architecture STRUCTURE of audio_mixer_project_wrapper is
     Rotary_a : in STD_LOGIC;
     Rotary_b : in STD_LOGIC;
     Button : in STD_LOGIC;
-    Switch : in STD_LOGIC
+    Switch : in STD_LOGIC;
+    leds_8bits_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   end component audio_mixer_project;
 begin

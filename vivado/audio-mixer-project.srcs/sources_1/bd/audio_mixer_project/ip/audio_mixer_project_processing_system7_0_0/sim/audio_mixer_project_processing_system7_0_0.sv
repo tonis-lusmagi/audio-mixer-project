@@ -576,7 +576,7 @@
       bit  IRQ_P2F_SPI1;
       bit  IRQ_P2F_UART1;
       bit  IRQ_P2F_CAN1;
-      bit  [7 : 0] IRQ_F2P;
+      bit  [8 : 0] IRQ_F2P;
       bit  Core0_nFIQ;
       bit  Core0_nIRQ;
       bit  Core1_nFIQ;
@@ -781,7 +781,7 @@
       parameter C_S_AXI_HP3_DATA_WIDTH = 64;
       parameter C_M_AXI_GP0_THREAD_ID_WIDTH = 12;
       parameter C_M_AXI_GP1_THREAD_ID_WIDTH = 12;
-      parameter C_NUM_F2P_INTR_INPUTS = 8;
+      parameter C_NUM_F2P_INTR_INPUTS = 9;
       parameter C_IRQ_F2P_MODE = "DIRECT";
       parameter C_DQ_WIDTH = 32;
       parameter C_DQS_WIDTH = 4;
@@ -854,7 +854,7 @@
       input  [1 : 0] M_AXI_GP0_BRESP;
       input  [1 : 0] M_AXI_GP0_RRESP;
       input  [31 : 0] M_AXI_GP0_RDATA;
-      input  [7 : 0] IRQ_F2P;
+      input  [8 : 0] IRQ_F2P;
       output  FCLK_CLK0;
       output  FCLK_RESET0_N;
       inout  [53 : 0] MIO;
@@ -1143,6 +1143,14 @@ end
 always@(negedge IRQ_F2P[7])
 begin
     ps7_set_input_IRQ_F2P(7,0);
+end
+always@(posedge IRQ_F2P[8])
+begin
+    ps7_set_input_IRQ_F2P(8,1);
+end
+always@(negedge IRQ_F2P[8])
+begin
+    ps7_set_input_IRQ_F2P(8,0);
 end
 
 always@(posedge M_AXI_GP0_ACLK)

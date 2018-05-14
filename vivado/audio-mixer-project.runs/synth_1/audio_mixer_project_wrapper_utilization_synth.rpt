@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Sun May 13 21:09:47 2018
+| Date         : Mon May 14 17:12:08 2018
 | Host         : archlinux running 64-bit Arch Linux
 | Command      : report_utilization -file audio_mixer_project_wrapper_utilization_synth.rpt -pb audio_mixer_project_wrapper_utilization_synth.pb
 | Design       : audio_mixer_project_wrapper
@@ -166,8 +166,9 @@ Table of Contents
 | audio_mixer_project_pmod_controller_0_1    |    1 |
 | audio_mixer_project_mixer_0_0              |    1 |
 | audio_mixer_project_axi_to_audio_0_0       |    1 |
+| audio_mixer_project_axi_gpio_2_0           |    1 |
 | audio_mixer_project_axi_gpio_1_0           |    1 |
-| audio_mixer_project_axi_gpio_0_0           |    1 |
+| audio_mixer_project_axi_gpio_0_2           |    1 |
 | audio_mixer_project_auto_pc_0              |    1 |
 | audio_mixer_project_ZedboardOLED_0_0       |    1 |
 | audio_mixer_project_Volume_Pregain_1_1     |    1 |

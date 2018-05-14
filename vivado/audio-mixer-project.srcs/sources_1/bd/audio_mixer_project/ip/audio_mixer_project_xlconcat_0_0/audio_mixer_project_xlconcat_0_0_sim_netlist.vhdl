@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
--- Date        : Thu May 10 23:23:00 2018
+-- Date        : Mon May 14 17:08:15 2018
 -- Host        : archlinux running 64-bit Arch Linux
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/clarke/workspace/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/ip/audio_mixer_project_xlconcat_0_0/audio_mixer_project_xlconcat_0_0_sim_netlist.vhdl
@@ -24,7 +24,8 @@ entity audio_mixer_project_xlconcat_0_0 is
     In5 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In6 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In7 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    In8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of audio_mixer_project_xlconcat_0_0 : entity is true;
@@ -45,6 +46,7 @@ architecture STRUCTURE of audio_mixer_project_xlconcat_0_0 is
   signal \^in5\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^in6\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^in7\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^in8\ : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
   \^in0\(0) <= In0(0);
   \^in1\(0) <= In1(0);
@@ -54,6 +56,8 @@ begin
   \^in5\(0) <= In5(0);
   \^in6\(0) <= In6(0);
   \^in7\(0) <= In7(0);
+  \^in8\(0) <= In8(0);
+  dout(8) <= \^in8\(0);
   dout(7) <= \^in7\(0);
   dout(6) <= \^in6\(0);
   dout(5) <= \^in5\(0);

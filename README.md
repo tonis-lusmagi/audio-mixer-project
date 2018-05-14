@@ -113,9 +113,10 @@ Change working branch:
 
 	axi_gpio_0 intc 35
 		GPIO992 btns_5bits
-		GPIO842 leds_8bits
 	axi_gpio_1 intc 36
 		GPIO960 sws_8bits
+	axi_gpio_2 intc 37
+		GPIO842 leds_8bits
 
 	$ cd /sys/class/gpio
 	$ ls

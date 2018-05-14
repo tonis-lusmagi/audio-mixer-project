@@ -53,7 +53,7 @@
 (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2017.3" *)
 (* CHECK_LICENSE_TYPE = "audio_mixer_project_xlconcat_0_0,xlconcat_v2_1_1_xlconcat,{}" *)
 (* CORE_GENERATION_INFO = "audio_mixer_project_xlconcat_0_0,xlconcat_v2_1_1_xlconcat,{x_ipProduct=Vivado 2017.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconcat,x_ipVersion=2.1,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,IN0_WIDTH=1,IN1_WIDTH=1,IN2_WIDTH=1,IN3_WIDTH=1,IN4_WIDTH=1,IN5_WIDTH=1,IN6_WIDTH=1,IN7_WIDTH=1,IN8_WIDTH=1,IN9_WIDTH=1,IN10_WIDTH=1,IN11_WIDTH=1,IN12_WIDTH=1,IN13_WIDTH=1,IN14_WIDTH=1,IN15_WIDTH=1,IN16_WIDTH=1,IN17_WIDTH=1,IN18_WIDTH=1,IN19_WIDTH=1,IN20_WIDTH=1,IN21_WIDTH=1,IN22_WIDTH\
-=1,IN23_WIDTH=1,IN24_WIDTH=1,IN25_WIDTH=1,IN26_WIDTH=1,IN27_WIDTH=1,IN28_WIDTH=1,IN29_WIDTH=1,IN30_WIDTH=1,IN31_WIDTH=1,dout_width=8,NUM_PORTS=8}" *)
+=1,IN23_WIDTH=1,IN24_WIDTH=1,IN25_WIDTH=1,IN26_WIDTH=1,IN27_WIDTH=1,IN28_WIDTH=1,IN29_WIDTH=1,IN30_WIDTH=1,IN31_WIDTH=1,dout_width=9,NUM_PORTS=9}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module audio_mixer_project_xlconcat_0_0 (
   In0,
@@ -64,6 +64,7 @@ module audio_mixer_project_xlconcat_0_0 (
   In5,
   In6,
   In7,
+  In8,
   dout
 );
 
@@ -75,7 +76,8 @@ input wire [0 : 0] In4;
 input wire [0 : 0] In5;
 input wire [0 : 0] In6;
 input wire [0 : 0] In7;
-output wire [7 : 0] dout;
+input wire [0 : 0] In8;
+output wire [8 : 0] dout;
 
   xlconcat_v2_1_1_xlconcat #(
     .IN0_WIDTH(1),
@@ -110,8 +112,8 @@ output wire [7 : 0] dout;
     .IN29_WIDTH(1),
     .IN30_WIDTH(1),
     .IN31_WIDTH(1),
-    .dout_width(8),
-    .NUM_PORTS(8)
+    .dout_width(9),
+    .NUM_PORTS(9)
   ) inst (
     .In0(In0),
     .In1(In1),
@@ -121,7 +123,7 @@ output wire [7 : 0] dout;
     .In5(In5),
     .In6(In6),
     .In7(In7),
-    .In8(1'B0),
+    .In8(In8),
     .In9(1'B0),
     .In10(1'B0),
     .In11(1'B0),
