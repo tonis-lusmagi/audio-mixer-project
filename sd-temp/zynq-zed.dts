@@ -14,7 +14,7 @@
 	compatible = "xlnx,zynq-zed", "xlnx,zynq-7000";
 
 	axi_gpio_0: axi_gpio_0@41200000 {
-    	compatible = "xlnx,xps-gpio-1.00.a";
+    	compatible = "generic-uio";
     	reg = < 0x41200000 0x10000 >;
     	gpio-controller;
     	interrupt-parent = <&intc>;
@@ -22,7 +22,7 @@
 	};
 
 	axi_gpio_1: axi_gpio_1@41210000 {
-    	compatible = "xlnx,xps-gpio-1.00.a";
+    	compatible = "generic-uio";
     	reg = < 0x41210000 0x10000 >;
     	gpio-controller;
     	interrupt-parent = <&intc>;
@@ -30,7 +30,7 @@
 	};
 	
 	axi_gpio_2: axi_gpio_2@41220000 {
-    	compatible = "xlnx,xps-gpio-1.00.a";
+    	compatible = "generic-uio";
     	reg = < 0x41220000 0x10000 >;
     	gpio-controller;
     	interrupt-parent = <&intc>;
