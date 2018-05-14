@@ -50,7 +50,7 @@ void Xil_Out32(unsigned *address, unsigned value) {
 *
 * @return	none.
 ******************************************************************************/
-void oled_clear(void *oled_base_addr) {
+void oled_clear_all(void *oled_base_addr) {
 
 	int i = 0;
 
@@ -68,6 +68,91 @@ void oled_clear(void *oled_base_addr) {
     }
 
 	for (i = 0; i <= DELAY; i++) {
+		Xil_Out32(oled_base_addr + 64, 0);
+    }
+}
+void oled_clear_1(void *oled_base_addr) {
+
+	int i = 0;
+
+	for (i = 0; i <= 15; i++) {
+		int_seq[i] = 0x00000000;
+	}
+
+	for (i = 0; i <= 11; i = i + 4) {
+
+		Xil_Out32(oled_base_addr + (i), int_seq[i]);
+	}
+
+	for (i = 0; i <= DELAY; i++) {
+		Xil_Out32(oled_base_addr + 16, 1);
+    }
+
+	for (i = 0; i <= DELAY; i++) {
+		Xil_Out32(oled_base_addr + 16, 0);
+    }
+}
+
+void oled_clear_2(void *oled_base_addr) {
+
+	int i = 16;
+
+	for (i = 16; i <= 31; i++) {
+		int_seq[i] = 0x00000000;
+	}
+
+	for (i = 15; i <= 27; i = i + 4) {
+
+		Xil_Out32(oled_base_addr + (i), int_seq[i]);
+	}
+
+	for (i = 15; i <= DELAY; i++) {
+		Xil_Out32(oled_base_addr + 32, 1);
+    }
+
+	for (i = 15; i <= DELAY; i++) {
+		Xil_Out32(oled_base_addr + 32, 0);
+    }
+}
+void oled_clear_3(void *oled_base_addr) {
+
+	int i = 32;
+
+	for (i = 31; i <= 47; i++) {
+		int_seq[i] = 0x00000000;
+	}
+
+	for (i = 31; i <= 44; i = i + 4) {
+
+		Xil_Out32(oled_base_addr + (i), int_seq[i]);
+	}
+
+	for (i = 31; i <= DELAY; i++) {
+		Xil_Out32(oled_base_addr + 48, 1);
+    }
+
+	for (i = 31; i <= DELAY; i++) {
+		Xil_Out32(oled_base_addr + 48, 0);
+    }
+}
+void oled_clear_4(void *oled_base_addr) {
+
+	int i = 48;
+
+	for (i = 47; i <= 63; i++) {
+		int_seq[i] = 0x00000000;
+	}
+
+	for (i = 47; i <= 60; i = i + 4) {
+
+		Xil_Out32(oled_base_addr + (i), int_seq[i]);
+	}
+
+	for (i = 47; i <= DELAY; i++) {
+		Xil_Out32(oled_base_addr + 64, 1);
+    }
+
+	for (i = 47; i <= DELAY; i++) {
 		Xil_Out32(oled_base_addr + 64, 0);
     }
 }
