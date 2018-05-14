@@ -23,7 +23,7 @@
 #include <sys/types.h> 		//fifo
 #include <sys/stat.h>		//fifo
 #include <pthread.h>
-
+#include <linux/gpio.h>
 
 #include "ZedboardOLED.c"
 
@@ -98,6 +98,15 @@
 #define SWITCH 4
 #define BUTTON 8
 
+unsigned int GPIO_LED_0 = 61;
+unsigned int GPIO_LED_1 = 62;
+unsigned int GPIO_LED_2 = 63;
+unsigned int GPIO_LED_3 = 64;
+unsigned int GPIO_LED_4 = 65;
+unsigned int GPIO_LED_5 = 66;
+unsigned int GPIO_LED_6 = 67;
+unsigned int GPIO_LED_7 = 68;
+
 int udp_client_setup(char *broadcast_address, int broadcast_port);
 int udp_client_recv(unsigned *buffer,int buffer_size );
 void *send_audio_function(void *arg);
@@ -123,6 +132,33 @@ int main(int argc, char *argv[])
 	pthread_t pmod_thread;
 	pthread_t recv_thread;
 	int i,j;
+	
+	gpio_request(GPIO_LED_0, "sysfs");
+	gpio_request(GPIO_LED_1, "sysfs");
+	gpio_request(GPIO_LED_2, "sysfs");
+	gpio_request(GPIO_LED_3, "sysfs");
+	gpio_request(GPIO_LED_4, "sysfs");
+	gpio_request(GPIO_LED_5, "sysfs");
+	gpio_request(GPIO_LED_6, "sysfs");
+	gpio_request(GPIO_LED_7, "sysfs");
+	
+	gpio_direction_output(GPIO_LED_0, ledOn);
+	gpio_direction_output(GPIO_LED_1, ledOn);
+	gpio_direction_output(GPIO_LED_2, ledOn);
+	gpio_direction_output(GPIO_LED_3, ledOn);
+	gpio_direction_output(GPIO_LED_4, ledOn);
+	gpio_direction_output(GPIO_LED_5, ledOn);
+	gpio_direction_output(GPIO_LED_6, ledOn);
+	gpio_direction_output(GPIO_LED_7, ledOn);
+	
+	gpio_export(GPIO_LED_0, false);
+	gpio_export(GPIO_LED_1, false);
+	gpio_export(GPIO_LED_2, false);
+	gpio_export(GPIO_LED_3, false);
+	gpio_export(GPIO_LED_4, false);
+	gpio_export(GPIO_LED_5, false);
+	gpio_export(GPIO_LED_6, false);
+	gpio_export(GPIO_LED_7, false);
 	
 	int globalVol = 0;
 	char menuBuf[17] = {65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65};
@@ -393,6 +429,14 @@ int main(int argc, char *argv[])
 					sprintf(&menuBuf[1], "%s%3d",menuitem[menuPos+i], setting[menuPos+i]);
 					oled_print_message(&menuBuf[0], i, ptr7);
 				}*/
+			}
+			
+			for (i = 0; i < 8 ; i++)
+			{
+				if(globalVol <= i*2)
+					gpio_set_value(GPIO_LED_0 +i, ledOn);
+				else
+					gpio_set_value(GPIO_LED_0 +i, ledOff);
 			}
 		}
 		

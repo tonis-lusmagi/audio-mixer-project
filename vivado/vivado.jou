@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May 14 11:22:56 2018
+# Process ID: 5384
+# Current directory: c:/Users/Lemps/audio-mixer-project/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13204 C:\Users\Lemps\audio-mixer-project\vivado\audio-mixer-project.xpr
+# Log file: c:/Users/Lemps/audio-mixer-project/vivado/vivado.log
+# Journal file: c:/Users/Lemps/audio-mixer-project/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Lemps/audio-mixer-project/vivado/audio-mixer-project.xpr
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+open_bd_design {C:/Users/Lemps/audio-mixer-project/vivado/audio-mixer-project.srcs/sources_1/bd/audio_mixer_project/audio_mixer_project.bd}
+ipx::edit_ip_in_project -upgrade true -name pmod_controller_v1_0_project -directory C:/Users/Lemps/audio-mixer-project/vivado/audio-mixer-project.tmp/pmod_controller_v1_0_project c:/Users/Lemps/audio-mixer-project/ip-repo/pmod_controller_1.0/component.xml
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
