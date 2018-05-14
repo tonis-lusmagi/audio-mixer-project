@@ -341,9 +341,9 @@ int main(int argc, char *argv[])
 				menuSelect = 0;
 				while(!menuSelect)
 				{
-					if (menuDown)
+					if (menuUp)
 					{
-						while(menuDown);
+						menuUp = 0;
 						if(setting[menuPos+cursorPos]<settingRange[menuPos+cursorPos])
 							setting[menuPos+cursorPos]++;
 						
@@ -358,9 +358,9 @@ int main(int argc, char *argv[])
 							oled_print_message(&menuBuf[0], i, ptr7);
 						}
 					}
-					else if (menuUp)
+					else if (menuDown)
 					{
-						while(menuUp);
+						menuDown = 0;
 						if(setting[menuPos+cursorPos]>0)
 							setting[menuPos+cursorPos]--;
 						oled_clear(ptr7);

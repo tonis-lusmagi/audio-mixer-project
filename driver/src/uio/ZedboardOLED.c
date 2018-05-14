@@ -50,7 +50,7 @@ void Xil_Out32(unsigned *address, unsigned value) {
 *
 * @return	none.
 ******************************************************************************/
-void oled_clear_all(void *oled_base_addr) {
+void oled_clear(void *oled_base_addr) {
 
 	int i = 0;
 
