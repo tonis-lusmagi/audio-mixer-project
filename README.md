@@ -2,7 +2,7 @@
 
 ![](https://upload.wikimedia.org/wikipedia/commons/6/60/ARM_logo.svg)
                 
-## About
+## Tools
 
 Xilinx Linux kernel 4.9
 
@@ -14,39 +14,46 @@ Lembitu | Martin | Tonis
 
 ## Liscences
 
-IPs:
+**IPs:**
+1. **Zedboard Audio:** Microelectronic Systems Design Research Group, TU Kaiserslautern, Germany  
+http://ems.eit.uni-kl.de ; https://github.com/ems-kl/zedboard_audio
+2. **AXI to Audio:** Martin Perman, TTÜ; Tonis Lusmagi, TTÜ
+3. **Filter:** Tony Storey, DIGI-KEY; Ovie, Tsotne, Juri, Silvester  
+https://github.com/tsotnep/ip_repo_vivado
+4. **Volume:**  
+https://github.com/tsotnep/Volume_Pregain
+5. **Mixer:** Karl Janson, TTÜ  
+https://github.com/karljans/SoC_Design
+6. **OLED:** Ali Aljaani, TAMUQ University; Karl Janson, TTÜ  
+https://github.com/karljans/SoC_Design
+7. **GPIO:** AXI stock
+8. **PMOD Rotary Encoder:** Lembitu Valdmets, TTÜ
 
-	Zedboard_audio IP: 
-	AXI to audio: Martin
-	Filter:
-	Volume: 
-	Mixer: 
-	OLED: 
-	GPIO: AXI stock
-	PMOD Rotary Encoder: Lemps
+**Software:**
+1. **UDP broadcast client code:** Karl Janson, TTÜ; Keijo Lass, TTÜ  
+https://github.com/karljans/SoC_Design
+2. **OLED control library:** Ali Aljaani, TAMUQ University; Karl Janson, TTÜ  
+https://github.com/karljans/SoC_Design
 
-Software:
-
-	UDP broadcast client code:
-	OLED control library:
-
-Scripts:
-
-	Script for setting the MAC and IP addresses: 
+**Scripts:**
+1. **MAC and IP address script:** Karl Janson, TTÜ  
+https://github.com/karljans/SoC_Design
+2. **Run and unmount scripts:** Karl Janson, TTÜ; Tonis Lusmagi, TTÜ  
+https://github.com/karljans/SoC_Design 
 
 ## Features
 
-	Receive an audio stream from network
-	Receive an audio stream from line-in
-	Audio streams are mixed together in hardware
-	Volume of both audio streams controllable separetly
-	Filters for both audio streams controllable separetly
-	Controllable from Linux user interface (UI).
-	Following elements used:
-		Linux command line menu
-		ZedBoard's built-in OLED display
-		ZedBoard's buttons/switches/LEDs (at least one of them)
-		PMOD Rotary encoder
+	1. Receive an audio stream from network
+	2. Receive an audio stream from line-in
+	3. Audio streams are mixed together in hardware
+	4. Volume of both audio streams controllable separetly
+	5. Filters for both audio streams controllable separetly
+	6. Controllable from Linux user interface (UI).
+	7. Following elements used:
+		7.1. Linux command line
+		7.2. ZedBoard's built-in OLED display
+		7.3. ZedBoard's buttons/switches/LEDs (at least one of them) (btns: unused, sws: unused, LEDs: used)
+		7.4. PMOD Rotary encoder
 
 ![](/assets/audio-mixer-project-schematic.png?raw=true)
 
@@ -54,49 +61,45 @@ Scripts:
 
 ## Zynq
 
-	Mount and run. [./run.sh [xx]]
+	Mount and run:
 	$ picocom -b 115200 /dev/ttyACM0
 	$ mount /dev/mmcblk0p1 /mnt && cd /mnt
-	$ ./run.sh 
+	$ ./run.sh [xx]
 
-		or manually:
+		or run manually:
 		$ ./change_ip_and_mac.sh [xx]
 		$ insmod uio_pdrv_genirq.ko of_id=generic-uio
 		$ ./uiodriver_full 5000 5000 0 0 0
 
 	Unmount:
-	$ ./unmount.sh
+	$ ./umount.sh
 
-		or manually:
+		or unmount manually:
 		$ rmmod uio_pdrv_genirq
 		$ umount /dev/mmcblk0p1
 
-# Help doc:
+## Menu & navigation
 
-## Git
+	Navigate the menu using Rotary Encoder:
 
-	$ git clone https://github.com/Lusberg/audio-mixer-project.git
+	>VOL_AUX_L   
+	 VOL_AUX_R   
+	 VOL_STREAM_L
+	 VOL_STREAM_R
+	 AUX_LowP    
+	 AUX_BandP   
+	 AUX_HighP   
+	 STREAM_LowP 
+	 STREAM_BandP
+	 STREAM_HighP
 
-Add files:
+	Push Rotary Encoder to choose menu item.
+	Use Rotary Encoder to change value.
 
-	open terminal in project folder
-	$ git fetch
-	$ git pull origin master
-	$ git add .
-	$ git commit -m "Write a meaningful message here"
-	$ git push origin master
+	Use Rotary Encoder to change global volume level.
+	Global volume level is shown on OLED display and on Zedboard LEDs.
 
-Add branch:
-
-	open terminal in project folder
-	$ git checkout -b [branch name]
-	$ git add .
-	$ git commit -m "Write a meaningful message here"
-	$ git push origin [branch name]
-
-Change working branch:
-
-	$ git checkout [branch name]
+# Maps:
 
 ## UIO map
 
@@ -111,15 +114,36 @@ Change working branch:
 
 ## AXI GPIO map
 
-	axi_gpio_0 intc 35
-		GPIO992 btns_5bits
-	axi_gpio_1 intc 36
-		GPIO960 sws_8bits
-	axi_gpio_2 intc 37
-		GPIO928 leds_8bits
+	$ cd /sys/class/gpio && ls -l
+	axi_gpio_0 intc35 GPIO992 btns_5bits
+	axi_gpio_1 intc36 GPIO960 sws_8bits
+	axi_gpio_2 intc37 GPIO928 leds_8bits
 
-	$ cd /sys/class/gpio
-	$ ls
+# Git:
+
+	$ git clone https://github.com/Lusberg/audio-mixer-project.git
+
+## Add files
+
+	open terminal in project folder
+	$ git add .
+	$ git commit -m "Message"
+	$ git push origin master
+	if local repo is outdated, then:
+	$ git pull origin master
+	$ git push origin master
+
+## Add branch
+
+	open terminal in project folder
+	$ git checkout -b [branch name]
+	$ git add .
+	$ git commit -m "Message"
+	$ git push origin [branch name]
+
+## Change working branch
+
+	$ git checkout [branch name]
 
 # Tech details:
 
@@ -191,8 +215,6 @@ Change working branch:
 	$ cd ~/workspace/audio-mixer-project
 	$ cp vivado/audio-mixer-project.sdk/audio_mixer_project_wrapper_hw_platform_0/audio_mixer_project_wrapper.bit sd-temp/
 
-Build BOOT.BIN:
-
 	SDK:
 	1. Xilinx --> Create Boot Image
 	2. Create new BIF file
@@ -217,7 +239,3 @@ Build BOOT.BIN:
 Use the number of the computer as the parameter for the script (a red sticker on the computer case). For example, if you are working in front of computer called LX22, then choose 22 as the parameter for your script:
 
 	$ ./change_ip_and_mac.sh [xx]
-
-
-
-
