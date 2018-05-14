@@ -93,8 +93,8 @@
 #define PMOD_REG_3   *((unsigned *)(ptr6 + 12)) //we only use this, first 4 bits
 
 #define MENULENGTH 8
-#define A 2
-#define B 1
+#define A 1
+#define B 2
 #define SWITCH 4
 #define BUTTON 8
 
@@ -125,18 +125,18 @@ int main(int argc, char *argv[])
 	int i,j;
 	
 	int globalVol = 0;
-	char menuBuf[15];
+	char menuBuf[17] = {65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65};
 	int cursorPos = 0;
 	int menuPos = 0;
-	char menuitem[MENULENGTH][12] = {
-			"menuitem 1  ",
-			"menuitem 2  ",
-			"menuitem 3  ",
-			"menuitem 4  ",
-			"menuitem 5  ",
-			"menuitem 6  ",
-			"menuitem 7  ",
-			"menuitem 8  "};
+	char menuitem[MENULENGTH][13] = {
+			"menuitem 1  \0",
+			"menuitem 2  \0",
+			"menuitem 3  \0",
+			"menuitem 4  \0",
+			"menuitem 5  \0",
+			"menuitem 6  \0",
+			"menuitem 7  \0",
+			"menuitem 8  \0"};
 	int setting[MENULENGTH] = {0,0,0,0,0,0,0,0};
 	int settingRange[MENULENGTH] = {100,100,100,100,1,1,1,1};
 
@@ -253,59 +253,41 @@ int main(int argc, char *argv[])
 		
 		while(1)
         {
-			if (menuDown)
+			if (volSwitch)
 			{
-				while(menuDown);
-				if(cursorPos<3)
-					cursorPos++;
-				else if (menuPos < MENULENGTH-4)
-					menuPos++;
-			}
-			else if (menuUp)
-			{
-				while(menuUp);
-				if(cursorPos>1)
-					cursorPos--;
-				else if (menuPos>0)
-					menuPos--;
-			}
-			else if (menuSelect)
-			{
-				while(menuSelect);
-				while(!menuSelect)
+				if (menuUp)
 				{
-					if (menuDown)
-					{
-						while(menuDown);
-						if(setting[menuPos+cursorPos]<settingRange[menuPos+cursorPos])
-							setting[menuPos+cursorPos]++;
-					}
-					else if (menuUp)
-					{
-						while(menuUp);
-						if(setting[menuPos+cursorPos]>0)
-							setting[menuPos+cursorPos]--;
-					}
-					menuBuf[0] = 62;
-					//sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+cursorPos], setting[menuPos+cursorPos]);
-					oled_print_message(&menuBuf[0], cursorPos, ptr7);
-				}
-				while(menuSelect);
-			}
-			else if (volSwitch)
-			{
-				if (menuDown)
-				{
-					while(menuDown);
-					if(globalVol<100)
+					menuUp = 0;
+					if(globalVol<16)
 						globalVol++;
+					for(j=0;j<16;j++)
+					{
+						if (globalVol > j)
+							menuBuf[j] = 35;
+						else
+							menuBuf[j] = 32;
+					}
+					oled_clear(ptr7);
+					for(i=0;i<4;oled_print_message(&menuBuf[0], i++, ptr7));
+					
 				}
-				else if (menuUp)
+				else if (menuDown)
 				{
-					while(menuUp);
-					if(globalVol>1)
+					menuDown = 0;
+					if(globalVol>0)
 						globalVol--;
+					
+					for(j=0;j<16;j++)
+					{
+						if (globalVol > j)
+							menuBuf[j] = 35;
+						else
+							menuBuf[j] = 32;
+					}
+					oled_clear(ptr7);
+					for(i=0;i<4;oled_print_message(&menuBuf[0], i++, ptr7));
 				}
+				/*
 				for(j=0;j<16;j++)
 				{
 					if (globalVol > j*6,25)
@@ -313,16 +295,104 @@ int main(int argc, char *argv[])
 					else
 						menuBuf[j] = 32;
 				}
-				for(i=0;i<4;oled_print_message(&menuBuf[0], i++, ptr7));
+				oled_clear(ptr7);
+				for(i=0;i<4;oled_print_message(&menuBuf[0], i++, ptr7));*/
 			}
-			for(i=0;i<4;i++);
+			else if (menuDown)
 			{
-				if(i==cursorPos)
-					menuBuf[0] = 62;
-				else
-					menuBuf[0] = 32;
-				//sprintf(&menuBuf[1], "%-12s%2d",menuitem[menuPos+i], setting[menuPos+i]);
-				oled_print_message(&menuBuf[0], i, ptr7);
+				menuDown = 0;
+				if(cursorPos<3)
+					cursorPos++;
+				else if (menuPos < MENULENGTH-4)
+					menuPos++;
+					
+				oled_clear(ptr7);
+				for(i=0;i<4;i++)
+				{
+					if(i==cursorPos)
+						menuBuf[0] = 62;
+					else
+						menuBuf[0] = 0;//32;
+					sprintf(&menuBuf[1], "%s%3d",menuitem[menuPos+i], setting[menuPos+i]);
+					oled_print_message(&menuBuf[0], i, ptr7);
+				}
+			}
+			else if (menuUp)
+			{
+				menuUp = 0;
+				if(cursorPos>0)
+					cursorPos--;
+				else if (menuPos>0)
+					menuPos--;
+					
+				oled_clear(ptr7);
+				for(i=0;i<4;i++)
+				{
+					if(i==cursorPos)
+						menuBuf[0] = 62;
+					else
+						menuBuf[0] = 0;//32;
+					sprintf(&menuBuf[1], "%s%3d",menuitem[menuPos+i], setting[menuPos+i]);
+					oled_print_message(&menuBuf[0], i, ptr7);
+				}
+			}
+			else if (menuSelect)
+			{
+				menuSelect = 0;
+				while(!menuSelect)
+				{
+					if (menuDown)
+					{
+						while(menuDown);
+						if(setting[menuPos+cursorPos]<settingRange[menuPos+cursorPos])
+							setting[menuPos+cursorPos]++;
+						
+						oled_clear(ptr7);
+						for(i=0;i<4;i++)
+						{
+							if(i==cursorPos)
+								menuBuf[0] = 45;
+							else
+								menuBuf[0] = 0;//32;
+							sprintf(&menuBuf[1], "%s%3d",menuitem[menuPos+i], setting[menuPos+i]);
+							oled_print_message(&menuBuf[0], i, ptr7);
+						}
+					}
+					else if (menuUp)
+					{
+						while(menuUp);
+						if(setting[menuPos+cursorPos]>0)
+							setting[menuPos+cursorPos]--;
+						oled_clear(ptr7);
+						for(i=0;i<4;i++)
+						{
+							if(i==cursorPos)
+								menuBuf[0] = 45;
+							else
+								menuBuf[0] = 0;//32;
+							sprintf(&menuBuf[1], "%s%3d",menuitem[menuPos+i], setting[menuPos+i]);
+							oled_print_message(&menuBuf[0], i, ptr7);
+						}
+					}
+					//menuBuf[0] = 45;
+					//sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+cursorPos], setting[menuPos+cursorPos]);
+					//oled_print_message(&menuBuf[0], cursorPos, ptr7);
+				}
+				menuSelect = 0;
+			}
+			else
+			{
+				/*
+				//oled_clear(ptr7);
+				for(i=0;i<4;i++)
+				{
+					if(i==cursorPos)
+						menuBuf[0] = 62;
+					else
+						menuBuf[0] = 0;//32;
+					sprintf(&menuBuf[1], "%s%3d",menuitem[menuPos+i], setting[menuPos+i]);
+					oled_print_message(&menuBuf[0], i, ptr7);
+				}*/
 			}
 		}
 		
@@ -419,30 +489,31 @@ void *pmod_function(void *arg)
 	{
 		read(fd6, &IRQEnable, sizeof(IRQEnable));
 		pmodData = PMOD_REG_3;
-		printf("Rotary event detected: %d", &pmodData);
-		/*
+		//printf("Rotary event detected: %d\n", pmodData);
+		
 		if(pmodData & BUTTON)
 			menuSelect = 1;
-		else
-			menuSelect = 0;
+		//else
+			//menuSelect = 0;
 		
 		if(pmodData & SWITCH)
 			volSwitch = 1;
 		else
 			volSwitch = 0;
 		
-		if(pmodData&(A|B) == 0)
+		if(pmodData == 0 || pmodData == 4) //A|B
 		{
+			//printf("A|B\n");
 			if(prevPmodData&A)
-				menuDown = 1;
-			else
-				menuDown = 0;
+				menuUp = 1;
+			//else
+				//menuUp = 0;
 				
 			if(prevPmodData&B)
-				menuUp = 1;
-			else
-				menuUp = 0;
-		}*/
+				menuDown = 1;
+			//else
+				//menuDown = 0;
+		}
 		prevPmodData = pmodData;
 		IRQEnable = 1;
 		write(fd6, &IRQEnable, sizeof(IRQEnable));

@@ -192,7 +192,7 @@ unsigned int ln, i;
 char *char_pointer;
 
 	char_pointer = start;
-	ln = strlen(start);
+	ln = 16;//strlen(start);
 
 	for (i = 0; i < ln; i++) {
 
