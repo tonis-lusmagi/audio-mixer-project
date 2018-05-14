@@ -531,15 +531,15 @@ int main(int argc, char *argv[])
 			
 			
 			//stream
-			VOLUME_1_REG_0  = 32*globalVol*setting[2];
-			VOLUME_1_REG_1  = 32*globalVol*setting[3];
+			VOLUME_1_REG_0  = 32*globalVol*setting[3];
+			VOLUME_1_REG_1  = 32*globalVol*setting[2];
 			FILTER_1_REG_17 = setting[9];
 			FILTER_1_REG_18 = setting[8];
 			FILTER_1_REG_19 = setting[7];
 			
 			//line in
-			VOLUME_0_REG_0  = 32*globalVol*setting[0];
-			VOLUME_0_REG_1  = 32*globalVol*setting[1];
+			VOLUME_0_REG_0  = 32*globalVol*setting[1];
+			VOLUME_0_REG_1  = 32*globalVol*setting[0];
 			FILTER_0_REG_17 = setting[6];
 			FILTER_0_REG_18 = setting[5];
 			FILTER_0_REG_19 = setting[4];
