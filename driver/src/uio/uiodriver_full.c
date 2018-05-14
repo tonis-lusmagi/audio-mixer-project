@@ -125,7 +125,7 @@ int main(int argc, char *argv[])
 	int i,j;
 	
 	int globalVol = 0;
-	char menuBuf[16];
+	char menuBuf[15];
 	int cursorPos = 0;
 	int menuPos = 0;
 	char menuitem[MENULENGTH][12] = {
@@ -287,7 +287,7 @@ int main(int argc, char *argv[])
 							setting[menuPos+cursorPos]--;
 					}
 					menuBuf[0] = 62;
-					sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+cursorPos], setting[menuPos+cursorPos]);
+					//sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+cursorPos], setting[menuPos+cursorPos]);
 					oled_print_message(&menuBuf[0], cursorPos, ptr7);
 				}
 				while(menuSelect);
@@ -321,7 +321,7 @@ int main(int argc, char *argv[])
 					menuBuf[0] = 62;
 				else
 					menuBuf[0] = 32;
-				sprintf(&menuBuf[1], "%-12s%3d",menuitem[menuPos+i], setting[menuPos+i]);
+				//sprintf(&menuBuf[1], "%-12s%2d",menuitem[menuPos+i], setting[menuPos+i]);
 				oled_print_message(&menuBuf[0], i, ptr7);
 			}
 		}
@@ -420,7 +420,7 @@ void *pmod_function(void *arg)
 		read(fd6, &IRQEnable, sizeof(IRQEnable));
 		pmodData = PMOD_REG_3;
 		printf("Rotary event detected: %d", &pmodData);
-		
+		/*
 		if(pmodData & BUTTON)
 			menuSelect = 1;
 		else
@@ -442,7 +442,7 @@ void *pmod_function(void *arg)
 				menuUp = 1;
 			else
 				menuUp = 0;
-		}
+		}*/
 		prevPmodData = pmodData;
 		IRQEnable = 1;
 		write(fd6, &IRQEnable, sizeof(IRQEnable));
