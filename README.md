@@ -96,6 +96,7 @@ https://github.com/karljans/SoC_Design
 	Push Rotary Encoder to choose menu item.
 	Use Rotary Encoder to change value.
 
+	Flip the black switch to change to gloval vol level mode.
 	Use Rotary Encoder to change global volume level.
 	Global volume level is shown on OLED display and on Zedboard LEDs.
 
