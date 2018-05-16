@@ -169,7 +169,7 @@ https://github.com/karljans/SoC_Design
 			1. [*] Device Drivers -> GPIO support -> Memory mapped GPIO drivers -> Xilinx GPIO support
 			2. [M] Device Drivers -> Userspace I/O Drivers -> Userspace I/O platform driver with generic IRQ handling
 			3. [*] Kernel hacking -> "printk and dmesg options" -> Show timing information on printks
-		$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j1 O=~/workspace/linux
+		$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j7 O=~/workspace/linux
 		$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j7 O=~/workspace/linux UIMAGE_LOADADDR=0x8000 uImage
 		$ cp ~/workspace/linux/arch/arm/boot/uImage ~/workspace/audio-mixer-project/sd-image/
 	4. Download Xilinx U-Boot:
