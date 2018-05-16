@@ -10,7 +10,7 @@ Vivado 2017.3
 
 ## Authors
 
-Lembitu | Martin | Tonis
+Lembitu Valdmets | Martin Perman | Tonis Lusmägi
 
 ## Liscences
 
