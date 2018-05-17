@@ -12,7 +12,7 @@ Vivado 2017.3
 
 Lembitu Valdmets | Martin Perman | Tonis Lusmägi
 
-## Liscences
+## Licenses
 
 **IPs:**
 1. **Zedboard Audio:** Microelectronic Systems Design Research Group, TU Kaiserslautern, Germany  
@@ -46,8 +46,8 @@ https://github.com/karljans/SoC_Design
 	1. Receive an audio stream from network
 	2. Receive an audio stream from line-in
 	3. Audio streams are mixed together in hardware
-	4. Volume of both audio streams controllable separetly
-	5. Filters for both audio streams controllable separetly
+	4. Volume of both audio streams controllable separately
+	5. Filters for both audio streams controllable separately
 	6. Controllable from Linux user interface (UI).
 	7. Following elements used:
 		7.1. Linux command line
